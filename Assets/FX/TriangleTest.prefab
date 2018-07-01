@@ -33,7 +33,7 @@ GameObject:
   - component: {fileID: 114580015853754484}
   - component: {fileID: 114212421357117952}
   m_Layer: 0
-  m_Name: TriangleFX
+  m_Name: TriangleTest
   m_TagString: Shape
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -235,6 +235,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28d6cd9ed47fcc249b0eb72b52765ddc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playOnStart: 1
+  meshType: 0
 --- !u!114 &114291810098729900
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -310,7 +312,7 @@ ParticleSystem:
   stopAction: 0
   looping: 0
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 1
   useRigidbodyForVelocity: 1

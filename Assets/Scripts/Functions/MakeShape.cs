@@ -69,7 +69,7 @@ public class MakeShape : MonoBehaviour
         GenerateShape();
     }
 
-    void Start()
+    void Awake()
     {
         GenerateShape();
     }

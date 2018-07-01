@@ -3,11 +3,14 @@ using System.Collections.Generic;
 using NUnit.Framework.Constraints;
 using UnityEngine;
 
+[ExecuteInEditMode]
 [RequireComponent(typeof(ParticleSystem))]
 public class ShapeFX : MonoBehaviour
 {
 
+	public bool playOnStart = false;
 	public MeshType meshType;
+	
 	private Mesh _mesh;
 	
 	public enum MeshType
@@ -18,7 +21,7 @@ public class ShapeFX : MonoBehaviour
 	
 	private ParticleSystem _particleSystem;
 	private ParticleSystemRenderer _particleSystemRenderer;
-	
+
 	// Use this for initialization
 	void Awake ()
 	{
@@ -30,11 +33,20 @@ public class ShapeFX : MonoBehaviour
 	void Start()
 	{
 		SetMeshFromParent();
+		if (playOnStart)
+		{
+			_particleSystem.Play();
+		}
+	}
+	// Update is called once per frame
+	void Update () {
+		//SetMeshFromParent();
 	}
 
 	[ContextMenu ("Set Mesh")]
 	public void SetMeshFromParent()
 	{
+		
 		_particleSystem = GetComponent<ParticleSystem>();
 		_particleSystemRenderer = GetComponent<ParticleSystemRenderer>();
 		MeshFilter mf = GetComponentInParent<MeshFilter>();
@@ -54,7 +66,7 @@ public class ShapeFX : MonoBehaviour
 			} 
 			
 			var psm = _particleSystem.main;
-			psm.startColor = mr.material.color;
+			psm.startColor = mr.sharedMaterial.color;
 		}
 		else
 		{
@@ -62,8 +74,5 @@ public class ShapeFX : MonoBehaviour
 		}
 	}
 	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+	
 }
