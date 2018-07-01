@@ -13,7 +13,7 @@ public class GameManager : MonoBehaviour
 
 	public Callback FirstShapeAdded;
 	public Callback LastShapeRemoved;
-	private List<ShapeInfo> _shapes;
+	private List<ShapeInfo> _shapes = new List<ShapeInfo>();
 	
 	void Awake ()
 	{
