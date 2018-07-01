@@ -1,0 +1,24 @@
+fileFormatVersion: 2
+guid: d62ae20a722974558a6343ca99a62007
+timeCreated: 1528007374
+licenseType: Free
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: JeanSunHo
+  fontNames:
+  - JeanSunHo
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 0db8af3e06bde4cec9b5d2ed23ceb985, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

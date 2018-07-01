@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: c598b6fa69c964658895cf189faca5dc
+timeCreated: 1528829400
+licenseType: Free
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - clip: {instanceID: 0}
+  - mixBus: {fileID: 243061719671910238, guid: 6c2b2d904995f4700b2a721eb59dbc12, type: 2}
+  - transitionOrigin: {instanceID: 0}
+  - transitionDestination: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
