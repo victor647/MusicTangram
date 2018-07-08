@@ -170,14 +170,14 @@ public class OutlineSystem : MonoBehaviour
    
     void OnGUI()
     {
-        /*
+        
         
         GL.PushMatrix();
         GL.LoadPixelMatrix(0, Screen.width, Screen.height, 0);
         Graphics.DrawTexture(new Rect(0, 0, Screen.width, Screen.height), renTexOut);
         GL.PopMatrix();
         
-        */
+        
         
 #if RENDER_BEFORE_UI
         GL.PushMatrix();
