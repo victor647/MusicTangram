@@ -99,7 +99,7 @@ public class ShapeInfo : MonoBehaviour
 	}
 
 	private void OnDestroy()
-	{
+	{		
 		GameManager.instance.RemoveShape(this);
 	}
 

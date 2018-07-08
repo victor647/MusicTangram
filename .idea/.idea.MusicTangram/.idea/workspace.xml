@@ -2,32 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="35390549-7a17-4052-8ff3-bd1c5f2dd30b" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.MusicTangram/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MusicTangram/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.MusicTangram/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MusicTangram/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Easy Outline/Prefabs/Outline System.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Easy Outline/Prefabs/Outline System.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FX/Test.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FX/Test.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/InteractiveMusicPlayer/MusicEvent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/InteractiveMusicPlayer/MusicEvent.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Answers/Boat.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Answers/Boat.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Shapes/Triangle.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Shapes/Triangle.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level_1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level_1.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level_2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level_2.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level_3.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level_3.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Functions/Draggable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Functions/Draggable.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Functions/Removable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Functions/Removable.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Functions/Snappable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Functions/Snappable.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Highlight.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Highlight.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LoadLevel.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LoadLevel.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Scenes.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Scenes.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ShapeInfo.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ShapeInfo.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/ControlPanel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/ControlPanel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/ShapeModifier.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/ShapeModifier.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.MusicTangram/.idea/contentModel.xml" afterPath="$PROJECT_DIR$/.idea/.idea.MusicTangram/.idea/contentModel.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.MusicTangram/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/.idea.MusicTangram/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level_1.unity" afterPath="$PROJECT_DIR$/Assets/Scenes/Level_1.unity" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level_2.unity" afterPath="$PROJECT_DIR$/Assets/Scenes/Level_2.unity" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level_3.unity" afterPath="$PROJECT_DIR$/Assets/Scenes/Level_3.unity" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Functions/ShapeInfo.cs" afterPath="$PROJECT_DIR$/Assets/Scripts/Functions/ShapeInfo.cs" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -42,7 +22,8 @@
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/Functions/Snappable.cs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="780">
-              <caret line="52" selection-start-line="52" selection-end-line="52" />
+              <caret line="52" column="0" lean-forward="false" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -51,28 +32,18 @@
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/Functions/Paintable.cs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="315">
-              <caret line="21" column="14" selection-start-line="21" selection-start-column="14" selection-end-line="21" selection-end-column="14" />
+              <caret line="21" column="14" lean-forward="false" selection-start-line="21" selection-start-column="14" selection-end-line="21" selection-end-column="14" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="OutlineSystem.cs" pinned="false" current-in-tab="true">
+      <file leaf-file-name="OutlineSystem.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Easy Outline/Behaviours/OutlineSystem.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="310">
-              <caret line="122" column="51" selection-start-line="122" selection-start-column="51" selection-end-line="122" selection-end-column="51" />
-              <folding>
-                <marker date="1531079749471" expanded="true" signature="93:5366" ph="{...}" />
-                <marker date="1531079749471" expanded="true" signature="1533:1670" ph="{...}" />
-                <marker date="1531079749471" expanded="true" signature="1570:1628" ph="{...}" />
-                <marker date="1531079749471" expanded="true" signature="1712:2276" ph="{...}" />
-                <marker date="1531079749471" expanded="true" signature="2314:2440" ph="{...}" />
-                <marker date="1531079749471" expanded="true" signature="2466:4595" ph="{...}" />
-                <marker date="1531079749471" expanded="true" signature="4015:4386" ph="{...}" />
-                <marker date="1531079749471" expanded="true" signature="4618:4869" ph="{...}" />
-                <marker date="1531079749471" expanded="true" signature="4742:4802" ph="{...}" />
-                <marker date="1531079749471" expanded="true" signature="4895:5349" ph="{...}" />
-              </folding>
+            <state relative-caret-position="1830">
+              <caret line="122" column="51" lean-forward="false" selection-start-line="122" selection-start-column="51" selection-end-line="122" selection-end-column="51" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -81,7 +52,8 @@
         <entry file="file://$PROJECT_DIR$/Assets/InteractiveMusicPlayer/MusicManager.cs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="2190">
-              <caret line="146" selection-start-line="146" selection-end-line="146" />
+              <caret line="146" column="0" lean-forward="false" selection-start-line="146" selection-start-column="0" selection-end-line="146" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -90,7 +62,8 @@
         <entry file="file://$PROJECT_DIR$/Assets/InteractiveMusicPlayer/MusicEvent.cs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="3360">
-              <caret line="224" selection-start-line="224" selection-end-line="224" />
+              <caret line="224" column="0" lean-forward="false" selection-start-line="224" selection-start-column="0" selection-end-line="224" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -98,8 +71,82 @@
       <file leaf-file-name="ControlPanel.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/UI/ControlPanel.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="27" column="32" selection-start-line="27" selection-start-column="32" selection-end-line="27" selection-end-column="32" />
+            <state relative-caret-position="1020">
+              <caret line="71" column="0" lean-forward="false" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
+              <folding>
+                <marker date="1531073926372" expanded="false" signature="6:100" ph="..." />
+                <marker date="1531073926372" expanded="true" signature="143:1640" ph="{...}" />
+                <marker date="1531073926372" expanded="true" signature="332:437" ph="{...}" />
+                <marker date="1531073926372" expanded="true" signature="369:434" ph="{...}" />
+                <marker date="1531073926372" expanded="true" signature="466:1125" ph="{...}" />
+                <marker date="1531073926372" expanded="true" signature="504:901" ph="{...}" />
+                <marker date="1531073926372" expanded="true" signature="591:740" ph="{...}" />
+                <marker date="1531073926372" expanded="true" signature="632:735" ph="{...}" />
+                <marker date="1531073926372" expanded="true" signature="935:1121" ph="{...}" />
+                <marker date="1531073926372" expanded="true" signature="995:1116" ph="{...}" />
+                <marker date="1531073926372" expanded="true" signature="1150:1638" ph="{...}" />
+                <marker date="1531073926372" expanded="true" signature="1246:1635" ph="{...}" />
+                <marker date="1531073926372" expanded="true" signature="1379:1631" ph="{...}" />
+                <marker date="1531073926372" expanded="true" signature="1407:1468" ph="{...}" />
+                <marker date="1531073926372" expanded="true" signature="1524:1626" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GameManager.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/Scripts/Macro/GameManager.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-145">
+              <caret line="60" column="38" lean-forward="false" selection-start-line="60" selection-start-column="38" selection-end-line="60" selection-end-column="38" />
+              <folding>
+                <marker date="1531070016615" expanded="false" signature="6:109" ph="..." />
+                <marker date="1531070016615" expanded="true" signature="151:2420" ph="{...}" />
+                <marker date="1531070016615" expanded="true" signature="571:662" ph="{...}" />
+                <marker date="1531070016615" expanded="true" signature="618:659" ph="{...}" />
+                <marker date="1531070016615" expanded="true" signature="685:735" ph="{...}" />
+                <marker date="1531070016615" expanded="true" signature="775:915" ph="{...}" />
+                <marker date="1531070016615" expanded="true" signature="853:912" ph="{...}" />
+                <marker date="1531070016615" expanded="true" signature="958:1120" ph="{...}" />
+                <marker date="1531070016615" expanded="true" signature="1039:1100" ph="{...}" />
+                <marker date="1531070016615" expanded="true" signature="1148:1963" ph="{...}" />
+                <marker date="1531070016615" expanded="true" signature="1215:1706" ph="{...}" />
+                <marker date="1531070016615" expanded="true" signature="1266:1702" ph="{...}" />
+                <marker date="1531070016615" expanded="true" signature="1307:1692" ph="{...}" />
+                <marker date="1531070016615" expanded="true" signature="1351:1658" ph="{...}" />
+                <marker date="1531070016615" expanded="true" signature="1994:2037" ph="{...}" />
+                <marker date="1531070016615" expanded="true" signature="2073:2418" ph="{...}" />
+                <marker date="1531070016615" expanded="true" signature="2187:2415" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ShapeInfo.cs" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Assets/Scripts/Functions/ShapeInfo.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="245">
+              <caret line="89" column="9" lean-forward="true" selection-start-line="89" selection-start-column="9" selection-end-line="89" selection-end-column="9" />
+              <folding>
+                <marker date="1531082732296" expanded="false" signature="6:78" ph="..." />
+                <marker date="1531082732296" expanded="true" signature="118:2040" ph="{...}" />
+                <marker date="1531082732296" expanded="true" signature="143:180" ph="{...}" />
+                <marker date="1531082732296" expanded="true" signature="263:908" ph="{...}" />
+                <marker date="1531082732296" expanded="true" signature="470:648" ph="{...}" />
+                <marker date="1531082732296" expanded="true" signature="725:903" ph="{...}" />
+                <marker date="1531082732296" expanded="true" signature="972:1004" ph="{...}" />
+                <marker date="1531082732296" expanded="true" signature="1026:1109" ph="{...}" />
+                <marker date="1531082732296" expanded="true" signature="1035:1106" ph="{...}" />
+                <marker date="1531082732296" expanded="true" signature="1136:1222" ph="{...}" />
+                <marker date="1531082732296" expanded="true" signature="1145:1219" ph="{...}" />
+                <marker date="1531082732296" expanded="true" signature="1246:1367" ph="{...}" />
+                <marker date="1531082732296" expanded="true" signature="1289:1364" ph="{...}" />
+                <marker date="1531082732296" expanded="true" signature="1395:1799" ph="{...}" />
+                <marker date="1531082732296" expanded="true" signature="1441:1796" ph="{...}" />
+                <marker date="1531082732296" expanded="true" signature="1558:1750" ph="{...}" />
+                <marker date="1531082732296" expanded="true" signature="1855:1954" ph="{...}" />
+                <marker date="1531082732296" expanded="true" signature="1981:2031" ph="{...}" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -108,7 +155,8 @@
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/UI/ShapeModifier.cs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="465">
-              <caret line="31" column="32" selection-start-line="31" selection-start-column="32" selection-end-line="31" selection-end-column="32" />
+              <caret line="31" column="32" lean-forward="false" selection-start-line="31" selection-start-column="32" selection-end-line="31" selection-end-column="32" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -117,7 +165,8 @@
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/Functions/Draggable.cs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="585">
-              <caret line="39" column="54" selection-start-line="39" selection-start-column="54" selection-end-line="39" selection-end-column="54" />
+              <caret line="39" column="54" lean-forward="false" selection-start-line="39" selection-start-column="54" selection-end-line="39" selection-end-column="54" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -133,47 +182,47 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Music/MixerManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/InteractiveMusicPlayer/MusicStinger.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Music/MusicTransport.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/InteractiveMusicPlayer/Editor/MusicEventEditor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/InteractiveMusicPlayer/Metronome/Metronome.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/InteractiveMusicPlayer/MusicSwitch.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/WinProgress.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/ControlPanel.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/ShapeModifier.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Functions/ShapeInfo.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/SampleMusic.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/InteractiveMusicPlayer/Library/MusicClip.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Easy Outline/Behaviours/OutlineSystem.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/InteractiveMusicPlayer/Library/MusicComponent.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/InteractiveMusicPlayer/Library/BarAndBeat.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/InteractiveMusicPlayer/Editor/MusicTransitionSegmentEditor.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/InteractiveMusicPlayer/Editor/MusicTrackEditor.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/InteractiveMusicPlayer/Editor/MusicEventEditor.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/InteractiveMusicPlayer/Editor/MusicStingerEditor.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Macro/GameManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Functions/MakeShape.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Functions/Removable.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Functions/Paintable.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/InteractiveMusicPlayer/MusicTransitionSegment.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Functions/PaletteColor.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/InteractiveMusicPlayer/MusicManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Functions/ShapePool.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Functions/Draggable.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/InteractiveMusicPlayer/MusicLayers.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Functions/Snappable.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/FX/ShapeFX.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/InteractiveMusicPlayer/MusicEvent.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/InteractiveMusicPlayer/ParameterMapping.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Editor/ScreenPositionEditor.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/InteractiveMusicPlayer/MusicTrack.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/InteractiveMusicPlayer/Metronome/Metronome.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Editor/MakeShapeEditor.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/InteractiveMusicPlayer/MusicSwitch.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Music/ShapeMusic.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/InteractiveMusicPlayer/MusicSequence.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Music/MusicOnDrag.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Music/ReferenceMix.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/InteractiveMusicPlayer/Library/Properties/Editor/ConditionalHideDrawer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Functions/Removable.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Editor/MakeShapeEditor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/InteractiveMusicPlayer/Library/MusicClip.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/InteractiveMusicPlayer/MusicTransitionSegment.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Easy Outline/Behaviours/OutlineSystem.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Functions/PaletteColor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/FX/ShapeFX.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Functions/ShapePool.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/InteractiveMusicPlayer/MusicSequence.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/ShapeModifier.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/InteractiveMusicPlayer/MusicParameter.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/InteractiveMusicPlayer/MusicManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/InteractiveMusicPlayer/MusicStinger.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Functions/Draggable.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Functions/Snappable.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/InteractiveMusicPlayer/MusicLayers.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Functions/ShapeInfo.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Macro/GameManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Music/MixerManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/InteractiveMusicPlayer/MusicEvent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/SampleMusic.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/InteractiveMusicPlayer/ParameterMapping.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Music/MusicOnDrag.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/InteractiveMusicPlayer/Library/BarAndBeat.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Functions/Paintable.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/InteractiveMusicPlayer/Library/MusicComponent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/InteractiveMusicPlayer/MusicTrack.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/InteractiveMusicPlayer/Editor/MusicTransitionSegmentEditor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Music/ShapeMusic.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/InteractiveMusicPlayer/Editor/MusicTrackEditor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Functions/MakeShape.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Music/ReferenceMix.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Music/MusicTransport.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -225,10 +274,10 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/ShapeModifier.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/ControlPanel.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Functions/Draggable.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Functions/ShapeInfo.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Functions/Snappable.cs" />
         <option value="$PROJECT_DIR$/Assets/InteractiveMusicPlayer/MusicEvent.cs" />
         <option value="$PROJECT_DIR$/Assets/Easy Outline/Behaviours/OutlineSystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Functions/ShapeInfo.cs" />
       </list>
     </option>
   </component>
@@ -241,29 +290,37 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="230" />
-    <option name="y" value="61" />
-    <option name="width" value="1400" />
-    <option name="height" value="995" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-339" />
+    <option name="y" value="23" />
+    <option name="width" value="1867" />
+    <option name="height" value="1057" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
   </component>
   <component name="ProjectView">
     <navigator currentView="SolutionExplorer" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="UnityExplorer">
-        <option name="show-hidden-items" value="false" />
-      </pane>
+      <pane id="Scratches" />
       <pane id="SolutionExplorer">
         <subPane>
           <expand>
             <path>
               <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
-              <item name="MusicTangram (2 projects)" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="MusicTangram (3 projects)" type="977d5f41:SolutionExplorerNodeRider" />
             </path>
           </expand>
           <select />
@@ -271,7 +328,9 @@
         <option name="show-file-system" value="false" />
         <option name="show-all-items" value="false" />
       </pane>
-      <pane id="Scratches" />
+      <pane id="UnityExplorer">
+        <option name="show-hidden-items" value="false" />
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -292,10 +351,10 @@
     </option>
   </component>
   <component name="RunManager">
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
-      <option name="listenPortForConnections" value="false" />
-      <option name="pid" />
-    </configuration>
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" />
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -329,11 +388,12 @@
       <workItem from="1531065198633" duration="806000" />
       <workItem from="1531066026004" duration="5791000" />
       <workItem from="1531076426645" duration="3464000" />
+      <workItem from="1531082511731" duration="642000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="146133000" />
+    <option name="totallyTimeSpent" value="146775000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -345,33 +405,29 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <frame x="-339" y="23" width="1867" height="1057" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="Errors In Solution" order="3" />
-      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
-      <window_info anchor="bottom" id="Unit Tests" order="7" />
-      <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18123667" />
-      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Unity" />
-      <window_info anchor="right" id="Database" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="NuGet" order="7" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Build" order="8" visible="true" weight="0.04550379" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Errors In Solution" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Unit Tests" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="NuGet" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24959828" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32994923" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -385,6 +441,7 @@
     <breakpoint-manager>
       <option name="time" value="4" />
     </breakpoint-manager>
+    <watches-manager />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/Draggable.cs" />
@@ -395,14 +452,14 @@
     <entry file="file://$PROJECT_DIR$/Assets/InteractiveMusicPlayer/Editor/MusicTrackEditor.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
-          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+          <caret line="14" column="13" lean-forward="false" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/Functions/PaletteColor.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
-          <caret line="22" column="33" selection-start-line="22" selection-start-column="33" selection-end-line="22" selection-end-column="33" />
+          <caret line="22" column="33" lean-forward="false" selection-start-line="22" selection-start-column="33" selection-end-line="22" selection-end-column="33" />
         </state>
       </provider>
     </entry>
@@ -412,63 +469,63 @@
     <entry file="file://$PROJECT_DIR$/Assets/InteractiveMusicPlayer/MusicStinger.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
-          <caret line="19" selection-start-line="19" selection-end-line="19" />
+          <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/InteractiveMusicPlayer/Editor/MusicTransitionSegmentEditor.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
-          <caret line="20" column="9" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="9" />
+          <caret line="20" column="9" lean-forward="false" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="9" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/InteractiveMusicPlayer/Editor/MusicStingerEditor.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
+          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/InteractiveMusicPlayer/MusicSequence.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
-          <caret line="19" column="9" selection-start-line="19" selection-start-column="9" selection-end-line="19" selection-end-column="9" />
+          <caret line="19" column="9" lean-forward="false" selection-start-line="19" selection-start-column="9" selection-end-line="19" selection-end-column="9" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/InteractiveMusicPlayer/MusicTransitionSegment.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1005">
-          <caret line="69" column="48" selection-start-line="69" selection-start-column="48" selection-end-line="69" selection-end-column="48" />
+          <caret line="69" column="48" lean-forward="false" selection-start-line="69" selection-start-column="48" selection-end-line="69" selection-end-column="48" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/InteractiveMusicPlayer/Metronome/Metronome.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="705">
-          <caret line="47" column="54" selection-start-line="47" selection-start-column="54" selection-end-line="47" selection-end-column="54" />
+          <caret line="47" column="54" lean-forward="false" selection-start-line="47" selection-start-column="54" selection-end-line="47" selection-end-column="54" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/Music/ShapeMusic.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
+          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/InteractiveMusicPlayer/MusicLayers.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
-          <caret line="16" column="62" selection-start-line="16" selection-start-column="62" selection-end-line="16" selection-end-column="62" />
+          <caret line="16" column="62" lean-forward="false" selection-start-line="16" selection-start-column="62" selection-end-line="16" selection-end-column="62" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/InteractiveMusicPlayer/MusicTrack.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="705">
-          <caret line="49" column="17" selection-start-line="49" selection-start-column="17" selection-end-line="49" selection-end-column="17" />
+          <caret line="49" column="17" lean-forward="false" selection-start-line="49" selection-start-column="17" selection-end-line="49" selection-end-column="17" />
         </state>
       </provider>
     </entry>
@@ -476,210 +533,249 @@
     <entry file="file://$PROJECT_DIR$/Assets/InteractiveMusicPlayer/Editor/MusicEventEditor.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="390">
-          <caret line="27" column="9" selection-start-line="27" selection-start-column="9" selection-end-line="27" selection-end-column="9" />
+          <caret line="27" column="9" lean-forward="false" selection-start-line="27" selection-start-column="9" selection-end-line="27" selection-end-column="9" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/ShapeInfo.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="403">
-          <caret line="69" column="26" selection-start-line="69" selection-start-column="26" selection-end-line="69" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Scenes.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="21" column="9" selection-start-line="21" selection-start-column="9" selection-end-line="21" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/LoadLevel.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/ShapeInfo.cs" />
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Scenes.cs" />
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/LoadLevel.cs" />
     <entry file="file://$PROJECT_DIR$/Assets/InteractiveMusicPlayer/Library/Properties/Editor/ConditionalHideDrawer.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="795">
-          <caret line="56" selection-start-line="56" selection-end-line="56" />
+          <caret line="56" column="0" lean-forward="false" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/InteractiveMusicPlayer/ParameterMapping.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="555">
-          <caret line="37" column="62" selection-start-line="37" selection-start-column="62" selection-end-line="37" selection-end-column="62" />
+          <caret line="37" column="62" lean-forward="false" selection-start-line="37" selection-start-column="62" selection-end-line="37" selection-end-column="62" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/InteractiveMusicPlayer/MusicSwitch.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2280">
-          <caret line="153" selection-start-line="153" selection-end-line="153" />
+          <caret line="153" column="0" lean-forward="false" selection-start-line="153" selection-start-column="0" selection-end-line="153" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/Functions/ShapePool.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="960">
-          <caret line="67" column="43" selection-start-line="62" selection-start-column="50" selection-end-line="67" selection-end-column="43" />
+          <caret line="67" column="43" lean-forward="false" selection-start-line="62" selection-start-column="50" selection-end-line="67" selection-end-column="43" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/InteractiveMusicPlayer/MusicParameter.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="705">
-          <caret line="48" column="13" selection-start-line="48" selection-start-column="13" selection-end-line="48" selection-end-column="13" />
+          <caret line="48" column="13" lean-forward="false" selection-start-line="48" selection-start-column="13" selection-end-line="48" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/GameManager.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1455">
-          <caret line="97" column="5" selection-start-line="97" selection-start-column="5" selection-end-line="97" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
     <entry file="file://$PROJECT_DIR$/Assets/WinProgress.cs" />
     <entry file="file://$PROJECT_DIR$/Assets/InteractiveMusicPlayer/Library/MusicComponent.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="855">
-          <caret line="534" column="9" selection-start-line="534" selection-start-column="9" selection-end-line="534" selection-end-column="9" />
+          <caret line="534" column="9" lean-forward="false" selection-start-line="534" selection-start-column="9" selection-end-line="534" selection-end-column="9" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/InteractiveMusicPlayer/Library/MusicClip.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2955">
-          <caret line="197" column="36" selection-start-line="197" selection-start-column="36" selection-end-line="197" selection-end-column="36" />
+          <caret line="197" column="36" lean-forward="false" selection-start-line="197" selection-start-column="36" selection-end-line="197" selection-end-column="36" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/Music/MusicTransport.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="735">
-          <caret line="49" column="5" selection-start-line="49" selection-start-column="5" selection-end-line="49" selection-end-column="5" />
+          <caret line="49" column="5" lean-forward="false" selection-start-line="49" selection-start-column="5" selection-end-line="49" selection-end-column="5" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/Music/ReferenceMix.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="375">
-          <caret line="25" column="22" selection-start-line="25" selection-start-column="22" selection-end-line="25" selection-end-column="22" />
+          <caret line="25" column="22" lean-forward="false" selection-start-line="25" selection-start-column="22" selection-end-line="25" selection-end-column="22" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/Music/MixerManager.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
-          <caret line="9" column="5" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
+          <caret line="9" column="5" lean-forward="false" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/FX/ShapeFX.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="645">
-          <caret line="43" column="9" selection-start-line="43" selection-start-column="9" selection-end-line="43" selection-end-column="9" />
+          <caret line="43" column="9" lean-forward="false" selection-start-line="43" selection-start-column="9" selection-end-line="43" selection-end-column="9" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/UI/WinProgress.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
-          <caret line="18" selection-start-line="18" selection-end-line="18" />
+          <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/Music/MusicOnDrag.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="390">
-          <caret line="29" column="8" selection-start-line="29" selection-start-column="8" selection-end-line="29" selection-end-column="8" />
+          <caret line="29" column="8" lean-forward="false" selection-start-line="29" selection-start-column="8" selection-end-line="29" selection-end-column="8" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/Functions/Removable.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
-          <caret line="19" column="45" selection-start-line="19" selection-start-column="45" selection-end-line="19" selection-end-column="45" />
+          <caret line="19" column="45" lean-forward="false" selection-start-line="19" selection-start-column="45" selection-end-line="19" selection-end-column="45" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/UI/SampleMusic.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="737">
-          <caret line="52" column="51" selection-start-line="52" selection-start-column="51" selection-end-line="52" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/UI/ControlPanel.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="27" column="32" selection-start-line="27" selection-start-column="32" selection-end-line="27" selection-end-column="32" />
+          <caret line="52" column="51" lean-forward="false" selection-start-line="52" selection-start-column="51" selection-end-line="52" selection-end-column="51" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/UI/ShapeModifier.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="465">
-          <caret line="31" column="32" selection-start-line="31" selection-start-column="32" selection-end-line="31" selection-end-column="32" />
+          <caret line="31" column="32" lean-forward="false" selection-start-line="31" selection-start-column="32" selection-end-line="31" selection-end-column="32" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/Functions/Draggable.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="585">
-          <caret line="39" column="54" selection-start-line="39" selection-start-column="54" selection-end-line="39" selection-end-column="54" />
+          <caret line="39" column="54" lean-forward="false" selection-start-line="39" selection-start-column="54" selection-end-line="39" selection-end-column="54" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/Functions/Paintable.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
-          <caret line="21" column="14" selection-start-line="21" selection-start-column="14" selection-end-line="21" selection-end-column="14" />
+          <caret line="21" column="14" lean-forward="false" selection-start-line="21" selection-start-column="14" selection-end-line="21" selection-end-column="14" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/Functions/Snappable.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="780">
-          <caret line="52" selection-start-line="52" selection-end-line="52" />
+          <caret line="52" column="0" lean-forward="false" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Functions/ShapeInfo.cs" />
     <entry file="file://$PROJECT_DIR$/Assets/InteractiveMusicPlayer/MusicEvent.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3360">
-          <caret line="224" selection-start-line="224" selection-end-line="224" />
+          <caret line="224" column="0" lean-forward="false" selection-start-line="224" selection-start-column="0" selection-end-line="224" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/InteractiveMusicPlayer/MusicManager.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2190">
-          <caret line="146" selection-start-line="146" selection-end-line="146" />
+          <caret line="146" column="0" lean-forward="false" selection-start-line="146" selection-start-column="0" selection-end-line="146" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Macro/GameManager.cs" />
     <entry file="file://$PROJECT_DIR$/Assets/Easy Outline/Behaviours/OutlineSystem.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="310">
-          <caret line="122" column="51" selection-start-line="122" selection-start-column="51" selection-end-line="122" selection-end-column="51" />
+        <state relative-caret-position="1830">
+          <caret line="122" column="51" lean-forward="false" selection-start-line="122" selection-start-column="51" selection-end-line="122" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/UI/ControlPanel.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1020">
+          <caret line="71" column="0" lean-forward="false" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
           <folding>
-            <marker date="1531079749471" expanded="true" signature="93:5366" ph="{...}" />
-            <marker date="1531079749471" expanded="true" signature="1533:1670" ph="{...}" />
-            <marker date="1531079749471" expanded="true" signature="1570:1628" ph="{...}" />
-            <marker date="1531079749471" expanded="true" signature="1712:2276" ph="{...}" />
-            <marker date="1531079749471" expanded="true" signature="2314:2440" ph="{...}" />
-            <marker date="1531079749471" expanded="true" signature="2466:4595" ph="{...}" />
-            <marker date="1531079749471" expanded="true" signature="4015:4386" ph="{...}" />
-            <marker date="1531079749471" expanded="true" signature="4618:4869" ph="{...}" />
-            <marker date="1531079749471" expanded="true" signature="4742:4802" ph="{...}" />
-            <marker date="1531079749471" expanded="true" signature="4895:5349" ph="{...}" />
+            <marker date="1531073926372" expanded="false" signature="6:100" ph="..." />
+            <marker date="1531073926372" expanded="true" signature="143:1640" ph="{...}" />
+            <marker date="1531073926372" expanded="true" signature="332:437" ph="{...}" />
+            <marker date="1531073926372" expanded="true" signature="369:434" ph="{...}" />
+            <marker date="1531073926372" expanded="true" signature="466:1125" ph="{...}" />
+            <marker date="1531073926372" expanded="true" signature="504:901" ph="{...}" />
+            <marker date="1531073926372" expanded="true" signature="591:740" ph="{...}" />
+            <marker date="1531073926372" expanded="true" signature="632:735" ph="{...}" />
+            <marker date="1531073926372" expanded="true" signature="935:1121" ph="{...}" />
+            <marker date="1531073926372" expanded="true" signature="995:1116" ph="{...}" />
+            <marker date="1531073926372" expanded="true" signature="1150:1638" ph="{...}" />
+            <marker date="1531073926372" expanded="true" signature="1246:1635" ph="{...}" />
+            <marker date="1531073926372" expanded="true" signature="1379:1631" ph="{...}" />
+            <marker date="1531073926372" expanded="true" signature="1407:1468" ph="{...}" />
+            <marker date="1531073926372" expanded="true" signature="1524:1626" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Macro/GameManager.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-145">
+          <caret line="60" column="38" lean-forward="false" selection-start-line="60" selection-start-column="38" selection-end-line="60" selection-end-column="38" />
+          <folding>
+            <marker date="1531070016615" expanded="false" signature="6:109" ph="..." />
+            <marker date="1531070016615" expanded="true" signature="151:2420" ph="{...}" />
+            <marker date="1531070016615" expanded="true" signature="571:662" ph="{...}" />
+            <marker date="1531070016615" expanded="true" signature="618:659" ph="{...}" />
+            <marker date="1531070016615" expanded="true" signature="685:735" ph="{...}" />
+            <marker date="1531070016615" expanded="true" signature="775:915" ph="{...}" />
+            <marker date="1531070016615" expanded="true" signature="853:912" ph="{...}" />
+            <marker date="1531070016615" expanded="true" signature="958:1120" ph="{...}" />
+            <marker date="1531070016615" expanded="true" signature="1039:1100" ph="{...}" />
+            <marker date="1531070016615" expanded="true" signature="1148:1963" ph="{...}" />
+            <marker date="1531070016615" expanded="true" signature="1215:1706" ph="{...}" />
+            <marker date="1531070016615" expanded="true" signature="1266:1702" ph="{...}" />
+            <marker date="1531070016615" expanded="true" signature="1307:1692" ph="{...}" />
+            <marker date="1531070016615" expanded="true" signature="1351:1658" ph="{...}" />
+            <marker date="1531070016615" expanded="true" signature="1994:2037" ph="{...}" />
+            <marker date="1531070016615" expanded="true" signature="2073:2418" ph="{...}" />
+            <marker date="1531070016615" expanded="true" signature="2187:2415" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Functions/ShapeInfo.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="245">
+          <caret line="89" column="9" lean-forward="true" selection-start-line="89" selection-start-column="9" selection-end-line="89" selection-end-column="9" />
+          <folding>
+            <marker date="1531082732296" expanded="false" signature="6:78" ph="..." />
+            <marker date="1531082732296" expanded="true" signature="118:2040" ph="{...}" />
+            <marker date="1531082732296" expanded="true" signature="143:180" ph="{...}" />
+            <marker date="1531082732296" expanded="true" signature="263:908" ph="{...}" />
+            <marker date="1531082732296" expanded="true" signature="470:648" ph="{...}" />
+            <marker date="1531082732296" expanded="true" signature="725:903" ph="{...}" />
+            <marker date="1531082732296" expanded="true" signature="972:1004" ph="{...}" />
+            <marker date="1531082732296" expanded="true" signature="1026:1109" ph="{...}" />
+            <marker date="1531082732296" expanded="true" signature="1035:1106" ph="{...}" />
+            <marker date="1531082732296" expanded="true" signature="1136:1222" ph="{...}" />
+            <marker date="1531082732296" expanded="true" signature="1145:1219" ph="{...}" />
+            <marker date="1531082732296" expanded="true" signature="1246:1367" ph="{...}" />
+            <marker date="1531082732296" expanded="true" signature="1289:1364" ph="{...}" />
+            <marker date="1531082732296" expanded="true" signature="1395:1799" ph="{...}" />
+            <marker date="1531082732296" expanded="true" signature="1441:1796" ph="{...}" />
+            <marker date="1531082732296" expanded="true" signature="1558:1750" ph="{...}" />
+            <marker date="1531082732296" expanded="true" signature="1855:1954" ph="{...}" />
+            <marker date="1531082732296" expanded="true" signature="1981:2031" ph="{...}" />
           </folding>
         </state>
       </provider>
