@@ -42,7 +42,7 @@ public class ShapeFX : MonoBehaviour
 		MeshRenderer mr = GetComponentInParent<MeshRenderer>();
 		if (mf && mr)
 		{
-			_mesh = mf.mesh;
+			_mesh = mf.sharedMesh;
 			if (meshType == MeshType.Renderer)
 			{
 				_particleSystemRenderer.mesh = _mesh;
