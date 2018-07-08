@@ -47,16 +47,16 @@ namespace InteractiveMusicPlayer
         public delegate void ModifyTarget(float value);
         public ModifyTarget Modify;
 
-        private void Start()
+        private void OnEnable()
         {                        
             _affectedMusic = GetComponent<MusicComponent>();
             switch (_targetType)
             {
                 case TargetType.Volume:
-                    Modify = _affectedMusic.ChangeVolume;
+                    Modify = _affectedMusic.SetVolume;
                     break;
                 case TargetType.Pan:
-                    Modify = _affectedMusic.ChangePan;
+                    Modify = _affectedMusic.SetPan;
                     break;
                 case TargetType.LowPassFilterCutoff:
                     Modify = _affectedMusic.SetLPFCutoff;
@@ -67,7 +67,8 @@ namespace InteractiveMusicPlayer
             }
 
             _parameter = MusicManager.Instance.FindParameter(_parameterName);
-            _parameter.RegisterMapping(this); //register this mapping to parameter                       
+            if (_parameter)
+                _parameter.RegisterMapping(this); //register this mapping to parameter
         }
 
         public void ApplyParameterToMusic(float value)
@@ -79,6 +80,11 @@ namespace InteractiveMusicPlayer
                 parameterPercentage = 1f - parameterPercentage;            
             float targetValue = Mathf.Lerp(_minTargetValue, _maxTargetValue, Mathf.Pow(parameterPercentage, _curveExponent));            
             Modify(targetValue);                     
-        }          
+        }
+
+        private void OnDisable()
+        {
+            _parameter.UnRegisterMapping(this); //register this mapping to parameter    
+        }
     }
 }

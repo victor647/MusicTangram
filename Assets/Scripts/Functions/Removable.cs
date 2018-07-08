@@ -9,13 +9,13 @@ public class Removable : MonoBehaviour
 	private void OnTriggerStay2D(Collider2D col)
 	{
 		if (col.gameObject.name == "Trash" && !Input.GetMouseButton(0) && !isDead)
-		{
+		{			
+			StartCoroutine(Shrink());
 			GetComponent<ShapeMusic>().Removed();
-			StartCoroutine(Shrink());			
 		}
 	}
 
-	IEnumerator Shrink()
+	private IEnumerator Shrink()
 	{
 		isDead = true;
 		while (transform.localScale.x > 0.1f)

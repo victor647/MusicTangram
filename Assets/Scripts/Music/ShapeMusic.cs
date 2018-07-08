@@ -10,11 +10,11 @@ public class ShapeMusic : MonoBehaviour
 	[HideInInspector] public MusicSwitch music;
 	
 	// Use this for initialization
-	void OnEnable () {
+	private void OnEnable () {
 		Invoke("InitializeMusic", 0.1f);
 	}
 
-	void InitializeMusic()
+	private void InitializeMusic()
 	{
 		music = Instantiate(musicPrefab).GetComponent<MusicSwitch>();		
 		MusicTransport.MusicInQueue += music.Play; //add music to queue			

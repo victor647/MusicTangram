@@ -6,27 +6,28 @@ using UnityEngine;
 public class Draggable : MonoBehaviour {
 
     private Vector2 _offset;
-    private PolygonCollider2D _collider;    
+    //private PolygonCollider2D _collider;    
     private Rigidbody2D _rigidBody;    
 
     private void Start()
     {
-        _collider = GetComponent<PolygonCollider2D>();
-        _rigidBody = GetComponent<Rigidbody2D>();        
+        //_collider = GetComponent<PolygonCollider2D>();
+        _rigidBody = GetComponent<Rigidbody2D>();   
+        _rigidBody.bodyType = RigidbodyType2D.Kinematic;
     }
 
-    void OnMouseDown()
+    private void OnMouseDown()
     {
         //mouse follows whereever player clicks on the shape
         _offset = transform.position - Camera.main.ScreenToWorldPoint(Input.mousePosition);
         //enables overlapping with other shapes when dragging
-        _collider.isTrigger = true;
+        //_collider.isTrigger = true;
         //repels when landing on another shape
-        _rigidBody.bodyType = RigidbodyType2D.Dynamic;
+        //_rigidBody.bodyType = RigidbodyType2D.Dynamic;
         
     }
 
-    void OnMouseDrag()
+    private void OnMouseDrag()
     {		
         //updates position with mouse position
         Vector2 position = (Vector2)Camera.main.ScreenToWorldPoint(Input.mousePosition) + _offset;
@@ -35,19 +36,19 @@ public class Draggable : MonoBehaviour {
 
     private void OnMouseUp()
     {
-        //makes the shape repel with overlapping shapes
-        _collider.isTrigger = false;
         //resets the sorting layer
         transform.Translate(Vector3.forward); 
-        Invoke("LockPosition", 0.3f);        
+        //makes the shape repel with overlapping shapes
+        //_collider.isTrigger = false;
+        //Invoke("OnCollisionExit2D", 0.2f);        
         
     }
 
 
-    void LockPosition()
+    private void OnCollisionExit2D()
     {
         //lock the position of shape after moving in a short time
-        _rigidBody.bodyType = RigidbodyType2D.Kinematic;
+        //_rigidBody.bodyType = RigidbodyType2D.Kinematic;
     }
 
 }

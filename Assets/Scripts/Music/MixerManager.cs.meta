@@ -5,7 +5,19 @@ licenseType: Free
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - lastMixer: {instanceID: 0}
+  - currentMixer: {instanceID: 0}
+  - refOnly: {fileID: 245073941740652546, guid: 6c2b2d904995f4700b2a721eb59dbc12,
+      type: 2}
+  - sampleOnly: {fileID: 245658454114888732, guid: 6c2b2d904995f4700b2a721eb59dbc12,
+      type: 2}
+  - selfOnly: {fileID: 245056747282441410, guid: 6c2b2d904995f4700b2a721eb59dbc12,
+      type: 2}
+  - allOn: {fileID: 245462911288346112, guid: 6c2b2d904995f4700b2a721eb59dbc12, type: 2}
+  - shape: {fileID: 243959567604760880, guid: 6c2b2d904995f4700b2a721eb59dbc12, type: 2}
+  - self: {fileID: 243581299608195090, guid: 6c2b2d904995f4700b2a721eb59dbc12, type: 2}
+  - sampleTrack: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

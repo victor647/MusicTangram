@@ -11,8 +11,8 @@ public class ScreenPosition : MonoBehaviour {
 
 	public screenPosition position;
 	public Vector2 offset;
-	
-	void Start () {
+
+	private void Start () {
 		UpdatePosition();
 	}
 

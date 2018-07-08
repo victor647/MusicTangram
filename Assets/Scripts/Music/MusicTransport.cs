@@ -16,53 +16,54 @@ public class MusicTransport : MonoBehaviour
 	private float _loopDuration;
 
 	// Use this for initialization
-	void Start ()
+	private void Start ()
 	{
 		_slider = GetComponent<Slider>();
 		if (BaseTrack)
 		{
 			BaseTrack.PlayCallback += StartRolling;
 			BaseTrack.LoopCallback += ResetSlider;			
-			BaseTrack.StopCallback += StopRolling;
-			_loopDuration = BaseTrack.ExitTime - BaseTrack.EntryTime;
+			BaseTrack.StopCallback += StopRolling;			
 		}
-	}	
-	
-	void StartRolling()
+	}
+
+	private void StartRolling()
 	{
+		_loopDuration = BaseTrack.ExitTime - BaseTrack.EntryTime;
 		_slider.value = 0f;
 		_isRunning = true;		
 	}
 
-	void StopRolling()
+	private void StopRolling()
 	{
 		_isRunning = false;
 	}
-	
-	void ResetSlider()
+
+	private void ResetSlider()
 	{
 		_timeStamp = Time.time;
 		if (MusicInQueue != null) MusicInQueue();
 		MusicInQueue = null;		
 	}
 
-	private void LateUpdate()
+	private void Update()
 	{
 		if (_isRunning)
 		{
 			_slider.value = (Time.time - _timeStamp) / _loopDuration;
 		}
 
-		if (_slider.value > 0.93f)
+		if (_slider.value > 0.93f && !ReferenceMix.instance.mouseOver)
 		{
-			if (GameManager.instance.totalShapesInGame > 0 && ReferenceMix.instance.toggleOn && !ReferenceMix.instance.mouseOver)
+			if (GameManager.instance.totalShapesInGame > 0 && ReferenceMix.instance.Toggle.isOn)
 			{
-				ReferenceMix.instance.RefMusicOff();
+				MixerManager.instance.lastMixer = MixerManager.instance.allOn;
+				ReferenceMix.instance.Toggle.isOn = false;
 			}	
-			if (GameManager.instance.totalShapesInGame == 0 && !ReferenceMix.instance.toggleOn && !ReferenceMix.instance.mouseOver 
+			if (GameManager.instance.totalShapesInGame == 0 && !ReferenceMix.instance.Toggle.isOn 
 			    && MixerManager.instance.currentMixer == MixerManager.instance.allOn)
 			{
-				ReferenceMix.instance.RefMusicOn();
+				ReferenceMix.instance.Toggle.isOn = true;				
 			}	
 		}
 	}

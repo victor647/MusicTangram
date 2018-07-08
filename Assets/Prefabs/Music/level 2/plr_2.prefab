@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4626193209460564}
   - component: {fileID: 114537186613881222}
   m_Layer: 0
-  m_Name: pll_2_gr
+  m_Name: plr_2_gr
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -37,7 +37,7 @@ GameObject:
   - component: {fileID: 4518945403921496}
   - component: {fileID: 114743479402238742}
   m_Layer: 0
-  m_Name: pll_2_pl
+  m_Name: plr_2_pl
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -53,7 +53,7 @@ GameObject:
   - component: {fileID: 4621320550706488}
   - component: {fileID: 114125536394091400}
   m_Layer: 0
-  m_Name: pll_2_yl
+  m_Name: plr_2_yl
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -69,7 +69,7 @@ GameObject:
   - component: {fileID: 4229999932663428}
   - component: {fileID: 114232188845333052}
   m_Layer: 0
-  m_Name: pll_2_bl
+  m_Name: plr_2_bl
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -85,7 +85,7 @@ GameObject:
   - component: {fileID: 4299863446631372}
   - component: {fileID: 114045502232777866}
   m_Layer: 0
-  m_Name: pll_2
+  m_Name: plr_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -197,7 +197,7 @@ MonoBehaviour:
     Beat: 0
   _customPositions: []
   _overrideParentAudio: 1
-  _volume: 0.625
+  _volume: 0.707
   _pan: 0
   _lowPassFilterCutoff: 22000
   _highPassFilterCutoff: 10
@@ -208,13 +208,13 @@ MonoBehaviour:
   _debugLog: 0
   _switchToSamePosition: 1
   _switchList:
-  - SwitchName: pll_2_yl
+  - SwitchName: plr_2_yl
     Music: {fileID: 114125536394091400}
-  - SwitchName: pll_2_gr
+  - SwitchName: plr_2_gr
     Music: {fileID: 114537186613881222}
-  - SwitchName: pll_2_bl
+  - SwitchName: plr_2_bl
     Music: {fileID: 114232188845333052}
-  - SwitchName: pll_2_pl
+  - SwitchName: plr_2_pl
     Music: {fileID: 114743479402238742}
   _currentSwitch: 
 --- !u!114 &114125536394091400
@@ -254,7 +254,7 @@ MonoBehaviour:
     Beat: 0
   _customPositions: []
   _overrideParentAudio: 0
-  _volume: 0.625
+  _volume: 0.707
   _pan: 0
   _lowPassFilterCutoff: 22000
   _highPassFilterCutoff: 10
@@ -308,7 +308,7 @@ MonoBehaviour:
     Beat: 0
   _customPositions: []
   _overrideParentAudio: 0
-  _volume: 0.625
+  _volume: 0.707
   _pan: 0
   _lowPassFilterCutoff: 22000
   _highPassFilterCutoff: 10
@@ -362,7 +362,7 @@ MonoBehaviour:
     Beat: 0
   _customPositions: []
   _overrideParentAudio: 0
-  _volume: 0.625
+  _volume: 0.707
   _pan: 0
   _lowPassFilterCutoff: 22000
   _highPassFilterCutoff: 10
@@ -416,7 +416,7 @@ MonoBehaviour:
     Beat: 0
   _customPositions: []
   _overrideParentAudio: 0
-  _volume: 0.625
+  _volume: 0.707
   _pan: 0
   _lowPassFilterCutoff: 22000
   _highPassFilterCutoff: 10

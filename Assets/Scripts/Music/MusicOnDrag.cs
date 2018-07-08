@@ -31,11 +31,11 @@ public class MusicOnDrag : MonoBehaviour {
 		if (_shapeMusic.music.PlayingStatus != MusicComponent.PlayStatus.Idle)
 		{
 			MixerManager.instance.SetMixerSnapshot(MixerManager.instance.selfOnly, 1f);
-			_shapeMusic.music.ChangeOutputBus(MixerManager.instance.self);	
+			_shapeMusic.music.SetOutputBus(MixerManager.instance.self);	
 		}	
 	}
 
-	void OnMouseUp()
+	private void OnMouseUp()
 	{
 		_mesh.material = _originalMaterial;
 		_onDrag = false;
@@ -46,10 +46,10 @@ public class MusicOnDrag : MonoBehaviour {
 			Invoke("ResetMixer", 1f);
 		}		
 	}
-	
-	void ResetMixer()
+
+	private void ResetMixer()
 	{
 		if (!_onDrag)
-			_shapeMusic.music.ChangeOutputBus(MixerManager.instance.shape);   
+			_shapeMusic.music.SetOutputBus(MixerManager.instance.shape);   
 	}
 }

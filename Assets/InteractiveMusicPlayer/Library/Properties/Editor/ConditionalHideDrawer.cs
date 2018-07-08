@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEditor;
 
 [CustomPropertyDrawer(typeof(ConditionalHideAttribute))]
-class ConditionalHideDrawer : PropertyDrawer
+internal class ConditionalHideDrawer : PropertyDrawer
 {
 
     public override void OnGUI(Rect position, SerializedProperty property, GUIContent label)

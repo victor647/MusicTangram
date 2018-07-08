@@ -1,7 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using NUnit.Framework.Constraints;
-using UnityEngine;
+﻿using UnityEngine;
 
 [ExecuteInEditMode]
 [RequireComponent(typeof(ParticleSystem))]
@@ -22,15 +19,7 @@ public class ShapeFX : MonoBehaviour
 	private ParticleSystem _particleSystem;
 	private ParticleSystemRenderer _particleSystemRenderer;
 
-	// Use this for initialization
-	void Awake ()
-	{
-		
-		
-		
-	}
-
-	void Start()
+	private void Start()
 	{
 		SetMeshFromParent();
 		if (playOnStart)
@@ -39,7 +28,7 @@ public class ShapeFX : MonoBehaviour
 		}
 	}
 	// Update is called once per frame
-	void Update () {
+	private void Update () {
 		//SetMeshFromParent();
 	}
 

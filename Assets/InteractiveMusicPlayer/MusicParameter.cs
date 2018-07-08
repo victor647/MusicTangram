@@ -17,7 +17,7 @@ namespace InteractiveMusicPlayer
 		[Tooltip("If any parameter change would result in a gradual change in target")]
 		[SerializeField]
 		private bool _slew = false;
-		[ConditionalHide("slew", true)] [Tooltip("In parameter units per second")]
+		[ConditionalHide("_slew", true)] [Tooltip("In parameter units per second")]
 		[SerializeField]
 		private float _slewRate = 20f;
 		
@@ -26,11 +26,17 @@ namespace InteractiveMusicPlayer
 		
 		[HideInInspector] public List<ParameterMapping> LinkedMappings = new List<ParameterMapping>();
 
-		private void Awake()
+		private void OnEnable()
 		{
 			MusicManager.Instance.RegisterParameter(_parameterName, this);
 		}
 
+		private void OnDisable()
+		{
+			MusicManager.Instance.UnRegisterParameter(_parameterName);
+		}
+
+		//to add a mapping
 		public void RegisterMapping(ParameterMapping mapping)
 		{
 			LinkedMappings.Add(mapping);
@@ -48,6 +54,12 @@ namespace InteractiveMusicPlayer
 			}
 
 			mapping.ApplyParameterToMusic(_currentParameterValue);
+		}
+
+		//to remove a mapping
+		public void UnRegisterMapping(ParameterMapping mapping)
+		{
+			LinkedMappings.Remove(mapping);
 		}
 
 		public void ChangeTargetValue(float value, bool fromExternal)

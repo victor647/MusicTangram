@@ -8,6 +8,7 @@ TagManager:
   - Palette
   - FunctionBoard
   - Pool
+  - Answer
   layers:
   - Default
   - TransparentFX

@@ -34,12 +34,13 @@ namespace InteractiveMusicPlayer
         [Tooltip("Fade in/out time for volume events")]
         public float fadeTime;
         [Tooltip("If the event should be delayed to trigger")]
-        public float delayTime;           
+        public float delayTime;
+        public bool debugLog;
         
         //for the editor to manually trigger an event to test
         public void ManualTrigger()
         {
-            Invoke("CheckEventType", delayTime);
+            Invoke("Activate", delayTime);
         }
 
         //for the editor to automatically generate event name based on type and target
@@ -67,7 +68,7 @@ namespace InteractiveMusicPlayer
             {
                 if (delayTime < 1f) //music rhythm will mess up if triggered too early
                     delayTime = 1f;                
-                Invoke("CheckEventType", delayTime);
+                Invoke("Activate", delayTime);
             }                 
         }
 
@@ -77,11 +78,11 @@ namespace InteractiveMusicPlayer
             {
                 if (colliderTag != "")
                 {
-                    if (other.CompareTag(colliderTag)) Invoke("CheckEventType", delayTime);
+                    if (other.CompareTag(colliderTag)) Invoke("Activate", delayTime);
                 }
                 else
                 {
-                    Invoke("CheckEventType", delayTime);
+                    Invoke("Activate", delayTime);
                 }                
             }                 
         }
@@ -92,11 +93,11 @@ namespace InteractiveMusicPlayer
             {
                 if (colliderTag != "")
                 {
-                    if (other.CompareTag(colliderTag)) Invoke("CheckEventType", delayTime);
+                    if (other.CompareTag(colliderTag)) Invoke("Activate", delayTime);
                 }
                 else
                 {
-                    Invoke("CheckEventType", delayTime);
+                    Invoke("Activate", delayTime);
                 }                
             }  
         }
@@ -107,11 +108,11 @@ namespace InteractiveMusicPlayer
             {
                 if (colliderTag != "")
                 {
-                    if (other.CompareTag(colliderTag)) Invoke("CheckEventType", delayTime);
+                    if (other.CompareTag(colliderTag)) Invoke("Activate", delayTime);
                 }
                 else
                 {
-                    Invoke("CheckEventType", delayTime);
+                    Invoke("Activate", delayTime);
                 }                
             }  
         }
@@ -122,11 +123,11 @@ namespace InteractiveMusicPlayer
             {
                 if (colliderTag != "")
                 {
-                    if (other.CompareTag(colliderTag)) Invoke("CheckEventType", delayTime);
+                    if (other.CompareTag(colliderTag)) Invoke("Activate", delayTime);
                 }
                 else
                 {
-                    Invoke("CheckEventType", delayTime);
+                    Invoke("Activate", delayTime);
                 }                
             }  
         }
@@ -137,11 +138,11 @@ namespace InteractiveMusicPlayer
             {
                 if (colliderTag != "")
                 {
-                    if (other.collider.CompareTag(colliderTag)) Invoke("CheckEventType", delayTime);
+                    if (other.collider.CompareTag(colliderTag)) Invoke("Activate", delayTime);
                 }
                 else
                 {
-                    Invoke("CheckEventType", delayTime);
+                    Invoke("Activate", delayTime);
                 }                
             }  
         }
@@ -152,11 +153,11 @@ namespace InteractiveMusicPlayer
             {
                 if (colliderTag != "")
                 {
-                    if (other.collider.CompareTag(colliderTag)) Invoke("CheckEventType", delayTime);
+                    if (other.collider.CompareTag(colliderTag)) Invoke("Activate", delayTime);
                 }
                 else
                 {
-                    Invoke("CheckEventType", delayTime);
+                    Invoke("Activate", delayTime);
                 }                
             }
         }
@@ -167,11 +168,11 @@ namespace InteractiveMusicPlayer
             {
                 if (colliderTag != "")
                 {
-                    if (other.collider.CompareTag(colliderTag)) Invoke("CheckEventType", delayTime);
+                    if (other.collider.CompareTag(colliderTag)) Invoke("Activate", delayTime);
                 }
                 else
                 {
-                    Invoke("CheckEventType", delayTime);
+                    Invoke("Activate", delayTime);
                 }                
             }
         }
@@ -182,11 +183,11 @@ namespace InteractiveMusicPlayer
             {
                 if (colliderTag != "")
                 {
-                    if (other.collider.CompareTag(colliderTag)) Invoke("CheckEventType", delayTime);
+                    if (other.collider.CompareTag(colliderTag)) Invoke("Activate", delayTime);
                 }
                 else
                 {
-                    Invoke("CheckEventType", delayTime);
+                    Invoke("Activate", delayTime);
                 }                
             }
         }
@@ -194,32 +195,32 @@ namespace InteractiveMusicPlayer
         private void OnMouseDown()
         {
             if (triggerCondition == TriggerCondition.OnMouseDown) 
-                Invoke("CheckEventType", delayTime);
+                Invoke("Activate", delayTime);
         }
 
         private void OnMouseUp()
         {
             if (triggerCondition == TriggerCondition.OnMouseUp) 
-                Invoke("CheckEventType", delayTime);
+                Invoke("Activate", delayTime);
         }
         
         private void OnMouseEnter()
         {
             if (triggerCondition == TriggerCondition.OnMouseEnter) 
-                Invoke("CheckEventType", delayTime);
+                Invoke("Activate", delayTime);
         }
         
         private void OnMouseExit()
         {
             if (triggerCondition == TriggerCondition.OnMouseExit) 
-                Invoke("CheckEventType", delayTime);
+                Invoke("Activate", delayTime);
         }
 
         private void OnEnable()
         {
             MusicManager.Instance.AddEvent(this);
             if (triggerCondition == TriggerCondition.OnEnable) 
-                Invoke("CheckEventType", delayTime);
+                Invoke("Activate", delayTime);
         }
 
         private void OnDisable()
@@ -227,17 +228,17 @@ namespace InteractiveMusicPlayer
             if (MusicManager.Instance)
                 MusicManager.Instance.RemoveEvent(this);
             if (triggerCondition == TriggerCondition.OnDisable) 
-                CheckEventType();
+                Activate();
         }
         
         private void OnDestroy()
         {
             if (triggerCondition == TriggerCondition.OnDestroy) 
-                CheckEventType();
+                Activate();
         }
 
         //for external calls
-        public void CheckEventType()
+        public void Activate()
         {
             if (!eventTarget && eventType != EventType.ChangeParameterValue)
             {
@@ -289,7 +290,7 @@ namespace InteractiveMusicPlayer
                     stgr.TriggerStinger();                   
                     break;
             }
+            if (debugLog) Debug.Log("Music event " + eventName + " is activated!");   
         }
-
     }
 }

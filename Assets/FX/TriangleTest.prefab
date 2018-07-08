@@ -235,7 +235,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28d6cd9ed47fcc249b0eb72b52765ddc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playOnStart: 1
   meshType: 0
 --- !u!114 &114291810098729900
 MonoBehaviour:
@@ -312,7 +311,7 @@ ParticleSystem:
   stopAction: 0
   looping: 0
   prewarm: 0
-  playOnAwake: 0
+  playOnAwake: 1
   useUnscaledTime: 0
   autoRandomSeed: 1
   useRigidbodyForVelocity: 1

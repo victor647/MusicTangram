@@ -26,32 +26,32 @@ public class ShapeModifier : MonoBehaviour {
                 //shrink 3 times at most
                 if (shape.transform.localScale.x > 0.41f)
                 {
-                    info.sizeIndex--;
+                    info.SizeIndex--;
                     StartCoroutine(Size(-0.02f));
                 }							
                 break;			
             case ModifierType.IncreaseSize:
                 if (isChangingSize) return;
                 //expand 3 times at most
-                if (shape.transform.localScale.x < 1.59f)
+                if (shape.transform.localScale.x < 1.99f)
                 {
-                    info.sizeIndex++;
+                    info.SizeIndex++;
                     StartCoroutine(Size(0.02f));
                 }
 				
                 break;
             case ModifierType.RotateLeft:
-                info.ChangeRotation(-1);
+                info.RotationIndex--;
                 StartCoroutine(Rotation(5));
                 break;
             case ModifierType.RotateRight:
-                info.ChangeRotation(1);
+                info.RotationIndex++;
                 StartCoroutine(Rotation(-5));
                 break;
         }
     }
 
-    IEnumerator Size(float increment)
+    private IEnumerator Size(float increment)
     {
         isChangingSize = true;
         int progress = 0;
@@ -59,20 +59,20 @@ public class ShapeModifier : MonoBehaviour {
         {
             progress ++;
             shape.transform.localScale += new Vector3(increment, increment, 0f);
-            music.ChangeVolume(shape.transform.localScale.x / 1.6f);
+            music.SetVolume(Mathf.Sqrt(shape.transform.localScale.x) / 1.414f);
             yield return new WaitForFixedUpdate();
         }
         isChangingSize = false;
     }
-	
-    IEnumerator Rotation(int increment)
+
+    private IEnumerator Rotation(int increment)
     {        
         int progress = 0;
         while (progress < 9)
         {
             progress ++;
             shape.transform.Rotate(0, 0, increment);
-            music.ChangePan(Mathf.Sin(shape.transform.eulerAngles.z * Mathf.Deg2Rad) * -0.6f);
+            music.SetPan(Mathf.Sin(shape.transform.eulerAngles.z * Mathf.Deg2Rad) * -0.6f);
             yield return new WaitForFixedUpdate();
         }			
     }

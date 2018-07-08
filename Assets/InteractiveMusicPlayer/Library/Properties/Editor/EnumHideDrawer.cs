@@ -6,7 +6,7 @@ using System;
 using UnityEngine.Serialization;
 
 [CustomPropertyDrawer(typeof(EnumHideAttribute))]
-class EnumHideDrawer : PropertyDrawer
+internal class EnumHideDrawer : PropertyDrawer
 {
 
     public override void OnGUI(Rect position, SerializedProperty property, GUIContent label)

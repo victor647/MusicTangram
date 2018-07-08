@@ -7,8 +7,8 @@ public class MixerManager : MonoBehaviour {
 	
 	public static MixerManager instance;
 	
-	[HideInInspector] public AudioMixerSnapshot lastMixer;
-	[HideInInspector] public AudioMixerSnapshot currentMixer;
+	[ReadOnly] public AudioMixerSnapshot lastMixer;
+	[ReadOnly] public AudioMixerSnapshot currentMixer;
 	
 	public AudioMixerSnapshot refOnly;
 	public AudioMixerSnapshot sampleOnly;
@@ -17,8 +17,8 @@ public class MixerManager : MonoBehaviour {
 	public AudioMixerGroup shape;
 	public AudioMixerGroup self;
 	public MusicSwitch sampleTrack;
-	
-	void Awake ()
+
+	private void Awake ()
 	{
 		if (!instance)
 			instance = this;
@@ -27,7 +27,7 @@ public class MixerManager : MonoBehaviour {
 	}
 	
 	public void SetMixerSnapshot(AudioMixerSnapshot snapshot, float time)
-	{
+	{		
 		snapshot.TransitionTo(time);
 		lastMixer = currentMixer == sampleOnly || currentMixer == selfOnly? allOn : currentMixer;
 		currentMixer = snapshot;

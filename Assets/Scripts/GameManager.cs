@@ -7,15 +7,20 @@ using InteractiveMusicPlayer;
 public class GameManager : MonoBehaviour
 {
 	public static GameManager instance;
-	[ReadOnly] public int totalShapesInGame;	
-
+	[ReadOnly] public int totalShapesInGame;
+	public int levelIndex;
+	
 	public delegate void Callback();
 
 	public Callback FirstShapeAdded;
 	public Callback LastShapeRemoved;
 	private List<ShapeInfo> _shapes = new List<ShapeInfo>();
-	
-	void Awake ()
+	public GameObject panel;
+	public List<ShapeInfo.ShapeInformation> correctShapes = new List<ShapeInfo.ShapeInformation>();
+	public MusicTrack flute;
+
+
+	private void Awake ()
 	{
 		if (!instance)
 			instance = this;
@@ -27,7 +32,7 @@ public class GameManager : MonoBehaviour
 
 	private void Start()
 	{
-		MusicManager.Instance.PostEvent("Stop_main_menu");
+		MusicManager.PostEvent("Stop_main_menu");
 	}
 
 	public void AddShape(ShapeInfo shape)
@@ -47,6 +52,48 @@ public class GameManager : MonoBehaviour
 		if (totalShapesInGame == 0)
 		{
 			if (LastShapeRemoved != null) LastShapeRemoved();
+		}
+		CheckAnswer();
+	}
+
+	public void CheckAnswer()
+	{
+		int correctShapesNumber = 0;
+		foreach (var shape in _shapes)
+		{
+			foreach (var correctShape in correctShapes)
+			{
+				if (shape.Info == correctShape)
+				{
+					//Debug.Log(shape.Info.Type);
+					correctShapesNumber++;
+				}					
+			}
+		}
+		WinProgress.UpdateProgress(correctShapesNumber);		
+		if (correctShapesNumber == correctShapes.Count && correctShapesNumber == totalShapesInGame)		
+			LevelComplete();			
+		else		
+			MusicManager.SetParameterValue("WinProgress", correctShapesNumber);		
+	}
+
+	private void LevelComplete()
+	{				
+		StartCoroutine(PanelFadeIn());
+	}
+
+	private IEnumerator PanelFadeIn()
+	{
+		panel.transform.localScale = Vector3.zero;
+		panel.SetActive(true);
+		float scale = 0f;
+		while (scale < 1f)
+		{
+			scale += 0.05f;			
+			panel.transform.localScale = new Vector3(scale, scale, 0f);
+			flute.SetVolume(0.6f + scale / 2f);
+			flute.SetLPFCutoff(4000f + scale * 18000f);
+			yield return new WaitForFixedUpdate();							
 		}
 	}
 }

@@ -6,6 +6,9 @@
       <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
+        <e p="FX" t="Include">
+          <e p="ShapeFX.cs" t="Include" />
+        </e>
         <e p="InteractiveMusicPlayer" t="Include">
           <e p="Editor" t="Include">
             <e p="MusicEventEditor.cs" t="Include" />
@@ -89,6 +92,7 @@
             <e p="SampleMusic.cs" t="Include" />
             <e p="ScreenPosition.cs" t="Include" />
             <e p="ShapeModifier.cs" t="Include" />
+            <e p="WinProgress.cs" t="Include" />
           </e>
         </e>
       </e>

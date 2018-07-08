@@ -17,14 +17,14 @@ public class Paintable : MonoBehaviour
 			_mesh.material = col.GetComponent<MeshRenderer>().material;
 			string colorName = _mesh.material.name.Substring(0, 2);
 			if (colorName != "wt")
-				GetComponent<ShapeMusic>().music.SetSwitch(_musicName + "_" + colorName);			
+				GetComponent<ShapeMusic>().music.SetSwitch(_musicName + "_" + colorName, 1f);			
 			col.tag = "Untagged";
-			_shapeInfo.color = colorName;
+			_shapeInfo.Color = colorName;
 		}
 	}
 	
 	// Update is called once per frame
-	void Start ()
+	private void Start ()
 	{
 		_mesh = GetComponent<MeshRenderer>();
 		_shapeMusic = GetComponent<ShapeMusic>();

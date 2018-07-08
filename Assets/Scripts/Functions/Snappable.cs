@@ -11,19 +11,28 @@ public class Snappable : MonoBehaviour {
     {
         polygonCollider = GetComponent<PolygonCollider2D>();        
     }
-	
-    void OnMouseDown()
+
+    private void OnMouseDown()
     {        
         //prevents snapping raycast to collide with itself
-        gameObject.layer = LayerMask.NameToLayer("Ignore Raycast");
+        //gameObject.layer = LayerMask.NameToLayer("Ignore Raycast");
     }
 
     private void OnMouseUp()
     {
-        SnapToEdge();
+        //SnapToEdge();
+        SnapToPosition();
     }
-    
-	void SnapToEdge()
+
+    private void SnapToPosition()
+    {
+        float modifier = 10f;//2f / transform.localScale.x;
+        float x = Mathf.RoundToInt(transform.position.x * modifier) / modifier;
+        float y = Mathf.RoundToInt(transform.position.y * modifier) / modifier;
+        transform.position = new Vector3(x, y, 0);
+    }
+
+    private void SnapToEdge()
     {
         //gets the rotation of shape in radian
         float rotationAngle = transform.eulerAngles.z * Mathf.Deg2Rad;

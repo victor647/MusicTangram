@@ -11,7 +11,11 @@ namespace InteractiveMusicPlayer
             get
             {
                 if (!_instance)
-                    _instance = (MusicManager) FindObjectOfType(typeof(MusicManager));                
+                {
+                    _instance = (MusicManager) FindObjectOfType(typeof(MusicManager));
+                    if (!_instance)
+                        Debug.LogError("Can't find music manager in scene!");                    
+                }                                       
                 return _instance;
             }            
         }
@@ -29,7 +33,7 @@ namespace InteractiveMusicPlayer
         
         [HideInInspector] public List<MusicEvent> musicEvents;
         [HideInInspector] public List<MusicTransitionSegment> transitionSegments;
-        Dictionary<string, MusicParameter> parameters = new Dictionary<string, MusicParameter>();
+        private Dictionary<string, MusicParameter> parameters = new Dictionary<string, MusicParameter>();
 
         private void OnValidate()
         {
@@ -84,21 +88,16 @@ namespace InteractiveMusicPlayer
         }
 
         //for external calls by string
-        public void PostEvent(string eventName)
-        {
-            foreach (var e in musicEvents)
+        public static void PostEvent(string eventName)
+        {            
+            foreach (var e in Instance.musicEvents)
             {
                 if (e.eventName == eventName)
                 {
-                    e.CheckEventType();
+                    e.Activate();
                     return;
                 }
             }
-        }
-        //overload for direct call
-        public void PostEvent(MusicEvent e)
-        {
-           e.CheckEventType();
         }
 
         //register the parameters to a list
@@ -110,6 +109,13 @@ namespace InteractiveMusicPlayer
                 Debug.LogError("Music Manager: An existing music parameter with same name of " + parameterName + " is found!");
         }
 
+        //unregister the parameters to a list
+        public void UnRegisterParameter(string parameterName)
+        {
+            if (parameters.ContainsKey(parameterName))            
+                parameters.Remove(parameterName);
+        }
+        
         //find the parameter component by name
         public MusicParameter FindParameter(string parameterName)
         {
@@ -121,14 +127,14 @@ namespace InteractiveMusicPlayer
         }
         
         //directly set switch from script
-        public void SetSwitch(string eventName, string switchName)
+        public static void SetSwitch(string eventName, string switchName)
         {
-            foreach (var e in musicEvents)
+            foreach (var e in Instance.musicEvents)
             {
                 if (e.eventName == eventName && e.eventType == MusicEvent.EventType.SetSwitch)
                 {
                     e.switchName = switchName;
-                    e.CheckEventType();
+                    e.Activate();
                     return;
                 }
             }
@@ -136,10 +142,10 @@ namespace InteractiveMusicPlayer
         }
 
         //directly set parameter value from script
-        public void SetParameterValue(string parameterName, float value)
+        public static void SetParameterValue(string parameterName, float value)
         {
-            if (parameters.ContainsKey(parameterName))
-                parameters[parameterName].ChangeTargetValue(value, true);
+            if (Instance.parameters.ContainsKey(parameterName))
+                Instance.parameters[parameterName].ChangeTargetValue(value, true);
             else
                 Debug.LogError("Music Manager: can't find parameter with name of " + parameterName);
         }

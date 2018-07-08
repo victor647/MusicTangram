@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class PaletteColor : MonoBehaviour
 {
-	private GameObject cursorColor;	
-	
-	void OnMouseDrag()
+	private GameObject cursorColor;
+
+	private void OnMouseDrag()
 	{
 		Vector3 position = Camera.main.ScreenToWorldPoint(Input.mousePosition) + Vector3.forward;
 		cursorColor.transform.position = position;		
 	}
 
-	void OnMouseDown()
+	private void OnMouseDown()
 	{
 		cursorColor = Instantiate(gameObject, transform.position, Quaternion.identity);
 		cursorColor.transform.localScale *= 0.2f;
@@ -23,7 +23,7 @@ public class PaletteColor : MonoBehaviour
 		StartCoroutine(Shrink());	
 	}
 
-	IEnumerator Shrink()
+	private IEnumerator Shrink()
 	{		
 		while (cursorColor.transform.localScale.x > 0.01f)
 		{

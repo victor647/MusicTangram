@@ -1,24 +1,21 @@
 ﻿using System.Collections;
-using System.Threading;
 using InteractiveMusicPlayer;
-using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class LoadLevel : MonoBehaviour {
-
-    Slider _slider;
+	private Slider _slider;
 
 	public string levelName;
 	// Use this for initialization
-	void Start ()
+	private void Start ()
 	{
 		_slider = GetComponent<Slider>();
 		StartCoroutine(Loading());
 	}
 
-	IEnumerator Loading()
+	private IEnumerator Loading()
 	{		
 		AsyncOperation operation = SceneManager.LoadSceneAsync(levelName);
 		operation.allowSceneActivation = false;		
@@ -33,6 +30,6 @@ public class LoadLevel : MonoBehaviour {
 		_slider.value = 1f;
 		yield return new WaitForSecondsRealtime(0.2f);
 		operation.allowSceneActivation = true;
-		MusicManager.Instance.PostEvent("Play_main_menu");
+		MusicManager.PostEvent("Play_main_menu");
 	}
 }

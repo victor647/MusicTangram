@@ -197,7 +197,7 @@ MonoBehaviour:
     Beat: 0
   _customPositions: []
   _overrideParentAudio: 0
-  _volume: 0.625
+  _volume: 0.707
   _pan: 0
   _lowPassFilterCutoff: 22000
   _highPassFilterCutoff: 10
@@ -251,7 +251,7 @@ MonoBehaviour:
     Beat: 0
   _customPositions: []
   _overrideParentAudio: 0
-  _volume: 0.625
+  _volume: 0.707
   _pan: 0
   _lowPassFilterCutoff: 22000
   _highPassFilterCutoff: 10
@@ -305,7 +305,7 @@ MonoBehaviour:
     Beat: 0
   _customPositions: []
   _overrideParentAudio: 1
-  _volume: 0.625
+  _volume: 0.707
   _pan: 0
   _lowPassFilterCutoff: 22000
   _highPassFilterCutoff: 10
@@ -362,7 +362,7 @@ MonoBehaviour:
     Beat: 0
   _customPositions: []
   _overrideParentAudio: 0
-  _volume: 0.625
+  _volume: 0.707
   _pan: 0
   _lowPassFilterCutoff: 22000
   _highPassFilterCutoff: 10
@@ -416,7 +416,7 @@ MonoBehaviour:
     Beat: 0
   _customPositions: []
   _overrideParentAudio: 0
-  _volume: 0.625
+  _volume: 0.707
   _pan: 0
   _lowPassFilterCutoff: 22000
   _highPassFilterCutoff: 10

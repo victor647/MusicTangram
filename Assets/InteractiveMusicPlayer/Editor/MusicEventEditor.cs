@@ -15,7 +15,7 @@ namespace InteractiveMusicPlayer.Editor
 			{									
 				evt.GenerateEventName();
 			}
-			if (GUILayout.Button("Click to Manually Trigger"))
+			if (GUILayout.Button("Click to Manually Activate"))
 			{									
 				evt.ManualTrigger();
 			}

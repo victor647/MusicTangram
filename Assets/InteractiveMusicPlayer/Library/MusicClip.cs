@@ -73,15 +73,15 @@ namespace InteractiveMusicPlayer
 		}
         
 		//if the output mixing bus needs to be changed
-		public override void ChangeOutputBus(AudioMixerGroup bus)
+		public override void SetOutputBus(AudioMixerGroup bus)
 		{
 			if (_source) _source.outputAudioMixerGroup = _mixerBus = bus;
 		}
 		
 		//changing volume from external calls
-		public override void ChangeVolume(float v)
+		public override void SetVolume(float v)
 		{                        
-			base.ChangeVolume(v);
+			base.SetVolume(v);
 			if (!_isFadingIn && !_isFadingOut && _source)
 			{
 				_volume = v;
@@ -91,9 +91,9 @@ namespace InteractiveMusicPlayer
 		}
         
 		//changing pan from external calls
-		public override void ChangePan(float p)
+		public override void SetPan(float p)
 		{                        
-			base.ChangePan(p);            
+			base.SetPan(p);            
 			if (_source) _source.panStereo = _pan = p;
 		}
 

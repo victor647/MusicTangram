@@ -14,14 +14,14 @@ public class ShapePool : MonoBehaviour
 	private Vector2 initialPosition;
 	private Vector2 mousePosition;
 	private bool tempInstantiated;
-    	
-	void OnMouseDown()
+
+	private void OnMouseDown()
 	{
 		initialPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 		offset = (Vector2)transform.position - initialPosition;				
 	}
-	
-	void OnMouseDrag()
+
+	private void OnMouseDrag()
 	{
 		mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 		//checks if the player drags for a threshold distance
@@ -41,19 +41,24 @@ public class ShapePool : MonoBehaviour
 	private void OnMouseUp()
 	{
 		//instantiate the actual shape from prefab
-		if ((mousePosition - initialPosition).magnitude > 3f && tempInstantiated)
+		if ((mousePosition - initialPosition).magnitude > 2f && tempInstantiated)
 		{
-			generatedShape = Instantiate(shapePrefab, tempShape.transform.position, Quaternion.identity);
+			generatedShape = Instantiate(shapePrefab, tempShape.transform.position + Vector3.forward, Quaternion.identity);
 			generatedShape.GetComponent<ShapeMusic>().musicPrefab = musicPrefab;
 			generatedShape.transform.localScale *= 0.5f;
 			StartCoroutine(Expand());
 			tempInstantiated = false;						
 			GetComponent<SampleMusic>().Reset();
 		}
+		else
+		{
+			Destroy(tempShape);
+			tempInstantiated = false;
+		}
 	}
 
 	//animation for expanding the shape
-	IEnumerator Expand()
+	private IEnumerator Expand()
 	{
 		Removable rmv = generatedShape.GetComponent<Removable>();
 		while (generatedShape.transform.localScale.x < 1f)
@@ -62,7 +67,6 @@ public class ShapePool : MonoBehaviour
 			generatedShape.transform.localScale += new Vector3(0.1f, 0.1f, 0f);
 			yield return new WaitForFixedUpdate();							
 		}
-		
-		Destroy(tempShape);
+		Destroy(tempShape);		
 	}
 }

@@ -33,7 +33,7 @@ public class SampleMusic : MonoBehaviour
         }		
     }
 
-    void Focus()
+    private void Focus()
     {
         MixerManager.instance.SetMixerSnapshot(MixerManager.instance.sampleOnly, 1f);
         toggleOn = true;        
@@ -42,7 +42,7 @@ public class SampleMusic : MonoBehaviour
         tempColor.a = 255;
         tempMaterial.color = tempColor;
         mesh.material = tempMaterial;
-        MixerManager.instance.sampleTrack.SetSwitch(gameObject.name);        
+        MixerManager.instance.sampleTrack.SetSwitch(gameObject.name, 0.5f);        
     }
 
     public void Reset()
@@ -51,7 +51,7 @@ public class SampleMusic : MonoBehaviour
             MixerManager.instance.SetMixerSnapshot(MixerManager.instance.allOn, 1f);
         toggleOn = false;
         mesh.material = originalMaterial;          
-        MixerManager.instance.sampleTrack.SetSwitch("");	   
+        MixerManager.instance.sampleTrack.SetSwitch("", 0.5f);	   
     }        
     
     private void Update()

@@ -363,7 +363,7 @@ namespace InteractiveMusicPlayer
         protected void ConvertDurationsFromBeatToTime()
         {                        		
             _trackDurationRealTime = BarAndBeatToRealTime(_trackDuration);
-        
+         
             //configure post-exit and pre-entry settings
             if (_postExit)
             {
@@ -781,31 +781,31 @@ namespace InteractiveMusicPlayer
         }
         
         //change output mixer bus
-        public virtual void ChangeOutputBus(AudioMixerGroup bus)
+        public virtual void SetOutputBus(AudioMixerGroup bus)
         {
             foreach (var clip in _childClips)
             {
-                clip.ChangeOutputBus(bus);
+                clip.SetOutputBus(bus);
             }
         }
         
         //change volume along with all of its children
-        public virtual void ChangeVolume(float v)
+        public virtual void SetVolume(float v)
         {            
             _volume = v;
             foreach (var child in _childComponents)
             {
-                child.ChangeVolume(v);
+                child.SetVolume(v);
             }
         }
         
         //change pan along with all of its children
-        public virtual void ChangePan(float p)
+        public virtual void SetPan(float p)
         {            
             _pan = p;
             foreach (var child in _childComponents)
             {
-                child.ChangePan(p);
+                child.SetPan(p);
             }
         }
         
