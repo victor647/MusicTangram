@@ -207,9 +207,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 1
-  rotationIndex: 0
-  sizeIndex: 0
-  color: 
 --- !u!114 &114226369391409224
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -235,6 +232,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28d6cd9ed47fcc249b0eb72b52765ddc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playOnStart: 0
   meshType: 0
 --- !u!114 &114291810098729900
 MonoBehaviour:

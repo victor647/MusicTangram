@@ -3,9 +3,22 @@
   <component name="ContentModelStore">
     <e p="C:\Users\intel\.Rider2018.1\system\resharper-host\local\Transient\ReSharperHost\v12\SolutionCaches\_MusicTangram.-26129323.00" t="ExcludeRecursive" />
     <e p="C:\Xylt\UnityProjects\MusicTangram" t="IncludeRecursive">
-      <e p="Assembly-CSharp-Editor-firstpass.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
+      <e p="Assets\Easy Outline" t="Include">
+        <e p="Behaviours" t="Include">
+          <e p="OutlineSystem.cs" t="Include" />
+        </e>
+        <e p="Demo Scene" t="Include">
+          <e p="Behaviours" t="Include">
+            <e p="DemoBehaviour.cs" t="Include" />
+          </e>
+        </e>
+        <e p="Shaders" t="Include">
+          <e p="MobileBlur.shader" t="Include" />
+          <e p="ScreenSpaceOutlineShader.shader" t="Include" />
+        </e>
+      </e>
       <e p="Assets\FX" t="Include">
         <e p="ShapeFX.cs" t="Include" />
       </e>
@@ -50,13 +63,6 @@
         <e p="MusicTrack.cs" t="Include" />
         <e p="MusicTransitionSegment.cs" t="Include" />
         <e p="ParameterMapping.cs" t="Include" />
-      </e>
-      <e p="Assets\Plugins" t="Include">
-        <e p="Editor" t="Include">
-          <e p="JetBrains" t="Include">
-            <e p="Unity3DRider.cs" t="Include" />
-          </e>
-        </e>
       </e>
       <e p="Assets\Scripts" t="Include">
         <e p="Editor" t="Include">
