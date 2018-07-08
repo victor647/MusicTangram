@@ -1,114 +1,105 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="$PROJECT_DIR$" t="IncludeRecursive">
-      <e p="Assembly-CSharp-Editor-firstpass.csproj" t="IncludeRecursive" />
+    <e p="C:\Users\intel\.Rider2018.1\system\resharper-host\local\Transient\ReSharperHost\v12\SolutionCaches\_MusicTangram.-26129323.00" t="ExcludeRecursive" />
+    <e p="C:\Xylt\UnityProjects\MusicTangram" t="IncludeRecursive">
       <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
-      <e p="Assets" t="Include">
-        <e p="Easy Outline" t="Include">
+      <e p="Assets\Easy Outline" t="Include">
+        <e p="Behaviours" t="Include">
+          <e p="OutlineSystem.cs" t="Include" />
+        </e>
+        <e p="Demo Scene" t="Include">
           <e p="Behaviours" t="Include">
-            <e p="OutlineSystem.cs" t="Include" />
+            <e p="DemoBehaviour.cs" t="Include" />
           </e>
-          <e p="Demo Scene" t="Include">
-            <e p="Behaviours" t="Include">
-              <e p="DemoBehaviour.cs" t="Include" />
+        </e>
+        <e p="Shaders" t="Include">
+          <e p="MobileBlur.shader" t="Include" />
+          <e p="ScreenSpaceOutlineShader.shader" t="Include" />
+        </e>
+      </e>
+      <e p="Assets\FX" t="Include">
+        <e p="ShapeFX.cs" t="Include" />
+      </e>
+      <e p="Assets\InteractiveMusicPlayer" t="Include">
+        <e p="Editor" t="Include">
+          <e p="MusicEventEditor.cs" t="Include" />
+          <e p="MusicLayersEditor.cs" t="Include" />
+          <e p="MusicRandomEditor.cs" t="Include" />
+          <e p="MusicSequenceEditor.cs" t="Include" />
+          <e p="MusicStingerEditor.cs" t="Include" />
+          <e p="MusicSwitchEditor.cs" t="Include" />
+          <e p="MusicTrackEditor.cs" t="Include" />
+          <e p="MusicTransitionSegmentEditor.cs" t="Include" />
+        </e>
+        <e p="Library" t="Include">
+          <e p="BarAndBeat.cs" t="Include" />
+          <e p="MusicClip.cs" t="Include" />
+          <e p="MusicComponent.cs" t="Include" />
+          <e p="Properties" t="Include">
+            <e p="ConditionalHideAttribute.cs" t="Include" />
+            <e p="Editor" t="Include">
+              <e p="ConditionalHideDrawer.cs" t="Include" />
+              <e p="EnumHideDrawer.cs" t="Include" />
+              <e p="ReadOnlyDrawer.cs" t="Include" />
             </e>
-          </e>
-          <e p="Shaders" t="Include">
-            <e p="MobileBlur.shader" t="Include" />
-            <e p="ScreenSpaceOutlineShader.shader" t="Include" />
+            <e p="EnumHideAttribute.cs" t="Include" />
+            <e p="ReadOnlyAttribute.cs" t="Include" />
           </e>
         </e>
-        <e p="FX" t="Include">
-          <e p="ShapeFX.cs" t="Include" />
+        <e p="Metronome" t="Include">
+          <e p="Metronome.cs" t="Include" />
         </e>
-        <e p="InteractiveMusicPlayer" t="Include">
-          <e p="Editor" t="Include">
-            <e p="MusicEventEditor.cs" t="Include" />
-            <e p="MusicLayersEditor.cs" t="Include" />
-            <e p="MusicRandomEditor.cs" t="Include" />
-            <e p="MusicSequenceEditor.cs" t="Include" />
-            <e p="MusicStingerEditor.cs" t="Include" />
-            <e p="MusicSwitchEditor.cs" t="Include" />
-            <e p="MusicTrackEditor.cs" t="Include" />
-            <e p="MusicTransitionSegmentEditor.cs" t="Include" />
-          </e>
-          <e p="Library" t="Include">
-            <e p="BarAndBeat.cs" t="Include" />
-            <e p="MusicClip.cs" t="Include" />
-            <e p="MusicComponent.cs" t="Include" />
-            <e p="Properties" t="Include">
-              <e p="ConditionalHideAttribute.cs" t="Include" />
-              <e p="Editor" t="Include">
-                <e p="ConditionalHideDrawer.cs" t="Include" />
-                <e p="EnumHideDrawer.cs" t="Include" />
-                <e p="ReadOnlyDrawer.cs" t="Include" />
-              </e>
-              <e p="EnumHideAttribute.cs" t="Include" />
-              <e p="ReadOnlyAttribute.cs" t="Include" />
-            </e>
-          </e>
-          <e p="Metronome" t="Include">
-            <e p="Metronome.cs" t="Include" />
-          </e>
-          <e p="MusicEvent.cs" t="Include" />
-          <e p="MusicLayers.cs" t="Include" />
-          <e p="MusicManager.cs" t="Include" />
-          <e p="MusicParameter.cs" t="Include" />
-          <e p="MusicRandom.cs" t="Include" />
-          <e p="MusicSequence.cs" t="Include" />
-          <e p="MusicSilence.cs" t="Include" />
-          <e p="MusicStinger.cs" t="Include" />
-          <e p="MusicSwitch.cs" t="Include" />
-          <e p="MusicTrack.cs" t="Include" />
-          <e p="MusicTransitionSegment.cs" t="Include" />
-          <e p="ParameterMapping.cs" t="Include" />
+        <e p="MusicEvent.cs" t="Include" />
+        <e p="MusicLayers.cs" t="Include" />
+        <e p="MusicManager.cs" t="Include" />
+        <e p="MusicParameter.cs" t="Include" />
+        <e p="MusicRandom.cs" t="Include" />
+        <e p="MusicSequence.cs" t="Include" />
+        <e p="MusicSilence.cs" t="Include" />
+        <e p="MusicStinger.cs" t="Include" />
+        <e p="MusicSwitch.cs" t="Include" />
+        <e p="MusicTrack.cs" t="Include" />
+        <e p="MusicTransitionSegment.cs" t="Include" />
+        <e p="ParameterMapping.cs" t="Include" />
+      </e>
+      <e p="Assets\Scripts" t="Include">
+        <e p="Editor" t="Include">
+          <e p="MakeShapeEditor.cs" t="Include" />
+          <e p="ScreenPositionEditor.cs" t="Include" />
         </e>
-        <e p="Plugins" t="Include">
-          <e p="Editor" t="Include">
-            <e p="JetBrains" t="Include">
-              <e p="Unity3DRider.cs" t="Include" />
-            </e>
-          </e>
+        <e p="Functions" t="Include">
+          <e p="Draggable.cs" t="Include" />
+          <e p="MakeShape.cs" t="Include" />
+          <e p="Paintable.cs" t="Include" />
+          <e p="PaletteColor.cs" t="Include" />
+          <e p="Removable.cs" t="Include" />
+          <e p="ShapeInfo.cs" t="Include" />
+          <e p="ShapePool.cs" t="Include" />
+          <e p="Snappable.cs" t="Include" />
         </e>
-        <e p="Scripts" t="Include">
-          <e p="Editor" t="Include">
-            <e p="MakeShapeEditor.cs" t="Include" />
-            <e p="ScreenPositionEditor.cs" t="Include" />
-          </e>
-          <e p="Functions" t="Include">
-            <e p="Draggable.cs" t="Include" />
-            <e p="MakeShape.cs" t="Include" />
-            <e p="Paintable.cs" t="Include" />
-            <e p="PaletteColor.cs" t="Include" />
-            <e p="Removable.cs" t="Include" />
-            <e p="ShapeInfo.cs" t="Include" />
-            <e p="ShapePool.cs" t="Include" />
-            <e p="Snappable.cs" t="Include" />
-          </e>
-          <e p="Library" t="Include">
-            <e p="Triangulator.cs" t="Include" />
-          </e>
-          <e p="Macro" t="Include">
-            <e p="GameManager.cs" t="Include" />
-            <e p="LoadLevel.cs" t="Include" />
-            <e p="Scenes.cs" t="Include" />
-          </e>
-          <e p="Music" t="Include">
-            <e p="MixerManager.cs" t="Include" />
-            <e p="musicOnDrag.cs" t="Include" />
-            <e p="MusicTransport.cs" t="Include" />
-            <e p="ReferenceMix.cs" t="Include" />
-            <e p="ShapeMusic.cs" t="Include" />
-          </e>
-          <e p="UI" t="Include">
-            <e p="ControlPanel.cs" t="Include" />
-            <e p="SampleMusic.cs" t="Include" />
-            <e p="ScreenPosition.cs" t="Include" />
-            <e p="ShapeModifier.cs" t="Include" />
-            <e p="WinProgress.cs" t="Include" />
-          </e>
+        <e p="Library" t="Include">
+          <e p="Triangulator.cs" t="Include" />
+        </e>
+        <e p="Macro" t="Include">
+          <e p="GameManager.cs" t="Include" />
+          <e p="LoadLevel.cs" t="Include" />
+          <e p="Scenes.cs" t="Include" />
+        </e>
+        <e p="Music" t="Include">
+          <e p="MixerManager.cs" t="Include" />
+          <e p="musicOnDrag.cs" t="Include" />
+          <e p="MusicTransport.cs" t="Include" />
+          <e p="ReferenceMix.cs" t="Include" />
+          <e p="ShapeMusic.cs" t="Include" />
+        </e>
+        <e p="UI" t="Include">
+          <e p="ControlPanel.cs" t="Include" />
+          <e p="SampleMusic.cs" t="Include" />
+          <e p="ScreenPosition.cs" t="Include" />
+          <e p="ShapeModifier.cs" t="Include" />
+          <e p="WinProgress.cs" t="Include" />
         </e>
       </e>
       <e p="Library" t="ExcludeRecursive" />
@@ -119,6 +110,5 @@
         <e p="bin" t="ExcludeRecursive" />
       </e>
     </e>
-    <e p="$USER_HOME$/Library/Caches/Rider2017.3/resharper-host/local/Transient/ReSharperHost/v11/SolutionCaches/_MusicTangram.-1661893970.00" t="ExcludeRecursive" />
   </component>
 </project>

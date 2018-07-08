@@ -1,7 +1,17 @@
-﻿using UnityEngine;
+﻿#define RENDER_BEFORE_UI
+
+using UnityEngine;
+
+
+
+
+
 
 public class OutlineSystem : MonoBehaviour
 {
+    
+
+    
     [Header("Outline Settings")]
     [Tooltip("Should the outline be solid or fade out")]
     public bool solidOutline = false;
@@ -42,12 +52,17 @@ public class OutlineSystem : MonoBehaviour
     private RenderTexture renTexDownsample;
     private RenderTexture renTexBlur;
     private RenderTexture renTexOut;
+#if RENDER_BEFORE_UI
+    private RenderTexture renTexUI;
+#endif
     
     public Material blurMaterial;
     public Material outlineMaterial;
 
     //Used to check if the screen size has been changed
     private Vector2 prevSize;
+
+    
 
     void Awake()
     {
@@ -69,6 +84,10 @@ public class OutlineSystem : MonoBehaviour
         renTexRecolor = new RenderTexture(x, y, 1);
         renTexOut = new RenderTexture(x, y, 1);
         renTexBlur = new RenderTexture(x, y, 1);
+#if RENDER_BEFORE_UI
+        renTexUI = new RenderTexture(x, y ,1);
+#endif
+        
     }
 
     public Vector2 ScreenDimension()
@@ -78,12 +97,15 @@ public class OutlineSystem : MonoBehaviour
         return size;
     }
 
+    
     void RunCalcs()
     {
 
         outlineMaterial.SetColor("_OutlineCol", outlineColor);
         outlineMaterial.SetFloat("_GradientStrengthModifier", outlineStrength);
 
+        
+        
         RenderTexture prevRenTex = mainCamera.targetTexture;
         int prevCullGroup = mainCamera.cullingMask;
         CameraClearFlags prevClearFlags = mainCamera.clearFlags;
@@ -95,6 +117,16 @@ public class OutlineSystem : MonoBehaviour
         mainCamera.backgroundColor = new Color(1f, 0f, 1f, 1f);
         
         mainCamera.Render();
+        
+        // Render UI
+#if RENDER_BEFORE_UI
+        mainCamera.cullingMask = LayerMask.GetMask("UI");
+        mainCamera.targetTexture = renTexUI;
+        mainCamera.backgroundColor = new Color(1f, 1f, 1f, 0f);
+        mainCamera.Render();        
+#endif
+        
+        // Render UI Ends
 
         mainCamera.backgroundColor = prevColor;
         mainCamera.clearFlags = prevClearFlags;
@@ -123,6 +155,7 @@ public class OutlineSystem : MonoBehaviour
 
     void LateUpdate()
     {
+        
         Vector2 currentSize = new Vector2(Screen.width, Screen.height);
         if (prevSize != currentSize)
         {
@@ -130,13 +163,27 @@ public class OutlineSystem : MonoBehaviour
         }
         prevSize = currentSize;
         RunCalcs();
+        
     }
-
+    
+   
     void OnGUI()
     {
+        
         GL.PushMatrix();
         GL.LoadPixelMatrix(0, Screen.width, Screen.height, 0);
         Graphics.DrawTexture(new Rect(0, 0, Screen.width, Screen.height), renTexOut);
         GL.PopMatrix();
+        
+#if RENDER_BEFORE_UI
+        GL.PushMatrix();
+        GL.LoadPixelMatrix(0, Screen.width, Screen.height, 0);
+        Graphics.DrawTexture(new Rect(0, 0, Screen.width, Screen.height), renTexUI);
+        GL.PopMatrix();
+#endif
+
     }
+    
+    
+    
 }
