@@ -122,7 +122,8 @@ public class OutlineSystem : MonoBehaviour
 #if RENDER_BEFORE_UI
         mainCamera.cullingMask = LayerMask.GetMask("UI");
         mainCamera.targetTexture = renTexUI;
-        mainCamera.backgroundColor = new Color(1f, 1f, 1f, 0f);
+        //mainCamera.backgroundColor = new Color(0f, 0f, 0f, 0f);
+        mainCamera.backgroundColor = prevColor;
         mainCamera.Render();        
 #endif
         
@@ -169,11 +170,14 @@ public class OutlineSystem : MonoBehaviour
    
     void OnGUI()
     {
+        /*
         
         GL.PushMatrix();
         GL.LoadPixelMatrix(0, Screen.width, Screen.height, 0);
         Graphics.DrawTexture(new Rect(0, 0, Screen.width, Screen.height), renTexOut);
         GL.PopMatrix();
+        
+        */
         
 #if RENDER_BEFORE_UI
         GL.PushMatrix();
