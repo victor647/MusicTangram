@@ -224,7 +224,7 @@ namespace InteractiveMusicPlayer
         }
 
         private void OnDisable()
-        {
+        {            
             if (MusicManager.Instance)
                 MusicManager.Instance.RemoveEvent(this);
             if (triggerCondition == TriggerCondition.OnDisable) 

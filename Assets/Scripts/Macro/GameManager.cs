@@ -7,8 +7,7 @@ using InteractiveMusicPlayer;
 public class GameManager : MonoBehaviour
 {
 	public static GameManager instance;
-	[ReadOnly] public int totalShapesInGame;
-	public int levelIndex;
+	[ReadOnly] public int totalShapesInGame;	
 	
 	public delegate void Callback();
 
@@ -65,7 +64,15 @@ public class GameManager : MonoBehaviour
 			{
 				if (shape.Info == correctShape)
 				{
-					//Debug.Log(shape.Info.Type);
+					if (shape.gameObject.layer == 0)
+					{
+						shape.gameObject.layer = 1; //transparentFX
+						Destroy(shape.GetComponent<Draggable>());
+						Destroy(shape.GetComponent<Paintable>());
+						Destroy(shape.GetComponent<Removable>());
+						Destroy(shape.GetComponent<Snappable>());
+						Destroy(shape.GetComponent<ControlPanel>());
+					}
 					correctShapesNumber++;
 				}					
 			}

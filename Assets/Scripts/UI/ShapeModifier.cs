@@ -12,7 +12,7 @@ public class ShapeModifier : MonoBehaviour {
     public ModifierType type;
     private GameObject shape;
     private MusicSwitch music;
-    private bool isChangingSize;
+    private bool isChangingSize;    
 
     private void OnMouseUp()
     {
@@ -62,7 +62,7 @@ public class ShapeModifier : MonoBehaviour {
             music.SetVolume(Mathf.Sqrt(shape.transform.localScale.x) / 1.414f);
             yield return new WaitForFixedUpdate();
         }
-        isChangingSize = false;
+        isChangingSize = false;        
     }
 
     private IEnumerator Rotation(int increment)
@@ -74,6 +74,6 @@ public class ShapeModifier : MonoBehaviour {
             shape.transform.Rotate(0, 0, increment);
             music.SetPan(Mathf.Sin(shape.transform.eulerAngles.z * Mathf.Deg2Rad) * -0.6f);
             yield return new WaitForFixedUpdate();
-        }			
+        }			        
     }
 }

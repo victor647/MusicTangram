@@ -23,8 +23,6 @@ GameObject:
   - component: {fileID: 33956777076916998}
   - component: {fileID: 23187195926136074}
   - component: {fileID: 60009255034828832}
-  - component: {fileID: 114781652880801732}
-  - component: {fileID: 114631844248129208}
   m_Layer: 0
   m_Name: Boat
   m_TagString: Answer
@@ -39,8 +37,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1547266678856714}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.383212, y: 3.8, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -138,29 +136,3 @@ MonoBehaviour:
   - {x: 0.001, y: 0}
   - {x: 1, y: 1}
   - {x: 0, y: 2}
---- !u!114 &114631844248129208
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1547266678856714}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0043cbde206b3416bb051953c5dd9ad4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  refMix: {fileID: 0}
-  mouseOver: 0
---- !u!114 &114781652880801732
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1547266678856714}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9d3e40d82006447bc813ea6530dfd98c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  position: 1
-  offset: {x: -1, y: -1.2}

@@ -9,7 +9,16 @@ public class ControlPanel : MonoBehaviour
 	public GameObject funtionBoardPrefab;
 	public static GameObject currentBoard;
 	public static GameObject currentShape;
-	public bool toggle;
+	[HideInInspector] public bool toggle;	
+
+	private void OnDestroy()
+	{
+		if (currentShape == gameObject)
+		{
+			Destroy(currentBoard, 0.25f);
+			currentShape = null;
+		}
+	}
 
 	private void OnMouseOver()
 	{

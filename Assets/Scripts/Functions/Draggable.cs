@@ -37,7 +37,7 @@ public class Draggable : MonoBehaviour {
     private void OnMouseUp()
     {
         //resets the sorting layer
-        transform.Translate(Vector3.forward); 
+        transform.Translate(Vector3.forward);         
         //makes the shape repel with overlapping shapes
         //_collider.isTrigger = false;
         //Invoke("OnCollisionExit2D", 0.2f);        

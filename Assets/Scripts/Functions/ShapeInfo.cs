@@ -18,15 +18,18 @@ public class ShapeInfo : MonoBehaviour
 		public int RotationIndex;
 		public int SizeIndex;
 		public string Color;
-
+		public Vector2 Position;
+		
 		public static bool operator == (ShapeInformation x, ShapeInformation y)
 		{
-			return x.Type == y.Type && x.RotationIndex == y.RotationIndex && x.SizeIndex == y.SizeIndex && x.Color == y.Color;
+			return x.Type == y.Type && x.RotationIndex == y.RotationIndex 
+				&& x.SizeIndex == y.SizeIndex && x.Color == y.Color && (y.Position - x.Position).magnitude < 0.01f;
 		}
 		
 		public static bool operator != (ShapeInformation x, ShapeInformation y)
 		{
-			return x.Type != y.Type || x.RotationIndex != y.RotationIndex || x.SizeIndex != y.SizeIndex || x.Color != y.Color;
+			return x.Type != y.Type || x.RotationIndex != y.RotationIndex 
+				|| x.SizeIndex != y.SizeIndex || x.Color != y.Color || (y.Position - x.Position).magnitude > 0.01f;
 		}		
 	}
 
@@ -41,6 +44,15 @@ public class ShapeInfo : MonoBehaviour
 		set
 		{
 			_info.Color = value;
+			GameManager.instance.CheckAnswer();
+		}
+	}
+	
+	public Vector2 Position
+	{
+		set
+		{
+			_info.Position = value;
 			GameManager.instance.CheckAnswer();
 		}
 	}
@@ -82,7 +94,8 @@ public class ShapeInfo : MonoBehaviour
 	private void Start ()
 	{
 		_info.Type = type;
-		GameManager.instance.AddShape(this);		
+		GameManager.instance.AddShape(this);
+		Position = transform.position;
 	}
 
 	private void OnDestroy()
