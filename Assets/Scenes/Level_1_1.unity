@@ -2933,7 +2933,7 @@ MonoBehaviour:
   _maxTargetValue: 5000
   _customMappingRange: 1
   MinParameterValue: 0
-  MaxParameterValue: 2
+  MaxParameterValue: 1
   _inverseMinMaxMapping: 0
 --- !u!114 &1950902189
 MonoBehaviour:
@@ -2953,7 +2953,7 @@ MonoBehaviour:
   _maxTargetValue: 0.5
   _customMappingRange: 1
   MinParameterValue: 0
-  MaxParameterValue: 2
+  MaxParameterValue: 1
   _inverseMinMaxMapping: 0
 --- !u!114 &1950902191
 MonoBehaviour:
@@ -3256,6 +3256,11 @@ Prefab:
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
       value: level_selection
+      objectReference: {fileID: 0}
+    - target: {fileID: 114750574527224658, guid: 418be9b8eff754a06a7bf7d93e79ab47,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 418be9b8eff754a06a7bf7d93e79ab47, type: 2}

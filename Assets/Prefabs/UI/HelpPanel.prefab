@@ -199,7 +199,9 @@ MonoBehaviour:
 
     Right click on shape/color
 
-    to hear what they sound like'
+    to hear what they sound like
+
+    and change size/rotation'
 --- !u!114 &114251584844332716
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -8,7 +8,7 @@ public class FadeScreen : MonoBehaviour {
 	public Texture2D fadeTexture;
  
 	[Range(0.1f,1f)]
-	public float fadespeed = 0.8f;
+	public float fadespeed = 0.02f;
 	public int drawDepth = -1000;
  
 	private float alpha = 1f;
@@ -22,7 +22,7 @@ public class FadeScreen : MonoBehaviour {
 	}
 
 	void OnGUI() {		
-		alpha += fadeDirection * fadespeed * Time.fixedDeltaTime;
+		alpha += fadeDirection * fadespeed * Time.deltaTime;
 		alpha = Mathf.Clamp01(alpha);		 		
 		
 		Color newColor = GUI.color; 

@@ -1,6 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using System.Runtime.Remoting.Messaging;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 
 using InteractiveMusicPlayer;
@@ -47,7 +47,13 @@ public class LevelManager : MonoBehaviour
 		}
 		CheckAnswer();
 	}
-	
+
+	private void Start()
+	{
+		totalShapesInGame = 0;
+		MusicManager.SetParameterValue("WinProgress", SceneManager.GetActiveScene().name.Contains("SB")? 1 : 0);		
+	}
+
 	public void CheckAnswer()
 	{				
 		int correctShapesNumber = 0;
@@ -69,9 +75,8 @@ public class LevelManager : MonoBehaviour
 					correctShapesNumber++;
 				}
 			}
-		}
+		}		
 		
-
 		WinProgress.UpdateProgress(correctShapesNumber);		
 		if (correctShapesNumber == correctShapes.Count && correctShapesNumber == totalShapesInGame)		
 			panel.Fade(true);			

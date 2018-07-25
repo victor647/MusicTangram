@@ -3258,7 +3258,7 @@ MonoBehaviour:
   _maxTargetValue: 5000
   _customMappingRange: 1
   MinParameterValue: 0
-  MaxParameterValue: 3
+  MaxParameterValue: 2
   _inverseMinMaxMapping: 0
 --- !u!114 &1950902189
 MonoBehaviour:
@@ -3278,7 +3278,7 @@ MonoBehaviour:
   _maxTargetValue: 0.5
   _customMappingRange: 1
   MinParameterValue: 0
-  MaxParameterValue: 3
+  MaxParameterValue: 2
   _inverseMinMaxMapping: 0
 --- !u!114 &1950902191
 MonoBehaviour:
