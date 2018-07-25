@@ -43,6 +43,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1174418601571754
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4668700470294866}
+  - component: {fileID: 114248755027613864}
+  m_Layer: 0
+  m_Name: tri_2_pl
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1224739690807928
 GameObject:
   m_ObjectHideFlags: 0
@@ -53,7 +69,7 @@ GameObject:
   - component: {fileID: 4192690032379954}
   - component: {fileID: 114046660127796558}
   m_Layer: 0
-  m_Name: tri_2_pl
+  m_Name: tri_2_or
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -91,6 +107,54 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1749939553350304
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4735873975575296}
+  - component: {fileID: 114351555388160584}
+  m_Layer: 0
+  m_Name: tri_2_pk
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1755580630331306
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4592853680171678}
+  - component: {fileID: 114279784306269208}
+  m_Layer: 0
+  m_Name: tri_2_rd
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1772087916170426
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4243169198830844}
+  - component: {fileID: 114574141155245880}
+  m_Layer: 0
+  m_Name: tri_2_cy
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!4 &4192690032379954
 Transform:
   m_ObjectHideFlags: 1
@@ -102,7 +166,20 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4371966699267454}
-  m_RootOrder: 3
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4243169198830844
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1772087916170426}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4371966699267454}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4325777410502974
 Transform:
@@ -115,7 +192,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4371966699267454}
-  m_RootOrder: 0
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4371966699267454
 Transform:
@@ -127,10 +204,14 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 4592853680171678}
+  - {fileID: 4192690032379954}
   - {fileID: 4325777410502974}
   - {fileID: 4589345777862026}
+  - {fileID: 4243169198830844}
   - {fileID: 4602249471440868}
-  - {fileID: 4192690032379954}
+  - {fileID: 4735873975575296}
+  - {fileID: 4668700470294866}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -145,7 +226,20 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4371966699267454}
-  m_RootOrder: 1
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4592853680171678
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1755580630331306}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4371966699267454}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4602249471440868
 Transform:
@@ -158,7 +252,33 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4371966699267454}
-  m_RootOrder: 2
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4668700470294866
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1174418601571754}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4371966699267454}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4735873975575296
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1749939553350304}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4371966699267454}
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &114046660127796558
 MonoBehaviour:
@@ -206,7 +326,169 @@ MonoBehaviour:
     Bar: 0
     Beat: 0
   _debugLog: 0
+  _clip: {fileID: 8300000, guid: 7a364f13f57444fdbb2f38882ea8b962, type: 3}
+  _mixerBus: {fileID: 243959567604760880, guid: 6c2b2d904995f4700b2a721eb59dbc12,
+    type: 2}
+  _lowPassFilter: 0
+  _LPFResonance: 1
+  _highPassFilter: 0
+  _HPFResonance: 1
+  _repeatThroughTrack: 0
+--- !u!114 &114248755027613864
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1174418601571754}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3adf71fbefe1148afbc2d1bec37b9f40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _overrideParentRhythm: 0
+  _tempo: 130
+  _beatsPerBar: 3
+  _beatDuration: 0
+  _trackDuration:
+    Bar: 10
+    Beat: 0
+  _overrideParentLoop: 0
+  _loopCount: 0
+  _playOnStart: 0
+  _fadeInTime: 0
+  _preEntry: 0
+  _entryPosition:
+    Bar: 0
+    Beat: 0
+  _postExit: 1
+  _exitPosition:
+    Bar: 8
+    Beat: 0
+  _overrideParentTransition: 0
+  _transitionInterval: 0
+  _gridDuration:
+    Bar: 0
+    Beat: 0
+  _customPositions: []
+  _overrideParentAudio: 0
+  _volume: 0.707
+  _pan: 0
+  _lowPassFilterCutoff: 22000
+  _highPassFilterCutoff: 10
+  _playingStatus: 3
+  _playheadPosition:
+    Bar: 0
+    Beat: 0
+  _debugLog: 0
   _clip: {fileID: 8300000, guid: 44a9455b5298c4d60896c6e0dc088362, type: 3}
+  _mixerBus: {fileID: 243959567604760880, guid: 6c2b2d904995f4700b2a721eb59dbc12,
+    type: 2}
+  _lowPassFilter: 0
+  _LPFResonance: 1
+  _highPassFilter: 0
+  _HPFResonance: 1
+  _repeatThroughTrack: 0
+--- !u!114 &114279784306269208
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1755580630331306}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3adf71fbefe1148afbc2d1bec37b9f40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _overrideParentRhythm: 0
+  _tempo: 130
+  _beatsPerBar: 3
+  _beatDuration: 0
+  _trackDuration:
+    Bar: 10
+    Beat: 0
+  _overrideParentLoop: 0
+  _loopCount: 0
+  _playOnStart: 0
+  _fadeInTime: 0
+  _preEntry: 0
+  _entryPosition:
+    Bar: 0
+    Beat: 0
+  _postExit: 1
+  _exitPosition:
+    Bar: 8
+    Beat: 0
+  _overrideParentTransition: 0
+  _transitionInterval: 0
+  _gridDuration:
+    Bar: 0
+    Beat: 0
+  _customPositions: []
+  _overrideParentAudio: 0
+  _volume: 0.707
+  _pan: 0
+  _lowPassFilterCutoff: 22000
+  _highPassFilterCutoff: 10
+  _playingStatus: 3
+  _playheadPosition:
+    Bar: 0
+    Beat: 0
+  _debugLog: 0
+  _clip: {fileID: 8300000, guid: 6e4709b123ae941aca9864c2fbba0ec2, type: 3}
+  _mixerBus: {fileID: 243959567604760880, guid: 6c2b2d904995f4700b2a721eb59dbc12,
+    type: 2}
+  _lowPassFilter: 0
+  _LPFResonance: 1
+  _highPassFilter: 0
+  _HPFResonance: 1
+  _repeatThroughTrack: 0
+--- !u!114 &114351555388160584
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1749939553350304}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3adf71fbefe1148afbc2d1bec37b9f40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _overrideParentRhythm: 0
+  _tempo: 130
+  _beatsPerBar: 3
+  _beatDuration: 0
+  _trackDuration:
+    Bar: 10
+    Beat: 0
+  _overrideParentLoop: 0
+  _loopCount: 0
+  _playOnStart: 0
+  _fadeInTime: 0
+  _preEntry: 0
+  _entryPosition:
+    Bar: 0
+    Beat: 0
+  _postExit: 1
+  _exitPosition:
+    Bar: 8
+    Beat: 0
+  _overrideParentTransition: 0
+  _transitionInterval: 0
+  _gridDuration:
+    Bar: 0
+    Beat: 0
+  _customPositions: []
+  _overrideParentAudio: 0
+  _volume: 0.707
+  _pan: 0
+  _lowPassFilterCutoff: 22000
+  _highPassFilterCutoff: 10
+  _playingStatus: 3
+  _playheadPosition:
+    Bar: 0
+    Beat: 0
+  _debugLog: 0
+  _clip: {fileID: 8300000, guid: 3c342d6fcdf904f81be6e462e8e81345, type: 3}
   _mixerBus: {fileID: 243959567604760880, guid: 6c2b2d904995f4700b2a721eb59dbc12,
     type: 2}
   _lowPassFilter: 0
@@ -370,15 +652,77 @@ MonoBehaviour:
   _debugLog: 0
   _switchToSamePosition: 1
   _switchList:
+  - SwitchName: tri_2_rd
+    Music: {fileID: 114279784306269208}
+  - SwitchName: tri_2_or
+    Music: {fileID: 114046660127796558}
   - SwitchName: tri_2_yl
     Music: {fileID: 114448753063254864}
   - SwitchName: tri_2_gr
     Music: {fileID: 114776772113834822}
+  - SwitchName: tri_2_cy
+    Music: {fileID: 114574141155245880}
   - SwitchName: tri_2_bl
     Music: {fileID: 114448421275558512}
+  - SwitchName: tri_2_pk
+    Music: {fileID: 114351555388160584}
   - SwitchName: tri_2_pl
-    Music: {fileID: 114046660127796558}
+    Music: {fileID: 114248755027613864}
   _currentSwitch: 
+--- !u!114 &114574141155245880
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1772087916170426}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3adf71fbefe1148afbc2d1bec37b9f40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _overrideParentRhythm: 0
+  _tempo: 130
+  _beatsPerBar: 3
+  _beatDuration: 0
+  _trackDuration:
+    Bar: 10
+    Beat: 0
+  _overrideParentLoop: 0
+  _loopCount: 0
+  _playOnStart: 0
+  _fadeInTime: 0
+  _preEntry: 0
+  _entryPosition:
+    Bar: 0
+    Beat: 0
+  _postExit: 1
+  _exitPosition:
+    Bar: 8
+    Beat: 0
+  _overrideParentTransition: 0
+  _transitionInterval: 0
+  _gridDuration:
+    Bar: 0
+    Beat: 0
+  _customPositions: []
+  _overrideParentAudio: 0
+  _volume: 0.707
+  _pan: 0
+  _lowPassFilterCutoff: 22000
+  _highPassFilterCutoff: 10
+  _playingStatus: 3
+  _playheadPosition:
+    Bar: 0
+    Beat: 0
+  _debugLog: 0
+  _clip: {fileID: 8300000, guid: 2878b7cbd819841db97f0a29a9fe1633, type: 3}
+  _mixerBus: {fileID: 243959567604760880, guid: 6c2b2d904995f4700b2a721eb59dbc12,
+    type: 2}
+  _lowPassFilter: 0
+  _LPFResonance: 1
+  _highPassFilter: 0
+  _HPFResonance: 1
+  _repeatThroughTrack: 0
 --- !u!114 &114776772113834822
 MonoBehaviour:
   m_ObjectHideFlags: 1

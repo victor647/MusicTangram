@@ -28,6 +28,9 @@ namespace InteractiveMusicPlayer
         [Tooltip("Buffer size for the audio system. Higher results in more latency but less CPU load. Must be power of 2")]
         public int bufferSize = 1024;
         
+        [Tooltip("When event gets called, output to Unity console")]
+        public bool eventLog;
+        
         [Tooltip("If this music manager should not be destroyed when loading a different scene")]
         public bool stayBetweenScenes;
         
@@ -95,8 +98,22 @@ namespace InteractiveMusicPlayer
                 if (e.eventName == eventName)
                 {
                     e.Activate();
-                    return;
+                    if (Instance.eventLog) Debug.Log("Music event " + eventName + " is activated!");   
+                    //if the event doesn't allow other events to have the same name, only activate that one
+                    if (!e.allowDuplicate) 
+                        return;
                 }
+            }
+            Debug.LogError("Music Manager: can't find event with name of " + eventName);
+        }
+
+        //to stop all the music playing
+        public static void StopAll(float fadeOutTime)
+        {
+            var music = FindObjectsOfType<MusicComponent>();
+            foreach (var m in music)
+            {                
+                m.Stop(fadeOutTime);
             }
         }
 
@@ -131,7 +148,7 @@ namespace InteractiveMusicPlayer
         {
             foreach (var e in Instance.musicEvents)
             {
-                if (e.eventName == eventName && e.eventType == MusicEvent.EventType.SetSwitch)
+                if (e.eventName == eventName && e.eventAction == MusicEvent.EventType.SetSwitch)
                 {
                     e.switchName = switchName;
                     e.Activate();

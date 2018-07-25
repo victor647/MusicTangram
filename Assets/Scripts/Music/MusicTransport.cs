@@ -51,16 +51,18 @@ public class MusicTransport : MonoBehaviour
 		if (_isRunning)
 		{
 			_slider.value = (Time.time - _timeStamp) / _loopDuration;
-		}
-
+		}			
+		
+		if (!ReferenceMix.instance) return; //sandbox mode doesn't have ref mix
+		
 		if (_slider.value > 0.93f && !ReferenceMix.instance.mouseOver)
 		{
-			if (GameManager.instance.totalShapesInGame > 0 && ReferenceMix.instance.Toggle.isOn)
+			if (LevelManager.instance.totalShapesInGame > 0 && ReferenceMix.instance.Toggle.isOn)
 			{
 				MixerManager.instance.lastMixer = MixerManager.instance.allOn;
 				ReferenceMix.instance.Toggle.isOn = false;
 			}	
-			if (GameManager.instance.totalShapesInGame == 0 && !ReferenceMix.instance.Toggle.isOn 
+			if (LevelManager.instance.totalShapesInGame == 0 && !ReferenceMix.instance.Toggle.isOn 
 			    && MixerManager.instance.currentMixer == MixerManager.instance.allOn)
 			{
 				ReferenceMix.instance.Toggle.isOn = true;				

@@ -6,7 +6,7 @@ using UnityEngine.EventSystems;
 public class ReferenceMix : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
 	public static ReferenceMix instance;			
-	public MusicTrack refMix;
+	public MusicLayers refMix;
 	private Toggle _toggle;
 	public Toggle Toggle
 	{
@@ -37,15 +37,15 @@ public class ReferenceMix : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
 	{
 		if (isOn){
 			refMix.UnMute(1f);
-			if (SampleMusic.highlightedObject) SampleMusic.highlightedObject.Reset();
+			if (SampleMusic.HighlightedObject) SampleMusic.HighlightedObject.Reset();
 			MixerManager.instance.SetMixerSnapshot(MixerManager.instance.refOnly, 0.8f);
 			_icon.color = _toggle.colors.normalColor;
 		}
 		else
 		{
 			refMix.Mute(1f);
-			MixerManager.instance.SetMixerSnapshot(MixerManager.instance.lastMixer, 0.8f);
-			if (SampleMusic.highlightedObject) SampleMusic.highlightedObject.Reset();
+			MixerManager.instance.SetMixerSnapshot(MixerManager.instance.allOn, 0.8f);
+			if (SampleMusic.HighlightedObject) SampleMusic.HighlightedObject.Reset();
 			_icon.color = _toggle.colors.disabledColor;
 		}		
 	}		

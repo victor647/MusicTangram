@@ -13,8 +13,10 @@ namespace  InteractiveMusicPlayer
         #region INITIALIZATION
         protected override void OnValidate()
         {                                       
-            LoopCount = 1;               
-            _playOnStart = false;
+            LoopCount = 1; //stinger cannot be looping
+            _playOnStart = false; //stinger cannot play on start
+            PostExit = false; //stinger shouldn't have post             
+            if (_hostMusic) CopyRhythmSettings(_hostMusic); //make sure the tempo always sync with the host
             base.OnValidate();
             if (Clip) gameObject.name = Clip.name + " (stinger)";
         }                              
@@ -26,8 +28,7 @@ namespace  InteractiveMusicPlayer
                 Debug.LogError(MusicManager.Instance.GetObjectPath(gameObject) + ": Stinger has no host to trigger!");
                 return;
             }            
-                        
-            CopyRhythmSettings(_hostMusic); //make sure the tempo always sync with the host
+                                    
             if (_transitionInterval == TransitionType.CustomPositions)
                 _hostMusic.LoopCallback += StartCheckingGrid;
             else
@@ -64,10 +65,8 @@ namespace  InteractiveMusicPlayer
         //play event from external call
         public void TriggerStinger()
         {
-            if (_transitionInterval == TransitionType.Immediate)
-            {
-                Play();                
-            }
+            if (_transitionInterval == TransitionType.Immediate)            
+                Play();                            
             else
             {                                                                                                                                                      
                 float transitionTime = GridLength - (Time.time - _transitionCheckTimeStamp) - EntryTime;

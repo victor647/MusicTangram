@@ -1,21 +1,21 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
+using InteractiveMusicPlayer;
 using UnityEngine;
 
 public class PaletteColor : MonoBehaviour
 {
-	private GameObject cursorColor;
+	private GameObject _instantiateCcursor;
 
 	private void OnMouseDrag()
 	{
 		Vector3 position = Camera.main.ScreenToWorldPoint(Input.mousePosition) + Vector3.forward;
-		cursorColor.transform.position = position;		
+		_instantiateCcursor.transform.position = position;		
 	}
 
 	private void OnMouseDown()
-	{
-		cursorColor = Instantiate(gameObject, transform.position, Quaternion.identity);
-		cursorColor.transform.localScale *= 0.2f;
+	{				
+		_instantiateCcursor = Instantiate(gameObject, transform.position, Quaternion.identity);
+		_instantiateCcursor.transform.localScale *= 0.2f;		
 	}
 
 	private void OnMouseUp()
@@ -25,11 +25,11 @@ public class PaletteColor : MonoBehaviour
 
 	private IEnumerator Shrink()
 	{		
-		while (cursorColor.transform.localScale.x > 0.01f)
+		while (_instantiateCcursor.transform.localScale.x > 0.01f)
 		{
-			cursorColor.transform.localScale -= new Vector3(0.02f, 0.02f, 0f);
+			_instantiateCcursor.transform.localScale -= new Vector3(0.02f, 0.02f, 0f);
 			yield return new WaitForFixedUpdate();
 		}
-		Destroy(cursorColor);
+		Destroy(_instantiateCcursor);
 	}
 }

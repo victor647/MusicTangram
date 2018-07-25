@@ -1,0 +1,24 @@
+fileFormatVersion: 2
+guid: 7d5ad579c51a54abd985c0ea8e139c4d
+timeCreated: 1531844415
+licenseType: Free
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Liquid
+  fontNames:
+  - Liquid
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 31964f64b479a43d7bea04f6005bbe8b, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -470,7 +470,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   eventName: Stop_main_menu
-  eventType: 1
+  allowDuplicate: 0
+  eventAction: 1
   manuallySetTarget: 0
   transitionFrom: {fileID: 0}
   eventTarget: {fileID: 0}
@@ -481,7 +482,6 @@ MonoBehaviour:
   colliderTag: 
   fadeTime: 1
   delayTime: 0
-  debugLog: 0
 --- !u!114 &428182207
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -494,7 +494,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   eventName: Play_main_menu
-  eventType: 0
+  allowDuplicate: 0
+  eventAction: 0
   manuallySetTarget: 0
   transitionFrom: {fileID: 0}
   eventTarget: {fileID: 0}
@@ -505,7 +506,6 @@ MonoBehaviour:
   colliderTag: 
   fadeTime: 0
   delayTime: 0.1
-  debugLog: 0
 --- !u!1 &750946137
 GameObject:
   m_ObjectHideFlags: 0
@@ -537,6 +537,7 @@ MonoBehaviour:
   voicePlaying: 0
   voiceLimit: 16
   bufferSize: 1024
+  eventLog: 0
   stayBetweenScenes: 1
   musicEvents: []
   transitionSegments: []
@@ -1436,7 +1437,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 0db8af3e06bde4cec9b5d2ed23ceb985, type: 3}
+    m_Font: {fileID: 12800000, guid: f2fc5a5e9682f4ef68e0e97b84e38306, type: 3}
     m_FontSize: 50
     m_FontStyle: 0
     m_BestFit: 0
@@ -1513,7 +1514,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Level_Selection
+          m_StringArgument: level_selection
           m_BoolArgument: 0
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,

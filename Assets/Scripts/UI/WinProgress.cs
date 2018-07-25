@@ -13,6 +13,6 @@ public class WinProgress : MonoBehaviour
 
 	public static void UpdateProgress(int number)
 	{
-		_text.text = number + "/" + GameManager.instance.correctShapes.Count;
+		if (_text) _text.text = number + "/" + LevelManager.instance.correctShapes.Count;
 	}				
 }

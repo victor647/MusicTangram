@@ -44,7 +44,7 @@ public class ShapeInfo : MonoBehaviour
 		set
 		{
 			_info.Color = value;
-			GameManager.instance.CheckAnswer();
+			if (LevelManager.instance) LevelManager.instance.CheckAnswer();
 		}
 	}
 	
@@ -53,7 +53,7 @@ public class ShapeInfo : MonoBehaviour
 		set
 		{
 			_info.Position = value;
-			GameManager.instance.CheckAnswer();
+			if (LevelManager.instance) LevelManager.instance.CheckAnswer();
 		}
 	}
 	
@@ -63,7 +63,7 @@ public class ShapeInfo : MonoBehaviour
 		set
 		{
 			_info.SizeIndex = value;
-			GameManager.instance.CheckAnswer();
+			if (LevelManager.instance) LevelManager.instance.CheckAnswer();
 		}
 	}
 	
@@ -85,8 +85,11 @@ public class ShapeInfo : MonoBehaviour
 				case ShapeType.plr:
 					_info.RotationIndex %= 4;
 					break;
+				default:
+					_info.RotationIndex %= 8;
+					break;
 			}			
-			GameManager.instance.CheckAnswer();
+			if (LevelManager.instance) LevelManager.instance.CheckAnswer();
 		}
 	}
 
@@ -94,13 +97,13 @@ public class ShapeInfo : MonoBehaviour
 	private void Start ()
 	{
 		_info.Type = type;
-		GameManager.instance.AddShape(this);
+		if (LevelManager.instance) LevelManager.instance.AddShape(this);
 		Position = transform.position;
 	}
 
 	private void OnDestroy()
 	{		
-		GameManager.instance.RemoveShape(this);
+		if (LevelManager.instance) LevelManager.instance.RemoveShape(this);
 	}
 
 

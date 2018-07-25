@@ -11,19 +11,49 @@ public class Scenes : MonoBehaviour
 	{		
 		if (nextScene == "Menu")
 			Destroy(MusicManager.Instance.gameObject);
-		SceneManager.LoadScene(nextScene);
+		
+		if (nextScene.Contains("Level"))		
+			StartCoroutine(LoadLevelDelay(nextScene));		
+		else if (SceneManager.GetActiveScene().name.Contains("Level"))
+		{
+			StartCoroutine(LoadLevelDelay(nextScene));	
+			Invoke("MainMenuMusic", 0.9f);
+		}
+		else		
+			SceneManager.LoadScene(nextScene);											
 	}
 
+	IEnumerator LoadLevelDelay(string scene)
+	{
+		FadeScreen.fadeDirection = 1;
+		AsyncOperation operation = SceneManager.LoadSceneAsync(scene);
+		operation.allowSceneActivation = false;
+		MusicManager.StopAll(1f);
+		yield return new WaitForSeconds(1f);		
+		operation.allowSceneActivation = true;
+		
+	}
+
+	private void MainMenuMusic()
+	{
+		MusicManager.PostEvent("Play_main_menu");
+	} 
+	
 	private void Update()
 	{
 		if (Input.GetKeyUp(KeyCode.Escape))
 		{
-			Application.Quit();
+			StartCoroutine(EndGame());
 		}
 	}
 
-	public void EndGame()
+	IEnumerator EndGame()
 	{
+		FadeScreen.fadeDirection = 1;
+		MusicManager.StopAll(1f);			
+		
+		yield return new WaitForSeconds(1.2f);		
+		
 		#if UNITY_EDITOR
 		UnityEditor.EditorApplication.isPlaying = false;
 		#else

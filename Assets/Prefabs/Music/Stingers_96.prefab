@@ -1,0 +1,913 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1020217891027206}
+  m_IsPrefabParent: 1
+--- !u!1 &1020217891027206
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4405814348719992}
+  m_Layer: 0
+  m_Name: Stingers_96
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1223972861289262
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4125872934455836}
+  - component: {fileID: 114069726791481846}
+  - component: {fileID: 114262128583016484}
+  m_Layer: 0
+  m_Name: stg_bl_96 (stinger)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1321443893342680
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4366361749009914}
+  - component: {fileID: 114593015754450238}
+  - component: {fileID: 114781656171384326}
+  m_Layer: 0
+  m_Name: stg_pk_96 (stinger)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1374167116423394
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4897625328878620}
+  - component: {fileID: 114891995595500664}
+  - component: {fileID: 114185116739010680}
+  m_Layer: 0
+  m_Name: stg_yl_96 (stinger)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1377909990537714
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4076892051968186}
+  - component: {fileID: 114815647335211424}
+  - component: {fileID: 114618352075125936}
+  m_Layer: 0
+  m_Name: stg_gr_96 (stinger)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1415856778135580
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4033763018192104}
+  - component: {fileID: 114767584232244310}
+  - component: {fileID: 114690120153690014}
+  m_Layer: 0
+  m_Name: stg_or_96 (stinger)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1845779404042842
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4722453186951636}
+  - component: {fileID: 114407578996965018}
+  - component: {fileID: 114455749816184808}
+  m_Layer: 0
+  m_Name: stg_pl_96 (stinger)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1957582379861968
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4119195662082932}
+  - component: {fileID: 114486912214629264}
+  - component: {fileID: 114215158979614248}
+  m_Layer: 0
+  m_Name: stg_rd_96 (stinger)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1981668628992500
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4857560591331894}
+  - component: {fileID: 114868706509414032}
+  - component: {fileID: 114051631579282596}
+  m_Layer: 0
+  m_Name: stg_cy_96 (stinger)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4033763018192104
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1415856778135580}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4405814348719992}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4076892051968186
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1377909990537714}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4405814348719992}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4119195662082932
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1957582379861968}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4405814348719992}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4125872934455836
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1223972861289262}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4405814348719992}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4366361749009914
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1321443893342680}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4405814348719992}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4405814348719992
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1020217891027206}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4033763018192104}
+  - {fileID: 4119195662082932}
+  - {fileID: 4897625328878620}
+  - {fileID: 4076892051968186}
+  - {fileID: 4857560591331894}
+  - {fileID: 4125872934455836}
+  - {fileID: 4722453186951636}
+  - {fileID: 4366361749009914}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4722453186951636
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1845779404042842}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4405814348719992}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4857560591331894
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1981668628992500}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4405814348719992}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4897625328878620
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1374167116423394}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4405814348719992}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114051631579282596
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1981668628992500}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abadd14bf42c74fb281e3873082b788b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventName: TriggerStinger_cy
+  allowDuplicate: 0
+  eventAction: 8
+  manuallySetTarget: 0
+  transitionFrom: {fileID: 0}
+  eventTarget: {fileID: 0}
+  parameterName: 
+  parameterValue: 0
+  switchName: 
+  triggerCondition: 0
+  colliderTag: 
+  fadeTime: 0
+  delayTime: 0
+--- !u!114 &114069726791481846
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1223972861289262}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58e7ad0a2644044fd92ff2e4420fd46c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _overrideParentRhythm: 1
+  _tempo: 96
+  _beatsPerBar: 4
+  _beatDuration: 0
+  _trackDuration:
+    Bar: 1
+    Beat: 0
+  _overrideParentLoop: 1
+  _loopCount: 1
+  _playOnStart: 0
+  _fadeInTime: 0
+  _preEntry: 0
+  _entryPosition:
+    Bar: 0
+    Beat: 0
+  _postExit: 0
+  _exitPosition:
+    Bar: 1
+    Beat: 0
+  _overrideParentTransition: 1
+  _transitionInterval: 4
+  _gridDuration:
+    Bar: 1
+    Beat: 0
+  _customPositions: []
+  _overrideParentAudio: 1
+  _volume: 0.6
+  _pan: 0
+  _lowPassFilterCutoff: 22000
+  _highPassFilterCutoff: 10
+  _playingStatus: 3
+  _playheadPosition:
+    Bar: 0
+    Beat: 0
+  _debugLog: 0
+  _clip: {fileID: 8300000, guid: 0634b5c184fb74008b6e8b14200f1006, type: 3}
+  _mixerBus: {fileID: 243750012315488710, guid: 6c2b2d904995f4700b2a721eb59dbc12,
+    type: 2}
+  _lowPassFilter: 0
+  _LPFResonance: 1
+  _highPassFilter: 0
+  _HPFResonance: 1
+  _hostMusic: {fileID: 0}
+--- !u!114 &114185116739010680
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1374167116423394}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abadd14bf42c74fb281e3873082b788b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventName: TriggerStinger_yl
+  allowDuplicate: 0
+  eventAction: 8
+  manuallySetTarget: 0
+  transitionFrom: {fileID: 0}
+  eventTarget: {fileID: 0}
+  parameterName: 
+  parameterValue: 0
+  switchName: 
+  triggerCondition: 0
+  colliderTag: 
+  fadeTime: 0
+  delayTime: 0
+--- !u!114 &114215158979614248
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1957582379861968}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abadd14bf42c74fb281e3873082b788b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventName: TriggerStinger_rd
+  allowDuplicate: 0
+  eventAction: 8
+  manuallySetTarget: 0
+  transitionFrom: {fileID: 0}
+  eventTarget: {fileID: 0}
+  parameterName: 
+  parameterValue: 0
+  switchName: 
+  triggerCondition: 0
+  colliderTag: 
+  fadeTime: 0
+  delayTime: 0
+--- !u!114 &114262128583016484
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1223972861289262}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abadd14bf42c74fb281e3873082b788b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventName: TriggerStinger_bl
+  allowDuplicate: 0
+  eventAction: 8
+  manuallySetTarget: 0
+  transitionFrom: {fileID: 0}
+  eventTarget: {fileID: 0}
+  parameterName: 
+  parameterValue: 0
+  switchName: 
+  triggerCondition: 0
+  colliderTag: 
+  fadeTime: 0
+  delayTime: 0
+--- !u!114 &114407578996965018
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1845779404042842}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58e7ad0a2644044fd92ff2e4420fd46c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _overrideParentRhythm: 1
+  _tempo: 96
+  _beatsPerBar: 4
+  _beatDuration: 0
+  _trackDuration:
+    Bar: 1
+    Beat: 0
+  _overrideParentLoop: 1
+  _loopCount: 1
+  _playOnStart: 0
+  _fadeInTime: 0
+  _preEntry: 0
+  _entryPosition:
+    Bar: 0
+    Beat: 0
+  _postExit: 0
+  _exitPosition:
+    Bar: 1
+    Beat: 0
+  _overrideParentTransition: 1
+  _transitionInterval: 4
+  _gridDuration:
+    Bar: 1
+    Beat: 0
+  _customPositions: []
+  _overrideParentAudio: 1
+  _volume: 0.6
+  _pan: 0
+  _lowPassFilterCutoff: 22000
+  _highPassFilterCutoff: 10
+  _playingStatus: 3
+  _playheadPosition:
+    Bar: 0
+    Beat: 0
+  _debugLog: 0
+  _clip: {fileID: 8300000, guid: 662069d39d54c48bcb713f83e8aedce7, type: 3}
+  _mixerBus: {fileID: 243750012315488710, guid: 6c2b2d904995f4700b2a721eb59dbc12,
+    type: 2}
+  _lowPassFilter: 0
+  _LPFResonance: 1
+  _highPassFilter: 0
+  _HPFResonance: 1
+  _hostMusic: {fileID: 0}
+--- !u!114 &114455749816184808
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1845779404042842}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abadd14bf42c74fb281e3873082b788b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventName: TriggerStinger_pl
+  allowDuplicate: 0
+  eventAction: 8
+  manuallySetTarget: 0
+  transitionFrom: {fileID: 0}
+  eventTarget: {fileID: 0}
+  parameterName: 
+  parameterValue: 0
+  switchName: 
+  triggerCondition: 0
+  colliderTag: 
+  fadeTime: 0
+  delayTime: 0
+--- !u!114 &114486912214629264
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1957582379861968}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58e7ad0a2644044fd92ff2e4420fd46c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _overrideParentRhythm: 1
+  _tempo: 96
+  _beatsPerBar: 4
+  _beatDuration: 0
+  _trackDuration:
+    Bar: 1
+    Beat: 0
+  _overrideParentLoop: 1
+  _loopCount: 1
+  _playOnStart: 0
+  _fadeInTime: 0
+  _preEntry: 0
+  _entryPosition:
+    Bar: 0
+    Beat: 0
+  _postExit: 0
+  _exitPosition:
+    Bar: 1
+    Beat: 0
+  _overrideParentTransition: 1
+  _transitionInterval: 4
+  _gridDuration:
+    Bar: 1
+    Beat: 0
+  _customPositions: []
+  _overrideParentAudio: 1
+  _volume: 0.6
+  _pan: 0
+  _lowPassFilterCutoff: 22000
+  _highPassFilterCutoff: 10
+  _playingStatus: 3
+  _playheadPosition:
+    Bar: 0
+    Beat: 0
+  _debugLog: 0
+  _clip: {fileID: 8300000, guid: f0d9079465ffe4e8fb3046aa0948a37b, type: 3}
+  _mixerBus: {fileID: 243750012315488710, guid: 6c2b2d904995f4700b2a721eb59dbc12,
+    type: 2}
+  _lowPassFilter: 0
+  _LPFResonance: 1
+  _highPassFilter: 0
+  _HPFResonance: 1
+  _hostMusic: {fileID: 0}
+--- !u!114 &114593015754450238
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1321443893342680}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58e7ad0a2644044fd92ff2e4420fd46c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _overrideParentRhythm: 1
+  _tempo: 96
+  _beatsPerBar: 4
+  _beatDuration: 0
+  _trackDuration:
+    Bar: 1
+    Beat: 0
+  _overrideParentLoop: 1
+  _loopCount: 1
+  _playOnStart: 0
+  _fadeInTime: 0
+  _preEntry: 0
+  _entryPosition:
+    Bar: 0
+    Beat: 0
+  _postExit: 0
+  _exitPosition:
+    Bar: 1
+    Beat: 0
+  _overrideParentTransition: 1
+  _transitionInterval: 4
+  _gridDuration:
+    Bar: 1
+    Beat: 0
+  _customPositions: []
+  _overrideParentAudio: 1
+  _volume: 0.6
+  _pan: 0
+  _lowPassFilterCutoff: 22000
+  _highPassFilterCutoff: 10
+  _playingStatus: 3
+  _playheadPosition:
+    Bar: 0
+    Beat: 0
+  _debugLog: 0
+  _clip: {fileID: 8300000, guid: 3fd28a59faf2f47f58bd12739438f4b9, type: 3}
+  _mixerBus: {fileID: 243750012315488710, guid: 6c2b2d904995f4700b2a721eb59dbc12,
+    type: 2}
+  _lowPassFilter: 0
+  _LPFResonance: 1
+  _highPassFilter: 0
+  _HPFResonance: 1
+  _hostMusic: {fileID: 0}
+--- !u!114 &114618352075125936
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1377909990537714}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abadd14bf42c74fb281e3873082b788b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventName: TriggerStinger_gr
+  allowDuplicate: 0
+  eventAction: 8
+  manuallySetTarget: 0
+  transitionFrom: {fileID: 0}
+  eventTarget: {fileID: 0}
+  parameterName: 
+  parameterValue: 0
+  switchName: 
+  triggerCondition: 0
+  colliderTag: 
+  fadeTime: 0
+  delayTime: 0
+--- !u!114 &114690120153690014
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1415856778135580}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abadd14bf42c74fb281e3873082b788b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventName: TriggerStinger_or
+  allowDuplicate: 0
+  eventAction: 8
+  manuallySetTarget: 0
+  transitionFrom: {fileID: 0}
+  eventTarget: {fileID: 0}
+  parameterName: 
+  parameterValue: 0
+  switchName: 
+  triggerCondition: 0
+  colliderTag: 
+  fadeTime: 0
+  delayTime: 0
+--- !u!114 &114767584232244310
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1415856778135580}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58e7ad0a2644044fd92ff2e4420fd46c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _overrideParentRhythm: 1
+  _tempo: 96
+  _beatsPerBar: 4
+  _beatDuration: 0
+  _trackDuration:
+    Bar: 1
+    Beat: 0
+  _overrideParentLoop: 1
+  _loopCount: 1
+  _playOnStart: 0
+  _fadeInTime: 0
+  _preEntry: 0
+  _entryPosition:
+    Bar: 0
+    Beat: 0
+  _postExit: 0
+  _exitPosition:
+    Bar: 1
+    Beat: 0
+  _overrideParentTransition: 1
+  _transitionInterval: 4
+  _gridDuration:
+    Bar: 1
+    Beat: 0
+  _customPositions: []
+  _overrideParentAudio: 1
+  _volume: 0.6
+  _pan: 0
+  _lowPassFilterCutoff: 22000
+  _highPassFilterCutoff: 10
+  _playingStatus: 3
+  _playheadPosition:
+    Bar: 0
+    Beat: 0
+  _debugLog: 0
+  _clip: {fileID: 8300000, guid: adfda6f4d2fcd44b58b632b35afc2060, type: 3}
+  _mixerBus: {fileID: 243750012315488710, guid: 6c2b2d904995f4700b2a721eb59dbc12,
+    type: 2}
+  _lowPassFilter: 0
+  _LPFResonance: 1
+  _highPassFilter: 0
+  _HPFResonance: 1
+  _hostMusic: {fileID: 0}
+--- !u!114 &114781656171384326
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1321443893342680}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abadd14bf42c74fb281e3873082b788b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventName: TriggerStinger_pk
+  allowDuplicate: 0
+  eventAction: 8
+  manuallySetTarget: 0
+  transitionFrom: {fileID: 0}
+  eventTarget: {fileID: 0}
+  parameterName: 
+  parameterValue: 0
+  switchName: 
+  triggerCondition: 0
+  colliderTag: 
+  fadeTime: 0
+  delayTime: 0
+--- !u!114 &114815647335211424
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1377909990537714}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58e7ad0a2644044fd92ff2e4420fd46c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _overrideParentRhythm: 1
+  _tempo: 96
+  _beatsPerBar: 4
+  _beatDuration: 0
+  _trackDuration:
+    Bar: 1
+    Beat: 0
+  _overrideParentLoop: 1
+  _loopCount: 1
+  _playOnStart: 0
+  _fadeInTime: 0
+  _preEntry: 0
+  _entryPosition:
+    Bar: 0
+    Beat: 0
+  _postExit: 0
+  _exitPosition:
+    Bar: 1
+    Beat: 0
+  _overrideParentTransition: 1
+  _transitionInterval: 4
+  _gridDuration:
+    Bar: 1
+    Beat: 0
+  _customPositions: []
+  _overrideParentAudio: 1
+  _volume: 0.6
+  _pan: 0
+  _lowPassFilterCutoff: 22000
+  _highPassFilterCutoff: 10
+  _playingStatus: 3
+  _playheadPosition:
+    Bar: 0
+    Beat: 0
+  _debugLog: 0
+  _clip: {fileID: 8300000, guid: 49be2eb9458dd4149a65622245b61b36, type: 3}
+  _mixerBus: {fileID: 243750012315488710, guid: 6c2b2d904995f4700b2a721eb59dbc12,
+    type: 2}
+  _lowPassFilter: 0
+  _LPFResonance: 1
+  _highPassFilter: 0
+  _HPFResonance: 1
+  _hostMusic: {fileID: 0}
+--- !u!114 &114868706509414032
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1981668628992500}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58e7ad0a2644044fd92ff2e4420fd46c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _overrideParentRhythm: 1
+  _tempo: 96
+  _beatsPerBar: 4
+  _beatDuration: 0
+  _trackDuration:
+    Bar: 1
+    Beat: 0
+  _overrideParentLoop: 1
+  _loopCount: 1
+  _playOnStart: 0
+  _fadeInTime: 0
+  _preEntry: 0
+  _entryPosition:
+    Bar: 0
+    Beat: 0
+  _postExit: 0
+  _exitPosition:
+    Bar: 1
+    Beat: 0
+  _overrideParentTransition: 1
+  _transitionInterval: 4
+  _gridDuration:
+    Bar: 1
+    Beat: 0
+  _customPositions: []
+  _overrideParentAudio: 1
+  _volume: 0.6
+  _pan: 0
+  _lowPassFilterCutoff: 22000
+  _highPassFilterCutoff: 10
+  _playingStatus: 3
+  _playheadPosition:
+    Bar: 0
+    Beat: 0
+  _debugLog: 0
+  _clip: {fileID: 8300000, guid: bcde1cc9882944531812f326e27d042c, type: 3}
+  _mixerBus: {fileID: 243750012315488710, guid: 6c2b2d904995f4700b2a721eb59dbc12,
+    type: 2}
+  _lowPassFilter: 0
+  _LPFResonance: 1
+  _highPassFilter: 0
+  _HPFResonance: 1
+  _hostMusic: {fileID: 0}
+--- !u!114 &114891995595500664
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1374167116423394}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58e7ad0a2644044fd92ff2e4420fd46c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _overrideParentRhythm: 1
+  _tempo: 96
+  _beatsPerBar: 4
+  _beatDuration: 0
+  _trackDuration:
+    Bar: 1
+    Beat: 0
+  _overrideParentLoop: 1
+  _loopCount: 1
+  _playOnStart: 0
+  _fadeInTime: 0
+  _preEntry: 0
+  _entryPosition:
+    Bar: 0
+    Beat: 0
+  _postExit: 0
+  _exitPosition:
+    Bar: 1
+    Beat: 0
+  _overrideParentTransition: 1
+  _transitionInterval: 4
+  _gridDuration:
+    Bar: 1
+    Beat: 0
+  _customPositions: []
+  _overrideParentAudio: 1
+  _volume: 0.6
+  _pan: 0
+  _lowPassFilterCutoff: 22000
+  _highPassFilterCutoff: 10
+  _playingStatus: 3
+  _playheadPosition:
+    Bar: 0
+    Beat: 0
+  _debugLog: 0
+  _clip: {fileID: 8300000, guid: 3fbd25df1f7b64609927312408d705f3, type: 3}
+  _mixerBus: {fileID: 243750012315488710, guid: 6c2b2d904995f4700b2a721eb59dbc12,
+    type: 2}
+  _lowPassFilter: 0
+  _LPFResonance: 1
+  _highPassFilter: 0
+  _HPFResonance: 1
+  _hostMusic: {fileID: 0}

@@ -23,6 +23,9 @@ public class ShapeMusic : MonoBehaviour
 	// Update is called once per frame
 	public void Removed()
 	{
+		CancelInvoke("InitializeMusic");
+		if (!music) return;
+		
 		MusicTransport.MusicInQueue -= music.Play; //add music to queue
 		music.Stop();
 		Destroy(music.gameObject, music.FadeTime);

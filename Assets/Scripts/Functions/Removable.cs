@@ -9,7 +9,8 @@ public class Removable : MonoBehaviour
 	{
 		if (col.gameObject.name == "Trash" && !Input.GetMouseButton(0) && !isDead)
 		{			
-			StartCoroutine(Shrink());
+			MixerManager.instance.SetMixerSnapshot(MixerManager.instance.allOn, 1f);
+			StartCoroutine(Shrink());			
 			GetComponent<ShapeMusic>().Removed();
 		}
 	}
@@ -21,7 +22,7 @@ public class Removable : MonoBehaviour
 		{
 			transform.localScale -= new Vector3(0.1f, 0.1f, 0f);
 			yield return new WaitForFixedUpdate();
-		}
+		}		
 		Destroy(gameObject);
 	}
 		

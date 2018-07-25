@@ -3,22 +3,36 @@
 namespace InteractiveMusicPlayer
 {
     public class MusicEvent : MonoBehaviour {
-
+        
+        [Tooltip("The reference of this event in Music Manager")]
+        public string eventName;
+        [Tooltip("If multiple events of same name is allowed and called together")]
+        public bool allowDuplicate;
+        
         public enum EventType
         {
-            Play, Stop, StopOnGrid, Mute, Unmute, TransitionTo, ChangeParameterValue, SetSwitch, TriggerStinger
-        }
-
-        [Tooltip("The reference of this event in Music Manager")]
-        public string eventName;        
-        public EventType eventType;
+            Play, Stop, StopOnGrid, Mute, Unmute, TransitionTo, 
+            ChangeParameterValue, SetSwitch, TriggerStinger
+        }        
+        [Tooltip("What action this event does")]
+        public EventType eventAction;
+        
         [Tooltip("If false, the target will be the music component on the same game object")]
         public bool manuallySetTarget;
-        [EnumHide("eventType", 5, true)] public MusicComponent transitionFrom;		
-        [ConditionalHide("manuallySetTarget", true)] public MusicComponent eventTarget;
-        [EnumHide("eventType", 6, true)] public string parameterName;
-        [EnumHide("eventType", 6, true)] public float parameterValue;        
-        [EnumHide("eventType", 7, true)] public string switchName;
+        [EnumHide("eventAction", 5, true)] 
+        public MusicComponent transitionFrom;		
+        [ConditionalHide("manuallySetTarget", true)] 
+        public MusicComponent eventTarget;
+        
+        [Tooltip("The music parameter this event is linked to")]
+        [EnumHide("eventAction", 6, true)] 
+        public string parameterName;
+        [Tooltip("The music parameter this event sets value")]
+        [EnumHide("eventAction", 6, true)]  
+        public float parameterValue;        
+        [Tooltip("The switch this event will set to")]
+        [EnumHide("eventAction", 7, true)] 
+        public string switchName;
         
         public enum TriggerCondition
         {
@@ -26,17 +40,17 @@ namespace InteractiveMusicPlayer
             OnTriggerEnter, OnTriggerExit, OnCollisionEnter, OnCollisionExit, 
             OnMouseDown, OnMouseUp, OnMouseEnter, OnMouseExit
         }
-
+        [Tooltip("When this music event will be triggered")]
         public TriggerCondition triggerCondition = TriggerCondition.None;
 
         [Tooltip("For collision/trigger, if a tag is used. Leave blank for all tags")]
         public string colliderTag;
         [Tooltip("Fade in/out time for volume events")]
         public float fadeTime;
-        [Tooltip("If the event should be delayed to trigger")]
-        public float delayTime;
-        public bool debugLog;
-        
+        [Tooltip("If the event should be delayed to trigger. Not applicable to OnDestroy")]
+        public float delayTime;        
+
+        #region SETUP               
         //for the editor to manually trigger an event to test
         public void ManualTrigger()
         {
@@ -47,27 +61,21 @@ namespace InteractiveMusicPlayer
         public void GenerateEventName()
         {
             if (!manuallySetTarget)
-                eventName = eventType + "_" + gameObject.name;
+                eventName = eventAction + "_" + gameObject.name;
             else if (eventTarget)
-                eventName = eventType + "_" + eventTarget.gameObject.name;
+                eventName = eventAction + "_" + eventTarget.gameObject.name;
             else 
                 Debug.LogError(MusicManager.Instance.GetObjectPath(gameObject) + ": Can't find event target, generate event name failed!");
         }
+        #endregion
         
+        #region TRIGGER
         private void Start ()
-        {
-            if (!manuallySetTarget)
-                eventTarget = GetComponent<MusicComponent>();
-            
-            if (eventName == "" && eventTarget)
-            {
-                GenerateEventName();
-            }
-            
+        {                   
             if (triggerCondition == TriggerCondition.Start)
             {
-                if (delayTime < 1f) //music rhythm will mess up if triggered too early
-                    delayTime = 1f;                
+                if (delayTime < 0.1f) //music might mess up if triggered too early
+                    delayTime = 0.1f;                
                 Invoke("Activate", delayTime);
             }                 
         }
@@ -76,14 +84,13 @@ namespace InteractiveMusicPlayer
         {
             if (triggerCondition == TriggerCondition.OnTriggerEnter)
             {
-                if (colliderTag != "")
+                if (colliderTag != "") //if user sets specific collider tag
                 {
-                    if (other.CompareTag(colliderTag)) Invoke("Activate", delayTime);
+                    if (other.CompareTag(colliderTag)) 
+                        Invoke("Activate", delayTime);
                 }
-                else
-                {
-                    Invoke("Activate", delayTime);
-                }                
+                else                
+                    Invoke("Activate", delayTime);                                
             }                 
         }
         
@@ -93,12 +100,11 @@ namespace InteractiveMusicPlayer
             {
                 if (colliderTag != "")
                 {
-                    if (other.CompareTag(colliderTag)) Invoke("Activate", delayTime);
+                    if (other.CompareTag(colliderTag)) 
+                        Invoke("Activate", delayTime);
                 }
-                else
-                {
-                    Invoke("Activate", delayTime);
-                }                
+                else                
+                    Invoke("Activate", delayTime);                                
             }  
         }
         
@@ -108,12 +114,11 @@ namespace InteractiveMusicPlayer
             {
                 if (colliderTag != "")
                 {
-                    if (other.CompareTag(colliderTag)) Invoke("Activate", delayTime);
+                    if (other.CompareTag(colliderTag)) 
+                        Invoke("Activate", delayTime);
                 }
-                else
-                {
-                    Invoke("Activate", delayTime);
-                }                
+                else                
+                    Invoke("Activate", delayTime);                                
             }  
         }
         
@@ -123,12 +128,11 @@ namespace InteractiveMusicPlayer
             {
                 if (colliderTag != "")
                 {
-                    if (other.CompareTag(colliderTag)) Invoke("Activate", delayTime);
+                    if (other.CompareTag(colliderTag)) 
+                        Invoke("Activate", delayTime);
                 }
-                else
-                {
-                    Invoke("Activate", delayTime);
-                }                
+                else                
+                    Invoke("Activate", delayTime);                                
             }  
         }
 
@@ -138,12 +142,11 @@ namespace InteractiveMusicPlayer
             {
                 if (colliderTag != "")
                 {
-                    if (other.collider.CompareTag(colliderTag)) Invoke("Activate", delayTime);
+                    if (other.collider.CompareTag(colliderTag)) 
+                        Invoke("Activate", delayTime);
                 }
-                else
-                {
-                    Invoke("Activate", delayTime);
-                }                
+                else                
+                    Invoke("Activate", delayTime);                                
             }  
         }
         
@@ -153,12 +156,11 @@ namespace InteractiveMusicPlayer
             {
                 if (colliderTag != "")
                 {
-                    if (other.collider.CompareTag(colliderTag)) Invoke("Activate", delayTime);
+                    if (other.collider.CompareTag(colliderTag)) 
+                        Invoke("Activate", delayTime);
                 }
-                else
-                {
-                    Invoke("Activate", delayTime);
-                }                
+                else                
+                    Invoke("Activate", delayTime);                               
             }
         }
         
@@ -168,12 +170,11 @@ namespace InteractiveMusicPlayer
             {
                 if (colliderTag != "")
                 {
-                    if (other.collider.CompareTag(colliderTag)) Invoke("Activate", delayTime);
+                    if (other.collider.CompareTag(colliderTag)) 
+                        Invoke("Activate", delayTime);
                 }
-                else
-                {
-                    Invoke("Activate", delayTime);
-                }                
+                else                
+                    Invoke("Activate", delayTime);                                
             }
         }
         
@@ -183,12 +184,11 @@ namespace InteractiveMusicPlayer
             {
                 if (colliderTag != "")
                 {
-                    if (other.collider.CompareTag(colliderTag)) Invoke("Activate", delayTime);
+                    if (other.collider.CompareTag(colliderTag)) 
+                        Invoke("Activate", delayTime);
                 }
-                else
-                {
-                    Invoke("Activate", delayTime);
-                }                
+                else                
+                    Invoke("Activate", delayTime);                                
             }
         }
 
@@ -218,7 +218,13 @@ namespace InteractiveMusicPlayer
 
         private void OnEnable()
         {
-            MusicManager.Instance.AddEvent(this);
+            if (!manuallySetTarget)
+                eventTarget = GetComponent<MusicComponent>();                            
+            if (eventName == "" && eventTarget) //if the user forgets to write event name          
+                GenerateEventName();     
+            
+            if (MusicManager.Instance)
+                MusicManager.Instance.AddEvent(this);
             if (triggerCondition == TriggerCondition.OnEnable) 
                 Invoke("Activate", delayTime);
         }
@@ -228,7 +234,7 @@ namespace InteractiveMusicPlayer
             if (MusicManager.Instance)
                 MusicManager.Instance.RemoveEvent(this);
             if (triggerCondition == TriggerCondition.OnDisable) 
-                Activate();
+                Invoke("Activate", delayTime);
         }
         
         private void OnDestroy()
@@ -236,19 +242,20 @@ namespace InteractiveMusicPlayer
             if (triggerCondition == TriggerCondition.OnDestroy) 
                 Activate();
         }
-
-        //for external calls
+        #endregion
+        
+        //activate the event
         public void Activate()
         {
-            if (!eventTarget && eventType != EventType.ChangeParameterValue)
+            if (!eventTarget && eventAction != EventType.ChangeParameterValue)
             {
-                Debug.LogError(MusicManager.Instance.GetObjectPath(gameObject) + ": Event has no target!");
+                Debug.LogError(MusicManager.Instance.GetObjectPath(gameObject) + ": Music event has no target!");
                 return;
             }
+            //set fade time for volume related events
+            if (eventAction != EventType.ChangeParameterValue) eventTarget.FadeTime = fadeTime;
             
-            if (eventType != EventType.ChangeParameterValue) eventTarget.FadeTime = fadeTime;
-            
-            switch (eventType)
+            switch (eventAction)
             {
                 case EventType.Play:                    
                     eventTarget.Play();
@@ -289,8 +296,7 @@ namespace InteractiveMusicPlayer
                     }                                        
                     stgr.TriggerStinger();                   
                     break;
-            }
-            if (debugLog) Debug.Log("Music event " + eventName + " is activated!");   
+            }            
         }
     }
 }

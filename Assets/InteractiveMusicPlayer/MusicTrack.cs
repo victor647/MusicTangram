@@ -28,7 +28,7 @@ namespace InteractiveMusicPlayer
 
         protected override void PlaySource()
         {            
-            if(!_muted && FadeTime == 0f)
+            if(!_isMuted && FadeTime == 0f)
                 _source.volume = _volume; 
             if (_repeatThroughTrack) //use built-in loop for repeating clips or non-post-exit loops
             {

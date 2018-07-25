@@ -2,30 +2,30 @@
 
 public class SampleMusic : MonoBehaviour
 {    		
-    private MeshRenderer mesh;
-    public static SampleMusic highlightedObject;
-    private Material originalMaterial;
-    private Material tempMaterial;
-    private Color32 tempColor;
-    private bool toggleOn;
+    private MeshRenderer _mesh;
+    public static SampleMusic HighlightedObject;
+    private Material _originalMaterial;
+    private Material _tempMaterial;
+    private Color32 _tempColor;
+    private bool _toggleOn;
 
     private void Start()
     {
-        mesh = GetComponent<MeshRenderer>();
-        originalMaterial = mesh.material;
+        _mesh = GetComponent<MeshRenderer>();
+        _originalMaterial = _mesh.material;
     }
 
     private void OnMouseOver()
     {
         if (Input.GetMouseButtonUp(1))
         {
-            if (!toggleOn)
+            if (!_toggleOn)
             {
-                if (highlightedObject)
+                if (HighlightedObject)
                 {
-                    highlightedObject.Reset();
+                    HighlightedObject.Reset();
                 }
-                highlightedObject = this;
+                HighlightedObject = this;
                 Focus();
             }
             else            
@@ -36,12 +36,12 @@ public class SampleMusic : MonoBehaviour
     private void Focus()
     {
         MixerManager.instance.SetMixerSnapshot(MixerManager.instance.sampleOnly, 1f);
-        toggleOn = true;        
-        tempMaterial = new Material(originalMaterial);
-        tempColor = tempMaterial.color;
-        tempColor.a = 255;
-        tempMaterial.color = tempColor;
-        mesh.material = tempMaterial;
+        _toggleOn = true;        
+        _tempMaterial = new Material(_originalMaterial);
+        _tempColor = _tempMaterial.color;
+        _tempColor.a = 255;
+        _tempMaterial.color = _tempColor;
+        _mesh.material = _tempMaterial;
         MixerManager.instance.sampleTrack.SetSwitch(gameObject.name, 0.5f);        
     }
 
@@ -49,8 +49,8 @@ public class SampleMusic : MonoBehaviour
     {
         if (MixerManager.instance.currentMixer == MixerManager.instance.sampleOnly)
             MixerManager.instance.SetMixerSnapshot(MixerManager.instance.allOn, 1f);
-        toggleOn = false;
-        mesh.material = originalMaterial;          
+        _toggleOn = false;
+        _mesh.material = _originalMaterial;          
         MixerManager.instance.sampleTrack.SetSwitch("", 0.5f);	   
     }        
     
@@ -60,11 +60,11 @@ public class SampleMusic : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
-            if (highlightedObject)
+            if (HighlightedObject)
             {
                 if (!hit.collider)                
                     Reset();                              
-                else if (hit.collider.gameObject != highlightedObject.gameObject)                
+                else if (hit.collider.gameObject != HighlightedObject.gameObject)                
                     Reset();                                    
             }
         }

@@ -15,32 +15,19 @@ namespace InteractiveMusicPlayer
         
         [ConditionalHide("_overrideParentRhythm", false)][SerializeField]
         private float _tempo = 120f;
-        public float Tempo
-        {
-            get { return _tempo; }
-        }
+        public float Tempo { get { return _tempo; }}
         
         [ConditionalHide("_overrideParentRhythm", false)]
         [SerializeField]
         private int _beatsPerBar = 4;
-        public int BeatsPerBar
-        {
-            get { return _beatsPerBar; }
-        }
+        public int BeatsPerBar { get { return _beatsPerBar; }}
 
-        public enum DurationOfBeat
-        {
-            QuarterNote, EighthNote, SixteenthNote
-        }
-
+        public enum DurationOfBeat {QuarterNote, EighthNote, SixteenthNote}
         [Tooltip("The duration in note value of a beat")]
         [ConditionalHide("_overrideParentRhythm", false)]
         [SerializeField]
         private DurationOfBeat _beatDuration = DurationOfBeat.QuarterNote;
-        public DurationOfBeat BeatDuration
-        {
-            get { return _beatDuration; }
-        }
+        public DurationOfBeat BeatDuration { get { return _beatDuration; }}        
         
         [Tooltip("The total length of music in bars and beats")]
         [SerializeField]
@@ -127,7 +114,7 @@ namespace InteractiveMusicPlayer
         
         [ConditionalHide("_overrideParentTransition", false)]
         [SerializeField]
-        protected TransitionType _transitionInterval = TransitionType.NextBar;	
+        protected TransitionType _transitionInterval = TransitionType.ExitCue;	
         
         [EnumHide("_transitionInterval", 3, true)]
         [Tooltip("Time interval between possible transiions")]
@@ -152,10 +139,7 @@ namespace InteractiveMusicPlayer
         
         //the original name, without playback status prepending       
         private string _originalName;
-        public string Name
-        {
-            get { return _originalName; }
-        }
+        public string Name { get { return _originalName; }}
         #endregion
 
         #region AUDIO SETTING
@@ -202,11 +186,7 @@ namespace InteractiveMusicPlayer
         #endregion
         
         #region PLAYBACK SETTING
-        public enum PlayStatus
-        {
-            PreEntry, Playing, PostExit, Idle 
-        }
-        
+        public enum PlayStatus {PreEntry, Playing, PostExit, Idle}        
         [Header("Playing Status")]        
         [ReadOnly]
         [SerializeField]
@@ -227,17 +207,12 @@ namespace InteractiveMusicPlayer
         
         //the timing data, read only from outside
         private float _secondPerBeat;
-        public float BeatLength
-        {
-            get { return _secondPerBeat; }
-        }
+        public float BeatLength { get { return _secondPerBeat; }}
 
         private float _secondPerBar;
-        public float BarLength
-        {
-            get { return _secondPerBar; }
-        }
+        public float BarLength { get { return _secondPerBar; }}
         
+        //the positions in real time
         private float _trackDurationRealTime;
         public float TrackLength
         {
@@ -246,25 +221,15 @@ namespace InteractiveMusicPlayer
         }      
         
         private float _entryPositionRealTime;
-        public float EntryTime
-        {
-            get { return _entryPositionRealTime; }
-        }  
+        public float EntryTime { get { return _entryPositionRealTime; }}  
         
         private float _exitPositionRealTime;
-        public float ExitTime
-        {
-            get { return _exitPositionRealTime; }
-        }  
-        
+        public float ExitTime { get { return _exitPositionRealTime; }}
+                 
         private float _gridLengthRealTime;
-        public float GridLength
-        {
-            get { return _gridLengthRealTime; }
-        }          
+        public float GridLength { get { return _gridLengthRealTime; }}          
         protected float _transitionCheckTimeStamp;
-        
-		
+        		
         //register other events to this track's playing events
         public delegate void MusicCallback();
         public MusicCallback PlayCallback;        
@@ -275,7 +240,7 @@ namespace InteractiveMusicPlayer
                 
         //FUNCTIONS
         
-        #region INITIALIZATION        
+        #region SYNCHRONIZATION        
         //if no parent found, always override settings
         private void AlwaysOverride()
         {
@@ -285,7 +250,7 @@ namespace InteractiveMusicPlayer
             _overrideParentAudio = true;
         }
         
-        //for the editor button
+        //for the editor button to copy settings to children music components
         public void CopySettingsToChildren()
         {
             foreach (Transform child in transform)
@@ -301,7 +266,7 @@ namespace InteractiveMusicPlayer
             }   
         }
         
-        //copy position settings from another music
+        //copy position settings from another music component
         protected void CopyPositionSettings(MusicComponent copyFrom)
         {                                  			            
             _preEntry = copyFrom._preEntry;
@@ -312,7 +277,7 @@ namespace InteractiveMusicPlayer
             ConvertDurationsFromBeatToTime();            
         }
 
-        //copy tempo and rhythm settings from another music
+        //copy tempo and rhythm settings from another music component
         protected void CopyRhythmSettings(MusicComponent copyFrom)
         {
             _tempo = copyFrom.Tempo;						    
@@ -322,7 +287,7 @@ namespace InteractiveMusicPlayer
             ConvertDurationsFromBeatToTime();
         }
 
-        //copy transition settings from another music
+        //copy transition settings from another music component
         public void CopyTransitionSettings(MusicComponent copyFrom)
         {
             _transitionInterval = copyFrom._transitionInterval;
@@ -331,7 +296,7 @@ namespace InteractiveMusicPlayer
             SetTransitionTime();      
         }
 
-        //copy audio settings from another music
+        //copy audio settings from another music component
         private void CopyAudioSettings(MusicComponent copyFrom)
         {
             _volume = copyFrom._volume;
@@ -339,7 +304,9 @@ namespace InteractiveMusicPlayer
             _highPassFilterCutoff = copyFrom._highPassFilterCutoff;
             _lowPassFilterCutoff = copyFrom._lowPassFilterCutoff;
         }
-
+        #endregion
+        
+        #region INITIALIZATION
         //find the duration in real time of each beat and bar
         private void GetBeatDuration()
         {
@@ -365,19 +332,16 @@ namespace InteractiveMusicPlayer
             _trackDurationRealTime = BarAndBeatToRealTime(_trackDuration);
          
             //configure post-exit and pre-entry settings
-            if (_postExit)
-            {
-                _exitPositionRealTime = BarAndBeatToRealTime(_exitPosition);
-            }
+            if (_postExit)            
+                _exitPositionRealTime = BarAndBeatToRealTime(_exitPosition);            
             else
             {
                 _exitPosition = _trackDuration;
                 _exitPositionRealTime = _trackDurationRealTime;
             }                    
-            if (_preEntry)
-            {
-                _entryPositionRealTime = BarAndBeatToRealTime(_entryPosition);                        
-            }
+            
+            if (_preEntry)            
+                _entryPositionRealTime = BarAndBeatToRealTime(_entryPosition);                                    
             else
             {
                 _entryPosition = BarAndBeat.Zero;
@@ -411,8 +375,8 @@ namespace InteractiveMusicPlayer
                     break;
                 case TransitionType.CustomPositions:
                     _customPositionsRealTime.Clear();
-                    foreach (var pos in _customPositions)
-                    { //register all the custom positions to real time list
+                    foreach (var pos in _customPositions) //register all the custom positions to real time list
+                    { 
                         _customPositionsRealTime.Add(BarAndBeatToRealTime(pos) - _entryPositionRealTime);
                     }    
                     break;
@@ -438,7 +402,7 @@ namespace InteractiveMusicPlayer
             }            
         }        
         
-        //calculate stuff when starting the game
+        //check when starting the game
         protected virtual void Start()
         {
             _playingStatus = PlayStatus.Idle;
@@ -473,7 +437,8 @@ namespace InteractiveMusicPlayer
                     StopCallback += track.Stop; //make sure all children stops when this stops
                 }                
             }
-            _childClips = GetComponentsInChildren<MusicClip>();
+            _childClips = GetComponentsInChildren<MusicClip>(); //find all music clips in children
+            
             //check tempo and transition override settings to match parent
             var parent = transform.parent;
             if (!parent)
@@ -516,7 +481,7 @@ namespace InteractiveMusicPlayer
         //when a play event is received
         public virtual void Play()
         {
-            if (PlayCallback != null) PlayCallback();
+            if (PlayCallback != null) PlayCallback(); //call methods registered at play callback
             _playheadPosition = BarAndBeat.Zero;
             if (_debugLog) Debug.Log(Time.time + ": " + _originalName + " starts playing");
             RemainingLoops = _loopCount;   
@@ -540,10 +505,8 @@ namespace InteractiveMusicPlayer
                 Invoke("LoopStart", _entryPositionRealTime);
                 gameObject.name = "#Pre-Entry# " + _originalName;
             }
-            else
-            {
-                LoopStart();
-            }                        
+            else            
+                LoopStart(); //if no pre entry, directly start main loop                                    
         }
 		
         //entering the main looping body
@@ -567,7 +530,6 @@ namespace InteractiveMusicPlayer
             }
             Invoke("LoopEnd", _exitPositionRealTime - _entryPositionRealTime);
             
-
             gameObject.name = "#Playing# " + _originalName;
             if (_debugLog) Debug.Log(Time.time + ": " + _originalName + " enters main loop stage");            
         }        	        
@@ -577,7 +539,7 @@ namespace InteractiveMusicPlayer
         {                        
             if ((_loopCount > 1 && RemainingLoops > 0) || _loopCount == 0) //if still need to loop
             {               
-                CancelInvoke("OnBeat"); 
+                CancelInvoke("OnBeat"); //make sure the playhead goes to right position
                 ResetPlayhead();
                 InvokeRepeating("OnBeat", _secondPerBeat, _secondPerBeat);
             }
@@ -596,10 +558,8 @@ namespace InteractiveMusicPlayer
                 gameObject.name = "#Post-Exit# " + _originalName;
                 if (_debugLog) Debug.Log(Time.time + ": " + _originalName + " enters post-exit");
             }
-            else
-            {
-                Stop();
-            }
+            else            
+                Stop(); //if no post exit, directly stop the music            
         }       
         
         //when a stop event is received
@@ -626,12 +586,14 @@ namespace InteractiveMusicPlayer
         #region TRANSITION
         //when a transition event is received
         public void TransitionTo(MusicComponent target)
-        {
-            if (!target) //if it is getting a stop on grid event
+        {   
+            _transitionTarget = target; //set the transition target  
+            
+            if (!target) //stop on grid event has no transition target
             {
                 if (_transitionInterval == TransitionType.Immediate)                                                        
                 {
-                    Stop();
+                    Stop(); //if interval is immediate, stop immediately
                     Debug.LogWarning(MusicManager.Instance.GetObjectPath(gameObject) + 
                         ": Transition is set to immediate, stop on grid event will function the same as normal stop event!");
                 }
@@ -639,8 +601,7 @@ namespace InteractiveMusicPlayer
                     Invoke("TransitionExit", _gridLengthRealTime - (Time.time - _transitionCheckTimeStamp));                
                 return;
             }
-            
-            _transitionTarget = target;            
+                                 
             foreach (var segment in MusicManager.Instance.transitionSegments) //check if the destination has any segment to play
             {
                 if (segment.Destination == target && segment.Origin == this)
@@ -649,61 +610,57 @@ namespace InteractiveMusicPlayer
                         _transitionTarget = segment; //make the segment the target of transition                     
                     break;
                 }                         
-                if (!segment.Origin && segment.Destination == target)
+                if (!segment.Origin && segment.Destination == target) //if segment only has target
                     _transitionTarget = segment;
-                if (segment.Origin == this && !segment.Destination)
+                if (segment.Origin == this && !segment.Destination) //if segment only has origin
                 {
                     _transitionTarget = segment;
-                    segment._transitionTarget = target;
-                }
-                    
+                    segment._transitionTarget = target; //the target plays after the segment
+                }                    
             }
-
+            if (target) _transitionTarget.FadeTime = _fadeTime; //set fade time to transition target
+            
             if (_transitionInterval == TransitionType.Immediate)
             {
                 _transitionTarget.Play();
-                Stop();
+                Stop(); //stop this music
             }
             else
             {
                 CancelInvoke("LoopEnd"); //make sure this track doesn't loop
                 //find the remaining time to next transition point
-                float transitionTime = _gridLengthRealTime - (Time.time - _transitionCheckTimeStamp) - _transitionTarget._entryPositionRealTime; 
-                if (transitionTime > 0f)                
-                    Invoke("TransitionExit", transitionTime);                
+                float transitionWaitTime = _gridLengthRealTime - (Time.time - _transitionCheckTimeStamp) - _transitionTarget.EntryTime; 
+                if (transitionWaitTime > 0f)                
+                    Invoke("TransitionExit", transitionWaitTime);                
                 else if (_transitionInterval == TransitionType.ExitCue || _transitionInterval == TransitionType.CustomPositions)                                                                                                
                     TransitionExit(); //if already passed the entry position
                 else
-                    Invoke("TransitionExit", transitionTime + _gridLengthRealTime); //wait for next grid
+                    Invoke("TransitionExit", transitionWaitTime + _gridLengthRealTime); //wait for next grid
                 
-                if (_debugLog)
-                    if (_debugLog) Debug.Log(Time.time + ": " + _originalName + " will transition to " + _transitionTarget._originalName);                
-            }
-            
+                if (_debugLog) Debug.Log(Time.time + ": " + _originalName + " will transition to " + _transitionTarget._originalName);                
+            }            
         }
 
         //update time stamp of each transition check point
         protected void UpdateTimeStamp()
         {
-            _transitionCheckTimeStamp = Time.time; 
-            
-            if (_transitionInterval == TransitionType.CustomPositions)
+            _transitionCheckTimeStamp = Time.time;
+
+            if (_transitionInterval != TransitionType.CustomPositions) return; //special case for custom positions            
+            if (_customPositionIndex == 0) //between loop start and the first point
             {
-                if (_customPositionIndex == 0) //between loop start and the first point
-                {
-                    _gridLengthRealTime = BarAndBeatToRealTime(_customPositions[0]) - _entryPositionRealTime;                    
-                }
-                else if (_customPositionIndex < _customPositions.Count) //get time between two custom positions
-                {
-                    _gridLengthRealTime = BarAndBeatToRealTime(_customPositions[_customPositionIndex]) -
-                                         BarAndBeatToRealTime(_customPositions[_customPositionIndex - 1]);                                        
-                }
-                else //between loop end and the last check point
-                {
-                    _gridLengthRealTime = _exitPositionRealTime - BarAndBeatToRealTime(_customPositions[_customPositions.Count - 1]);
-                }
-                _customPositionIndex++; //go to the next custom position
+                _gridLengthRealTime = BarAndBeatToRealTime(_customPositions[0]) - _entryPositionRealTime;                    
             }
+            else if (_customPositionIndex < _customPositions.Count) //get time between two custom positions
+            {
+                _gridLengthRealTime = BarAndBeatToRealTime(_customPositions[_customPositionIndex]) -
+                                      BarAndBeatToRealTime(_customPositions[_customPositionIndex - 1]);                                        
+            }
+            else //between loop end and the last check point
+            {
+                _gridLengthRealTime = _exitPositionRealTime - BarAndBeatToRealTime(_customPositions[_customPositions.Count - 1]);
+            }
+            _customPositionIndex++; //go to the next custom position
         }
         
         //called every transition grid
@@ -719,9 +676,9 @@ namespace InteractiveMusicPlayer
             _transitionTarget.Play(); //go to the next track
             //if transition at exit cue position, end the current one with normal post-exit
             if (_transitionInterval == TransitionType.ExitCue || _playheadPosition == _exitPosition)                                             
-                Invoke("PostExitStage", _transitionTarget._entryPositionRealTime);                                                              
+                Invoke("PostExitStage", _transitionTarget.EntryTime);                                                              
             else //if transition in the middle of a track, stop directly           
-                Invoke("Stop", _transitionTarget._entryPositionRealTime);            
+                Invoke("Stop", _transitionTarget.EntryTime);            
 
             if (_debugLog) Debug.Log(Time.time + ": " + _originalName + " now transitions to " + _originalName);
         }
@@ -731,40 +688,32 @@ namespace InteractiveMusicPlayer
         //update the playhead position every beat 
         private void OnBeat()
         {         
-            _playheadPosition.Beat++;
-            if (_playheadPosition.Beat == _beatsPerBar)
+            _playheadPosition.Beat++; //increment beat count
+            if (_playheadPosition.Beat == _beatsPerBar) //when beat reaches beats per bar
             {
-                _playheadPosition.Beat = 0;
-                _playheadPosition.Bar++;                
+                _playheadPosition.Beat = 0; //reset beat count
+                _playheadPosition.Bar++; //increment bar count                
             }                      
         }
 
         //reset the play head to entry position every time a track loops
         protected void ResetPlayhead()
         {
-            _playheadPosition = _entryPosition;
-            LoopStart();
+            _playheadPosition = _entryPosition; //reset the playhead to entry position
+            LoopStart(); //repeat the loop start actions
         }
         #endregion
         
         #region CONTROLS
-        //mute the music
+        //mute/unmute the music
         public virtual void Mute()
         {            
-            foreach (var clip in _childClips)
+            foreach (var clip in _childClips) //mute all the music clips in children
             {
                 clip.Mute();
             }
         }
-
-        //overload mute with fade time
-        public void Mute(float fadeTime)
-        {
-            _fadeTime = fadeTime;
-            Mute();
-        }
         
-        //unmute the music
         public virtual void UnMute()
         {            
             foreach (var clip in _childClips)
@@ -773,23 +722,29 @@ namespace InteractiveMusicPlayer
             }
         }
         
-        //overload unmute with fade time
+        //overload mute/unmute with fade time
+        public void Mute(float fadeTime)
+        {
+            FadeTime = fadeTime;
+            Mute();
+        }                        
+        
         public void UnMute(float fadeTime)
         {
-            _fadeTime = fadeTime;
+            FadeTime = fadeTime;
             UnMute();
         }
         
         //change output mixer bus
         public virtual void SetOutputBus(AudioMixerGroup bus)
         {
-            foreach (var clip in _childClips)
+            foreach (var clip in _childClips) //set mixer bus to all the children music clips
             {
                 clip.SetOutputBus(bus);
             }
         }
         
-        //change volume along with all of its children
+        //change volume/pan along with all of its children
         public virtual void SetVolume(float v)
         {            
             _volume = v;
@@ -799,7 +754,6 @@ namespace InteractiveMusicPlayer
             }
         }
         
-        //change pan along with all of its children
         public virtual void SetPan(float p)
         {            
             _pan = p;
@@ -809,7 +763,7 @@ namespace InteractiveMusicPlayer
             }
         }
         
-        //change low pass filter cutoff along with all of its children
+        //change low/high pass filter cutoff along with all of its children
         public virtual void SetLPFCutoff(float cutoff)
         {            
             _lowPassFilterCutoff = cutoff;
@@ -818,8 +772,7 @@ namespace InteractiveMusicPlayer
                 child.SetLPFCutoff(cutoff);
             }
         }
-        
-        //change high pass filter cutoff along with all of its children
+                
         public virtual void SetHPFCutoff(float cutoff)
         {            
             _highPassFilterCutoff = cutoff;
@@ -830,16 +783,16 @@ namespace InteractiveMusicPlayer
         }
 	
         //conversion between Bar/Beat and real time
-        protected float BarAndBeatToRealTime(BarAndBeat b)
+        private float BarAndBeatToRealTime(BarAndBeat b)
         {
-            return b.Bar * _secondPerBar + b.Beat * _secondPerBeat;
+            return b.Bar * _secondPerBar + b.Beat * _secondPerBeat; //the beat-quantized time in seconds
         }
         
         protected BarAndBeat RealTimetoBarAndBeat(float t)
         {
-            int bar = Mathf.FloorToInt(t / _secondPerBar);
-            int beat = Mathf.RoundToInt((t - bar * _secondPerBar) / _secondPerBeat);
-            return new BarAndBeat(bar, beat);
+            int barNumber = Mathf.FloorToInt(t / _secondPerBar);
+            int beatNumber = Mathf.RoundToInt((t - barNumber * _secondPerBar) / _secondPerBeat);
+            return new BarAndBeat(barNumber, beatNumber);
         }
         #endregion
     }

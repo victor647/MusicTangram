@@ -11,31 +11,29 @@ namespace InteractiveMusicPlayer
 
 		public BarAndBeat(int bar, int beat) //constructor
 		{
-			if (bar >= 0)
+			if (bar >= 0) //make sure that the bars and beats cannot be nagative
 			{
-				this.Bar = bar;
+				Bar = bar;
 			}
 			else
 			{
 				Debug.LogWarning("Bar number cannot be negative!");
-				this.Bar = 0;
+				Bar = 0;
 			}
 
 			if (beat >= 0)
 			{
-				this.Beat = beat;
+				Beat = beat;
 			}
 			else
 			{
 				Debug.LogWarning("Beat number cannot be negative!");
-				this.Beat = 0;
+				Beat = 0;
 			}
 		}
 
 		//operator for comparing
-
 		#region OPERATORS 
-
 		public static bool operator ==(BarAndBeat x, BarAndBeat y)
 		{
 			return x.Bar == y.Bar && x.Beat == y.Beat;
@@ -91,15 +89,13 @@ namespace InteractiveMusicPlayer
 			return x < y || x == y;
 		}
 
-		public override int GetHashCode()
+		public override int GetHashCode() //just for Unity to not throw warnings
 		{
 			return Bar ^ Beat;
 		}
-
 		#endregion
 
-		#region VALUES
-
+		#region VALUES		
 		public static BarAndBeat Zero
 		{
 			get { return new BarAndBeat(0, 0); }
@@ -114,7 +110,6 @@ namespace InteractiveMusicPlayer
 		{
 			get { return new BarAndBeat(0, 1); }
 		}
-
 		#endregion
 	}
 }

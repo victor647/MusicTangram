@@ -9,8 +9,20 @@ namespace InteractiveMusicPlayer
 		private string _parameterName = "";
 		[SerializeField]
 		private float _minValue = 0f;
+		public float MinValue
+		{
+			get { return _minValue; }
+			set { _minValue = value; }
+		}
+		
 		[SerializeField]
 		private float _maxValue = 100f;
+		public float MaxValue
+		{
+			get { return _maxValue; }
+			set { _maxValue = value; }
+		}
+		
 		[SerializeField] 
 		private float _currentParameterValue = 50f;
 		
@@ -20,7 +32,12 @@ namespace InteractiveMusicPlayer
 		[ConditionalHide("_slew", true)] [Tooltip("In parameter units per second")]
 		[SerializeField]
 		private float _slewRate = 20f;
-		
+		public float SlewRate
+		{
+			get { return _slewRate; }
+			set { _slewRate = value; }
+		}
+
 		private bool _isSlewing;
 		private float _targetParameterValue;
 		

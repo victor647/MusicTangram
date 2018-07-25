@@ -28,7 +28,7 @@ public class MusicOnDrag : MonoBehaviour {
 		_mesh.material = _tempMaterial;
 		_onDrag = true;
 		
-		if (_shapeMusic.music.PlayingStatus != MusicComponent.PlayStatus.Idle)
+		if (_shapeMusic.music.PlayingStatus != MusicComponent.PlayStatus.Idle && _originalMaterial.name.Substring(0, 2) != "wt")
 		{
 			MixerManager.instance.SetMixerSnapshot(MixerManager.instance.selfOnly, 1f);
 			_shapeMusic.music.SetOutputBus(MixerManager.instance.self);	
@@ -40,7 +40,7 @@ public class MusicOnDrag : MonoBehaviour {
 		_mesh.material = _originalMaterial;
 		_onDrag = false;
 		
-		if (_shapeMusic.music.PlayingStatus != MusicComponent.PlayStatus.Idle)
+		if (_shapeMusic.music.PlayingStatus != MusicComponent.PlayStatus.Idle && _originalMaterial.name.Substring(0, 2) != "wt")
 		{
 			MixerManager.instance.SetMixerSnapshot(MixerManager.instance.lastMixer, 1f);
 			Invoke("ResetMixer", 1f);
