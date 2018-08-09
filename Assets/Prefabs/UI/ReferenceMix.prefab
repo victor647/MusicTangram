@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 222466006976291970}
   - component: {fileID: 114048988125283690}
   - component: {fileID: 114619378058483404}
+  - component: {fileID: 114653530321742128}
   m_Layer: 5
   m_Name: ReferenceMix
   m_TagString: Untagged
@@ -110,9 +111,32 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 114653530321742128}
+        m_MethodName: TriggerSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Toggle+ToggleEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
   m_IsOn: 1
+--- !u!114 &114653530321742128
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1394357709385744}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e4525b2853e747a5abe6b0dd3802e34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundEffect: {fileID: 8300000, guid: 7a2a720d7e55b4621b2665ba9ef08db8, type: 3}
 --- !u!114 &114873957049261736
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -124,7 +148,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0043cbde206b3416bb051953c5dd9ad4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  refMix: {fileID: 0}
   mouseOver: 0
 --- !u!222 &222466006976291970
 CanvasRenderer:

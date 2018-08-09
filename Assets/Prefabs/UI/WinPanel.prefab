@@ -57,6 +57,7 @@ GameObject:
   - component: {fileID: 222687423039709180}
   - component: {fileID: 114670162384284004}
   - component: {fileID: 114523116344581128}
+  - component: {fileID: 114741204805852230}
   m_Layer: 5
   m_Name: Next
   m_TagString: Untagged
@@ -147,6 +148,17 @@ MonoBehaviour:
           m_StringArgument: Level_1_2
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 114741204805852230}
+        m_MethodName: TriggerSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &114572441507731590
@@ -203,6 +215,18 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &114741204805852230
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1723466493545448}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e4525b2853e747a5abe6b0dd3802e34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundEffect: {fileID: 8300000, guid: 0eb33af200b8e42b080a1f1943ea4baf, type: 3}
 --- !u!114 &114762626827540046
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -214,7 +238,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af99a5034120d4e99818c55ff58d2895, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  affectedMusic: {fileID: 0}
 --- !u!222 &222343856207053432
 CanvasRenderer:
   m_ObjectHideFlags: 1

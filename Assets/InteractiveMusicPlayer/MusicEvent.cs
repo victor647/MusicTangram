@@ -218,23 +218,22 @@ namespace InteractiveMusicPlayer
 
         private void OnEnable()
         {
+            if (MusicManager.Instance)
+                MusicManager.Instance.AddEvent(this);
             if (!manuallySetTarget)
                 eventTarget = GetComponent<MusicComponent>();                            
             if (eventName == "" && eventTarget) //if the user forgets to write event name          
-                GenerateEventName();     
-            
-            if (MusicManager.Instance)
-                MusicManager.Instance.AddEvent(this);
+                GenerateEventName();                            
             if (triggerCondition == TriggerCondition.OnEnable) 
                 Invoke("Activate", delayTime);
         }
 
         private void OnDisable()
-        {            
-            if (MusicManager.Instance)
-                MusicManager.Instance.RemoveEvent(this);
+        {                        
             if (triggerCondition == TriggerCondition.OnDisable) 
                 Invoke("Activate", delayTime);
+            if (MusicManager.Instance)
+                MusicManager.Instance.RemoveEvent(this);
         }
         
         private void OnDestroy()

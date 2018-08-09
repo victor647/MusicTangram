@@ -14,10 +14,16 @@ namespace InteractiveMusicPlayer
 		[SerializeField]
 		private AudioClip _clip = null;
 		public AudioClip Clip { get { return _clip; }}
-		
-		[Tooltip("The output mixer group this music is routed to")]
+
+		[Tooltip("The output mixer group this music is routed to")]		
 		[SerializeField]
-		private AudioMixerGroup _mixerBus; 
+		private AudioMixerGroup _mixerBus;
+		public AudioMixerGroup MixerBus
+		{
+			get { return _mixerBus; }
+			set { if (_source) _source.outputAudioMixerGroup = _mixerBus = value; }
+		}
+		
 		//the audio source instantiated after game runs
 		protected AudioSource _source;
         
@@ -52,7 +58,7 @@ namespace InteractiveMusicPlayer
 		//for muting music without setting playback volume to 0
 		public override void Mute()
 		{            			
-			if (_isMuted) return; //avoid repeating mute commands          			
+			if (_isMuted) return; //avoid repeating mute commands  			
 			_isMuted = true; //set the mute status			
 			if (FadeTime > 0f && _source.isPlaying) //decide if a fade out is needed
 			{
@@ -66,7 +72,7 @@ namespace InteractiveMusicPlayer
 		//resume the volume back
 		public override void UnMute()
 		{            
-			if (!_isMuted) return;
+			if (!_isMuted) return;			
 			_isMuted = false;
 			if (FadeTime > 0f && _source.isPlaying)
 			{
@@ -75,12 +81,6 @@ namespace InteractiveMusicPlayer
 			}
 			else
 				_source.volume = _volume;         
-		}
-        
-		//if the output mixing bus needs to be changed in game
-		public override void SetOutputBus(AudioMixerGroup bus)
-		{
-			if (_source) _source.outputAudioMixerGroup = _mixerBus = bus;
 		}
 		
 		//changing volume from external calls and events
@@ -214,6 +214,7 @@ namespace InteractiveMusicPlayer
 		{
 			if (_isFadingIn)
 			{
+				if (_isFadingOut) _isFadingOut = false; //stops fading out
 				float progress = (Time.time - _fadeTimeStamp) / FadeTime; //the percentage of passed fading time                 
 				_source.volume = Mathf.Lerp(0f, _volume, progress);
 				//only play audio source in the first frame of fading in
@@ -228,6 +229,7 @@ namespace InteractiveMusicPlayer
             
 			if (_isFadingOut)
 			{
+				if (_isFadingIn) _isFadingIn = false;
 				float progress = (Time.time - _fadeTimeStamp) / FadeTime;                 
 				_source.volume = Mathf.Lerp(_volume, 0f, progress);                
 				if (progress >= 1)

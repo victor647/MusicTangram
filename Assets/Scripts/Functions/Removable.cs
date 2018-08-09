@@ -11,6 +11,7 @@ public class Removable : MonoBehaviour
 		{			
 			MixerManager.instance.SetMixerSnapshot(MixerManager.instance.allOn, 1f);
 			StartCoroutine(Shrink());			
+			SoundEffectManager.instance.RemoveShape();
 			GetComponent<ShapeMusic>().Removed();
 		}
 	}

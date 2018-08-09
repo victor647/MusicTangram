@@ -40,6 +40,7 @@ GameObject:
   - component: {fileID: 222282955602726452}
   - component: {fileID: 114251584844332716}
   - component: {fileID: 114055595049903226}
+  - component: {fileID: 114920637475684054}
   m_Layer: 5
   m_Name: OK
   m_TagString: Untagged
@@ -102,7 +103,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af99a5034120d4e99818c55ff58d2895, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  affectedMusic: {fileID: 0}
 --- !u!114 &114055595049903226
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -153,6 +153,17 @@ MonoBehaviour:
           m_StringArgument: Level_2_1
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 114920637475684054}
+        m_MethodName: TriggerSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &114063904024295638
@@ -176,7 +187,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: f2fc5a5e9682f4ef68e0e97b84e38306, type: 3}
-    m_FontSize: 50
+    m_FontSize: 45
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 1
@@ -187,14 +198,16 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 'Drag shapes to pattern
+  m_Text: 'Drag shapes to match pattern
 
     Drag colors to shapes
 
 
-    Click CD for original music
+    Click CD to hear original music
 
     Match your music of shapes to CD
+
+    Blinking shapes play on next cycle
 
 
     Right click on shape/color
@@ -229,6 +242,18 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &114920637475684054
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1727566477585658}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e4525b2853e747a5abe6b0dd3802e34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundEffect: {fileID: 8300000, guid: 6e5a67e13ebbf412ab24dda17f941708, type: 3}
 --- !u!222 &222277055092344622
 CanvasRenderer:
   m_ObjectHideFlags: 1

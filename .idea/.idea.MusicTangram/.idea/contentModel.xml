@@ -36,6 +36,7 @@
             <e p="Metronome.cs" t="Include" />
           </e>
           <e p="MusicEvent.cs" t="Include" />
+          <e p="MusicInstance.cs" t="Include" />
           <e p="MusicLayers.cs" t="Include" />
           <e p="MusicManager.cs" t="Include" />
           <e p="MusicParameter.cs" t="Include" />
@@ -48,6 +49,7 @@
           <e p="MusicTransitionSegment.cs" t="Include" />
           <e p="ParameterMapping.cs" t="Include" />
         </e>
+        <e p="LevelButton.cs" t="Include" />
         <e p="Plugins" t="Include">
           <e p="Editor" t="Include">
             <e p="JetBrains" t="Include">
@@ -56,6 +58,16 @@
           </e>
         </e>
         <e p="Scripts" t="Include">
+          <e p="Audio" t="Include">
+            <e p="MixerManager.cs" t="Include" />
+            <e p="MusicTransport.cs" t="Include" />
+            <e p="PaletteMusic.cs" t="Include" />
+            <e p="ReferenceMix.cs" t="Include" />
+            <e p="ShapeMusic.cs" t="Include" />
+            <e p="SoundEffectManager.cs" t="Include" />
+            <e p="UISound.cs" t="Include" />
+            <e p="WinMusicToggle.cs" t="Include" />
+          </e>
           <e p="Editor" t="Include">
             <e p="MakeShapeEditor.cs" t="Include" />
             <e p="ScreenPositionEditor.cs" t="Include" />
@@ -66,9 +78,11 @@
             <e p="Paintable.cs" t="Include" />
             <e p="PaletteColor.cs" t="Include" />
             <e p="Removable.cs" t="Include" />
+            <e p="SelfDestroy.cs" t="Include" />
             <e p="ShapeInfo.cs" t="Include" />
             <e p="ShapePool.cs" t="Include" />
-            <e p="Snappable.cs" t="Include" />
+            <e p="SnapToGrid.cs" t="Include" />
+            <e p="SnapToShape.cs" t="Include" />
           </e>
           <e p="Library" t="Include">
             <e p="Triangulator.cs" t="Include" />
@@ -78,15 +92,6 @@
             <e p="LoadLevel.cs" t="Include" />
             <e p="PlayMode.cs" t="Include" />
             <e p="Scenes.cs" t="Include" />
-          </e>
-          <e p="Music" t="Include">
-            <e p="MixerManager.cs" t="Include" />
-            <e p="musicOnDrag.cs" t="Include" />
-            <e p="MusicTransport.cs" t="Include" />
-            <e p="PaletteMusic.cs" t="Include" />
-            <e p="ReferenceMix.cs" t="Include" />
-            <e p="ShapeMusic.cs" t="Include" />
-            <e p="WinMusicToggle.cs" t="Include" />
           </e>
           <e p="UI" t="Include">
             <e p="ControlPanel.cs" t="Include" />

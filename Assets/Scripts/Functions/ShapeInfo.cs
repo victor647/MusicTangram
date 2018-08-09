@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class ShapeInfo : MonoBehaviour
 {
@@ -9,7 +7,8 @@ public class ShapeInfo : MonoBehaviour
 		sqr, tri, rct, pll, plr, tpz
 	}
 
-	public ShapeType type; 
+	public ShapeType type;
+	[ReadOnly] public bool isInCorrectPosition;	
 	
 	[System.Serializable]
 	public struct ShapeInformation
@@ -19,18 +18,30 @@ public class ShapeInfo : MonoBehaviour
 		public int SizeIndex;
 		public string Color;
 		public Vector2 Position;
-		
-		public static bool operator == (ShapeInformation x, ShapeInformation y)
+		public Vector2 SecondaryPosition;
+
+		public bool MatchExceptColor(ShapeInformation s)
 		{
-			return x.Type == y.Type && x.RotationIndex == y.RotationIndex 
-				&& x.SizeIndex == y.SizeIndex && x.Color == y.Color && (y.Position - x.Position).magnitude < 0.01f;
+			return  MatchPosition(s) && s.Type == Type && s.RotationIndex == RotationIndex && s.SizeIndex == SizeIndex;
+		}
+
+		public bool MatchColor(ShapeInformation s)
+		{
+			return Color == s.Color && Type == s.Type;
 		}
 		
-		public static bool operator != (ShapeInformation x, ShapeInformation y)
+		private bool MatchPosition(ShapeInformation s)
 		{
-			return x.Type != y.Type || x.RotationIndex != y.RotationIndex 
-				|| x.SizeIndex != y.SizeIndex || x.Color != y.Color || (y.Position - x.Position).magnitude > 0.01f;
-		}		
+			if (s.SecondaryPosition == Vector2.zero)
+				return (s.Position - Position).magnitude < 0.01f;
+			return (s.Position - Position).magnitude < 0.01f || (s.SecondaryPosition - Position).magnitude < 0.01f;
+		}
+		
+		public bool Equals(ShapeInformation s)
+		{
+			return Type == s.Type && RotationIndex == s.RotationIndex
+				&& SizeIndex == s.SizeIndex && Color == s.Color && MatchPosition(s);
+		}				
 	}
 
 	private ShapeInformation _info;
@@ -44,7 +55,11 @@ public class ShapeInfo : MonoBehaviour
 		set
 		{
 			_info.Color = value;
-			if (LevelManager.instance) LevelManager.instance.CheckAnswer();
+			if (LevelManager.instance)
+			{
+				LevelManager.instance.attempts++;
+				LevelManager.instance.CheckAnswer();				
+			}
 		}
 	}
 	

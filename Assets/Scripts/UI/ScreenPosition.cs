@@ -1,12 +1,10 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class ScreenPosition : MonoBehaviour {
 
 	public enum screenPosition
 	{
-		UpperLeft, UpperRight, LowerLeft, LowerRight, Center
+		UpperLeft, UpperRight, LowerLeft, LowerRight, Center, Left, Right, Up, Down
 	}
 
 	public screenPosition position;
@@ -34,7 +32,19 @@ public class ScreenPosition : MonoBehaviour {
 				break;
 			case screenPosition.UpperRight:
 				transform.position = (Vector2)Camera.main.ViewportToWorldPoint(new Vector3(1,1,0));
-				break;								
+				break;		
+			case screenPosition.Up:
+				transform.position = (Vector2)Camera.main.ViewportToWorldPoint(new Vector3(0.5f,1,0));
+				break;
+			case screenPosition.Down:
+				transform.position = (Vector2)Camera.main.ViewportToWorldPoint(new Vector3(0.5f,0,0));
+				break;
+			case screenPosition.Left:
+				transform.position = (Vector2)Camera.main.ViewportToWorldPoint(new Vector3(0,0.5f,0));
+				break;
+			case screenPosition.Right:
+				transform.position = (Vector2)Camera.main.ViewportToWorldPoint(new Vector3(1,0.5f,0));
+				break;
 		}		
 		transform.Translate(offset);
 	}

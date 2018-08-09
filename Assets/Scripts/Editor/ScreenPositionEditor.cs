@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEditor;
 
-[CustomEditor(typeof(ScreenPosition))]
+[CustomEditor(typeof(ScreenPosition))][CanEditMultipleObjects]
 public class ScreenPositioneEditor : Editor
 {
 	private ScreenPosition sp;

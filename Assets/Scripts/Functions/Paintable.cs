@@ -12,12 +12,13 @@ public class Paintable : MonoBehaviour
 	
 	private void OnTriggerStay2D(Collider2D col)
 	{		
-		if (col.CompareTag("Palette") && !Input.GetMouseButton(0))
+		if (col.CompareTag("Palette") && !Input.GetMouseButton(0) && col.transform.position.z < 0)
 		{
 			_mesh.material = col.GetComponent<MeshRenderer>().material;
+			_shapeMusic.UpdateColor();
 			string colorName = _mesh.material.name.Substring(0, 2);
 			if (colorName != "wt")
-				GetComponent<ShapeMusic>().music.SetSwitch(_musicName + "_" + colorName, 1f);			
+				_shapeMusic.music.SetSwitch(_musicName + "_" + colorName, 1f);			
 			col.tag = "Untagged";
 			_shapeInfo.Color = colorName;
 		}

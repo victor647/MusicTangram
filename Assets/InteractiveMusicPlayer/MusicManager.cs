@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using System.Collections.Generic;
 
@@ -37,12 +38,15 @@ namespace InteractiveMusicPlayer
         [HideInInspector] public List<MusicEvent> musicEvents;
         [HideInInspector] public List<MusicTransitionSegment> transitionSegments;
         private Dictionary<string, MusicParameter> parameters = new Dictionary<string, MusicParameter>();
+        private Dictionary<string, MusicComponent> musicInstances = new Dictionary<string, MusicComponent>();
 
+               
+        #region MACRO
         private void OnValidate()
         {
             gameObject.name = "Music Manager";
         }
-
+        
         private void Awake ()
         {
             CheckInstance();            
@@ -79,7 +83,19 @@ namespace InteractiveMusicPlayer
             }
             return path;
         }
-
+        
+        //to stop all the music playing
+        public static void StopAll(float fadeOutTime)
+        {
+            var music = FindObjectsOfType<MusicComponent>();
+            foreach (var m in music)
+            {                
+                m.Stop(fadeOutTime);
+            }
+        }
+        #endregion
+        
+        #region MUSICEVENT
         public void AddEvent(MusicEvent e)
         {
             musicEvents.Add(e);
@@ -106,17 +122,38 @@ namespace InteractiveMusicPlayer
             }
             Debug.LogError("Music Manager: can't find event with name of " + eventName);
         }
-
-        //to stop all the music playing
-        public static void StopAll(float fadeOutTime)
+        #endregion
+        
+        #region MUSICINSTANCE
+        public void RegisterMusicInstance(string name, MusicComponent instance)
         {
-            var music = FindObjectsOfType<MusicComponent>();
-            foreach (var m in music)
-            {                
-                m.Stop(fadeOutTime);
-            }
+            if (!musicInstances.ContainsKey(name))            
+                musicInstances.Add(name, instance);            
+            else            
+                Debug.LogError("A music instance of the name " + name + " has already been registered!");            
+        }
+        
+        public void UnRegisterMusicInstance(string name)
+        {
+            if (!musicInstances.ContainsKey(name))          
+                Debug.LogError("Can't find music instance with name " + name + "!");                             
+            else            
+                musicInstances.Remove(name);                           
         }
 
+        //find the music instance registered by name
+        public static MusicComponent FindMusicByName(string name)
+        {
+            if (Instance.musicInstances.ContainsKey(name))
+            {
+                return Instance.musicInstances[name];
+            }
+            Debug.LogError("Can't find music instance with name " + name + "!");
+            return null;
+        }
+        #endregion
+
+        #region MUSICPARAMETER
         //register the parameters to a list
         public void RegisterParameter(string parameterName, MusicParameter parameter)
         {
@@ -143,6 +180,17 @@ namespace InteractiveMusicPlayer
             return null;            
         }
         
+        //directly set parameter value from script
+        public static void SetParameterValue(string parameterName, float value)
+        {
+            if (Instance.parameters.ContainsKey(parameterName))
+                Instance.parameters[parameterName].ChangeTargetValue(value, true);
+            else
+                Debug.LogError("Music Manager: can't find parameter with name of " + parameterName);
+        }
+        #endregion
+        
+        #region MUSICSWITCH
         //directly set switch from script
         public static void SetSwitch(string eventName, string switchName)
         {
@@ -157,14 +205,7 @@ namespace InteractiveMusicPlayer
             }
             Debug.LogError("Music Manager: can't find switch with name of " + switchName);
         }
+        #endregion
 
-        //directly set parameter value from script
-        public static void SetParameterValue(string parameterName, float value)
-        {
-            if (Instance.parameters.ContainsKey(parameterName))
-                Instance.parameters[parameterName].ChangeTargetValue(value, true);
-            else
-                Debug.LogError("Music Manager: can't find parameter with name of " + parameterName);
-        }
     }
 }

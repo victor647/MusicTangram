@@ -1,0 +1,25 @@
+fileFormatVersion: 2
+guid: 0baef4066197d4dfb801a94231af30c0
+timeCreated: 1532579962
+licenseType: Free
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - shapePlacement: {fileID: 8300000, guid: bc04c698d470a46a7b7aa433a979f589, type: 3}
+  - shapeLock: {fileID: 8300000, guid: 9c50bdaee4df04e0fbc99665dd61a50d, type: 3}
+  - shapeCorrectAcoustic: {fileID: 8300000, guid: 5262e8bef2bd14d01a5e60411b5e8f2c,
+      type: 3}
+  - shapeCorrectElectronic: {fileID: 8300000, guid: 571a2a23a83b84e06b0b76331256bedf,
+      type: 3}
+  - shapeRemove: {fileID: 8300000, guid: 92a31dc0f7cdd4406941e8c130bdaf56, type: 3}
+  - winStingerAcoustic: {fileID: 8300000, guid: 1d59f7d0add084a9a83ee4bd2420d646,
+      type: 3}
+  - winStingerElectronic: {fileID: 8300000, guid: d61c50c56ec044d179ed97bae3828b04,
+      type: 3}
+  - UIClick: {fileID: 8300000, guid: f4e66920143144a00bc8c0f3336f8cff, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

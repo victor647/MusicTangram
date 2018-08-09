@@ -5,10 +5,27 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class Scenes : MonoBehaviour
-{	
+{
+
+	public static Scenes instance;
+	private bool isLoading;
+	
+	private void Awake ()
+	{
+		if (!instance)
+			instance = this;
+		else		
+			Destroy(this);
+	}
 	
 	public void ChangeScene(string nextScene)
-	{		
+	{
+		if (nextScene == "this")
+		{
+			StartCoroutine(LoadLevelDelay(SceneManager.GetActiveScene().name));
+			return;
+		}
+
 		if (nextScene == "Menu")
 			Destroy(MusicManager.Instance.gameObject);
 		
@@ -25,13 +42,15 @@ public class Scenes : MonoBehaviour
 
 	IEnumerator LoadLevelDelay(string scene)
 	{
+		if (isLoading) yield break;
+		isLoading = true;	
 		FadeScreen.fadeDirection = 1;
 		AsyncOperation operation = SceneManager.LoadSceneAsync(scene);
 		operation.allowSceneActivation = false;
 		MusicManager.StopAll(1f);
-		yield return new WaitForSeconds(1f);		
-		operation.allowSceneActivation = true;
-		
+		yield return new WaitForSeconds(1f);
+		isLoading = false;
+		operation.allowSceneActivation = true;				
 	}
 
 	private void MainMenuMusic()
@@ -47,6 +66,11 @@ public class Scenes : MonoBehaviour
 		}
 	}
 
+	public void Exit()
+	{
+		StartCoroutine(EndGame());
+	}
+	
 	IEnumerator EndGame()
 	{
 		FadeScreen.fadeDirection = 1;

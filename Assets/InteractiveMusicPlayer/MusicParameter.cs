@@ -53,6 +53,15 @@ namespace InteractiveMusicPlayer
 			MusicManager.Instance.UnRegisterParameter(_parameterName);
 		}
 
+		private void OnValidate()
+		{
+			if (LinkedMappings == null) return; //don't execute in edit mode
+			foreach (var mapping in LinkedMappings)
+			{
+				mapping.ApplyParameterToMusic(_currentParameterValue); //apply the value change to all the mappings
+			}
+		}
+
 		//to add a mapping
 		public void RegisterMapping(ParameterMapping mapping)
 		{

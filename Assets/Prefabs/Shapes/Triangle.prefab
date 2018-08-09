@@ -46,8 +46,8 @@ GameObject:
   - component: {fileID: 114207151177621354}
   - component: {fileID: 114226369391409224}
   - component: {fileID: 114291810098729900}
+  - component: {fileID: 114884535844549512}
   - component: {fileID: 114867428244270870}
-  - component: {fileID: 114580015853754484}
   - component: {fileID: 114212421357117952}
   - component: {fileID: 50816391280836722}
   m_Layer: 0
@@ -132,7 +132,7 @@ Rigidbody2D:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1135711291881082}
-  m_BodyType: 2
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -144,7 +144,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 1
-  m_Constraints: 3
+  m_Constraints: 4
 --- !u!60 &60231310241898688
 PolygonCollider2D:
   m_ObjectHideFlags: 1
@@ -154,7 +154,7 @@ PolygonCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -207,6 +207,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 1
+  isInCorrectPosition: 0
 --- !u!114 &114226369391409224
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -230,17 +231,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 883894ebd2e474ade913d44d30dd24d9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &114580015853754484
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1135711291881082}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8fe9689b292364f9b974a07005991ab1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &114673145152409644
@@ -283,6 +273,18 @@ MonoBehaviour:
   musicPrefab: {fileID: 1967006448973044, guid: d67d214312cfc4e9684d261e70b22457,
     type: 2}
   music: {fileID: 0}
+--- !u!114 &114884535844549512
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1135711291881082}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4004fac42db424f22b7d746cc5f694e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  snapDistance: 0.3
 --- !u!114 &114955417086323024
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -236,6 +236,8 @@ namespace InteractiveMusicPlayer
         public MusicCallback LoopCallback;
         public MusicCallback ExitCallback;
         public MusicCallback StopCallback;
+        public MusicCallback BeatCallback;
+        public MusicCallback BarCallback;
         #endregion
                 
         //FUNCTIONS
@@ -406,15 +408,15 @@ namespace InteractiveMusicPlayer
         protected virtual void Start()
         {
             _playingStatus = PlayStatus.Idle;
+            _originalName = gameObject.name; //keep track of the original name
             if (_exitPosition > _trackDuration)
             {
                 //make sure exit position can't be later than track duration
                 _exitPosition = _trackDuration;
                 _postExit = false;
             }
-
             Initialize();
-            _originalName = gameObject.name; //keep track of the original name
+            
             if (_playOnStart)
             {
                 FadeTime = _fadeInTime;
@@ -688,9 +690,11 @@ namespace InteractiveMusicPlayer
         //update the playhead position every beat 
         private void OnBeat()
         {         
-            _playheadPosition.Beat++; //increment beat count
+            if (BeatCallback != null) BeatCallback(); //invoke methods registered to beat callback
+            _playheadPosition.Beat++; //increment beat count            
             if (_playheadPosition.Beat == _beatsPerBar) //when beat reaches beats per bar
             {
+                if (BarCallback != null) BarCallback(); //invoke methods registered to bar callback
                 _playheadPosition.Beat = 0; //reset beat count
                 _playheadPosition.Bar++; //increment bar count                
             }                      
@@ -736,11 +740,11 @@ namespace InteractiveMusicPlayer
         }
         
         //change output mixer bus
-        public virtual void SetOutputBus(AudioMixerGroup bus)
+        public void SetOutputBus(AudioMixerGroup bus)
         {
             foreach (var clip in _childClips) //set mixer bus to all the children music clips
-            {
-                clip.SetOutputBus(bus);
+            {                
+                clip.MixerBus = bus;
             }
         }
         

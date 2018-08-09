@@ -49,11 +49,13 @@ public class ShapePool : MonoBehaviour
 			StartCoroutine(Expand());
 			tempInstantiated = false;						
 			GetComponent<SampleMusic>().Reset();
+			SoundEffectManager.instance.PlaceShape();
 		}
 		else
 		{
 			Destroy(tempShape);
 			tempInstantiated = false;
+			SoundEffectManager.instance.RemoveShape();
 		}
 	}
 

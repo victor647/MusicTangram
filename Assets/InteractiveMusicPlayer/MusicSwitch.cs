@@ -18,6 +18,10 @@ namespace InteractiveMusicPlayer
 			}
 		}
 		private MusicComponent _currentMusic;
+		public MusicComponent CurrentMusic
+		{
+			get { return _currentMusic; }			
+		}
 
 		[Header("Switch Settings")] 
 		[Tooltip("If switch is changed, transition to the same playback position of target track")]

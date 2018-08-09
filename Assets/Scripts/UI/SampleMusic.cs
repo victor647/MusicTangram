@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using InteractiveMusicPlayer;
+using UnityEngine;
 
 public class SampleMusic : MonoBehaviour
 {    		
@@ -7,12 +8,12 @@ public class SampleMusic : MonoBehaviour
     private Material _originalMaterial;
     private Material _tempMaterial;
     private Color32 _tempColor;
-    private bool _toggleOn;
+    private bool _toggleOn;    
 
     private void Start()
     {
         _mesh = GetComponent<MeshRenderer>();
-        _originalMaterial = _mesh.material;
+        _originalMaterial = _mesh.material;        
     }
 
     private void OnMouseOver()
@@ -51,7 +52,7 @@ public class SampleMusic : MonoBehaviour
             MixerManager.instance.SetMixerSnapshot(MixerManager.instance.allOn, 1f);
         _toggleOn = false;
         _mesh.material = _originalMaterial;          
-        MixerManager.instance.sampleTrack.SetSwitch("", 0.5f);	   
+        MixerManager.instance.sampleTrack.SetSwitch("", 0.5f);        
     }        
     
     private void Update()
